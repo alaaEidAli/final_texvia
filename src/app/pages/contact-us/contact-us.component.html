@@ -1,0 +1,121 @@
+<section class="contact mt-5">
+  <header class="digital-banner w-100 py-4">
+    <div class="banner-content text-center">
+      <h1 class="fw-bold text-white tracking-wide">Business, Reimagined</h1>
+    </div>
+  </header>
+
+  <div class="container my-5 py-5">
+   
+        <div class="all-form-row row rounded-start rounded-end rounded-end-md-md rounded-md-5 px-0 shadow-lg ">
+        <div class="col-md-6 p-4 p-md-5">
+          <h2 class="fw-bold mb-4">Contact Us</h2>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" id="contactForm" class="row g-3">
+            <div class="col-12">
+              <label for="name" class="form-label mb-1">Your Name</label>
+              <input type="text" id="name" formControlName="name" class="form-control" [class.is-invalid]="contactForm.get('name')?.invalid && (contactForm.get('name')?.touched || contactForm.get('name')?.dirty)">
+              @if (contactForm.get('name')?.invalid && (contactForm.get('name')?.touched || contactForm.get('name')?.dirty)) {
+                <div class="invalid-feedback">Name is required.</div>
+              }
+            </div>
+            <div class="col-12">
+              <label for="mobile" class="form-label mb-1">Mobile</label>
+              <input type="tel" id="mobile" formControlName="mobile" class="form-control" [class.is-invalid]="contactForm.get('mobile')?.invalid && (contactForm.get('mobile')?.touched || contactForm.get('mobile')?.dirty)">
+              @if (contactForm.get('mobile')?.invalid && (contactForm.get('mobile')?.touched || contactForm.get('mobile')?.dirty)) {
+                <div class="invalid-feedback">Mobile number is required.</div>
+              }
+            </div>
+            <div class="col-12">
+              <label for="email" class="form-label mb-1">Email</label>
+              <input type="email" id="email" formControlName="email" class="form-control" [class.is-invalid]="contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty)">
+              @if (contactForm.get('email')?.invalid && (contactForm.get('email')?.touched || contactForm.get('email')?.dirty)) {
+                <div class="invalid-feedback">A valid email is required.</div>
+              }
+            </div>
+            <div class="col-12">
+              <label for="title" class="form-label mb-1">Title</label>
+              <input type="text" id="title" formControlName="title" class="form-control" [class.is-invalid]="contactForm.get('title')?.invalid && (contactForm.get('title')?.touched || contactForm.get('title')?.dirty)">
+              @if (contactForm.get('title')?.invalid && (contactForm.get('title')?.touched || contactForm.get('title')?.dirty)) {
+                <div class="invalid-feedback">Title is required.</div>
+              }
+            </div>
+            <div class="col-12">
+              <label for="company" class="form-label mb-1">Company</label>
+              <input type="text" id="company" formControlName="company" class="form-control" [class.is-invalid]="contactForm.get('company')?.invalid && (contactForm.get('company')?.touched || contactForm.get('company')?.dirty)">
+              @if (contactForm.get('company')?.invalid && (contactForm.get('company')?.touched || contactForm.get('company')?.dirty)) {
+                <div class="invalid-feedback">Company is required.</div>
+              }
+            </div>
+            <div class="col-12">
+              <label for="region" class="form-label mb-1">Country</label>
+              <input type="text" id="region" formControlName="region" class="form-control" [class.is-invalid]="contactForm.get('region')?.invalid && (contactForm.get('region')?.touched || contactForm.get('region')?.dirty)">
+              @if (contactForm.get('region')?.invalid && (contactForm.get('region')?.touched || contactForm.get('region')?.dirty)) {
+                <div class="invalid-feedback">Country is required.</div>
+              }
+            </div>
+            <div class="col-12">
+              <label for="solutions" class="form-label mb-1">Service</label>
+              <select class="form-select" id="solutionId" formControlName="solutionId" [class.is-invalid]="contactForm.get('solutionId')?.invalid && (contactForm.get('solutionId')?.touched || contactForm.get('solutionId')?.dirty)">
+                <option value="Digital Maturity Assessment" value="1">Digital Maturity Assessment</option>
+                <option value="Digital Transformation" value="2">Digital Transformation</option>
+                <option value="AI-Ready IIoT Platform" value="3">AI-Ready IIoT Platform</option>
+                <option value="Smart Manufacturing" value="4">Smart Manufacturing</option>
+                <option value="Industrial Automation" value="5">Industrial Automation</option>
+                <option value="PI System" value="7">PI System</option>
+                <option value="Real-Time Data & Analytics" value="8">Real-Time Data & Analytics</option>
+              </select>
+              @if (contactForm.get('solutionId')?.invalid && (contactForm.get('solutionId')?.touched || contactForm.get('solutionId')?.dirty)) {
+                <div class="invalid-feedback">Service is required.</div>
+              }
+            </div>
+            <div class="col-12">
+              <label for="Industries" class="form-label mb-1">Industry</label>
+              <input type="text" id="Industries" formControlName="Industries" class="form-control" [class.is-invalid]="contactForm.get('Industries')?.invalid && (contactForm.get('Industries')?.touched || contactForm.get('Industries')?.dirty)">
+              @if (contactForm.get('Industries')?.invalid && (contactForm.get('Industries')?.touched || contactForm.get('Industries')?.dirty)) {
+                <div class="invalid-feedback">Industry is required.</div>
+              }
+            </div>
+            <div class="col-12">
+              <label for="message" class="form-label mb-1">Message</label>
+              <textarea id="message" formControlName="message" rows="4" class="form-control resize-none" [class.is-invalid]="contactForm.get('message')?.invalid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty)"></textarea>
+              @if (contactForm.get('message')?.invalid && (contactForm.get('message')?.touched || contactForm.get('message')?.dirty)) {
+                <div class="invalid-feedback">Message is required.</div>
+              }
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-custom w-100 d-flex align-items-center justify-content-center py-2" id="submit-contact-form" [disabled]="isSubmitting || contactForm.invalid" >
+                <span class="me-2">Send Message</span>
+                @if(isSubmitting){
+                                     <i class="fas fa-spin fa-spinner"></i>
+                    }
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+            <!-- @if (submitMessage) {
+              <div class="alert" [class.alert-success]="submitSuccess" [class.alert-danger]="!submitSuccess">
+                {{ submitMessage }}
+              </div>
+            } -->
+          </form>
+        </div>
+        <div class="col-md-6 p-0 m-0">
+        <div class="d-flex flex-column h-100">
+          <div class=" text text-center py-3">
+            <h3 class="fw-bold m-0 text-primary">Global Expertise, Local Delivery</h3>
+          </div>
+          <div class="map text-center flex-grow-1 overflow-hidden pe-0 pe-md-3">
+            <img src="/images/rgasshnfx.PNG" alt=" where is texvia work" class="w-100 h-100 object-fit-cover">
+          </div>
+          <div class="text px-2  text-center py-3">
+            <p class="fw-bold mb-0">Our cross-regional presence enables us to deliver premium industrial automation and IoT solutions at competitive rates.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      
+    </div> 
+
+</section>

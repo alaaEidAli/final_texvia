@@ -1,0 +1,473 @@
+
+@use "../../shared/scss-Styles/sections-Header-styles" as *;
+@use "../../shared/scss-Styles/colors" as *;
+
+.navbar {
+  background-color: $white-color;
+  transition: background-color 0.3s ease;
+  height: 3rem !important;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+
+  .container-fluid {
+    background-color: $white-color;
+    @extend %container-style;
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 800;
+      padding-left: 20px;
+      color: $main-color;
+    }
+
+    .navbar-nav {
+      --bs-nav-link-padding-y: 0.2rem;
+
+      .nav-item {
+        margin-left: 1.5rem;
+
+        .nav-link {
+          font-size: 1rem;
+          color: black;
+          text-transform: capitalize;
+          
+          transition: color 0.3s ease, border-bottom 0.3s ease;
+           position: relative;
+          &:hover 
+          {
+            color: $main-color;
+          }
+        }
+
+         .nav-link-active {
+          color: $main-color;
+          font-weight: 600;
+        }
+        
+        &.dropdown {
+          position: relative;
+          z-index: 9998;
+          
+          
+          .dropdown-toggle {
+    color: black;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color .3s ease-in-out;
+  &::after{
+    display: none;
+  }
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: $main-color;
+        transition: width .3s ease-in-out;
+    }
+
+    &:hover,
+    &:focus  ,
+    &.active{
+        color: $main-color;
+
+        &::before {
+            width: 85%;
+        }
+
+        .down {
+            display: none;
+        }
+
+        .up {
+            display: inline-block;
+        }
+    }
+
+    .down, .up {
+        font-size: .7rem;
+    }
+
+    .down {
+        display: inline-block;
+    }
+
+    .up {
+        display: none;
+    }
+}
+
+          .dropdown-menu {
+            background-color: $white-color;
+            
+            border-radius: 0.375rem;
+            padding: 0.5rem 0;
+            box-shadow: 0 0.5rem 1rem rgba($black-color, 0.15);
+            min-width: 18rem;
+            display: none;
+  
+             
+
+            .dropdown-item-text {
+              color: $white-color;
+              padding: 0.5rem 1rem 0.5rem 1.5rem; // extra left padding for the line
+               background-color: transparent;
+              position: relative;
+              transition: background-color 0.2s ease, color 0.2s ease;
+
+              &::before {
+                content: "";
+                position: absolute;
+                left: 0.75rem;
+                top: 0;
+                height: 100%;
+                width: 3px;
+                background-color: $main-color;
+                transform: scaleY(0);
+                transform-origin: top;
+                transition: transform 0.3s ease-in-out;
+              }
+
+              &:hover,
+              &:focus {
+                color: $white-color;
+              }
+
+              &:hover::before,
+              &:focus::before,
+              &.active::before {
+                transform: scaleY(1);
+              }
+
+              &.active {
+                background-color: $main-color-lightness;
+                color: $white-color;
+              }
+            }
+           
+          }
+           .dropdown-menu2{
+              min-width: 10rem;
+            }
+        }
+
+        &.dropdown-mega {
+          .dropdown-menu {
+            padding: 0;
+            border: none;
+            border-radius: 0;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            width: 100%;
+            left: 0;
+            right: 0;
+            margin-top: 0;
+            position: absolute;
+            top: 100%; 
+             z-index: 1000;
+          }
+        
+          @media (min-width: 992px) {
+            position: static;
+          }
+        
+          h5 {
+            margin-bottom: 1rem;
+          }
+        }
+        
+        .dropdown-item-mega {
+          display: block;
+          width: 100%;
+          padding: 0.5rem 1rem;
+          clear: both;
+          font-weight: 400;
+          color: #212529;
+          text-align: inherit;
+          white-space: nowrap;
+          background-color: transparent;
+          border: 0;
+          text-decoration: none;
+        
+          &:hover,
+          &:focus {
+            color: #1e2125;
+            background-color: #e9ecef;
+          }
+        }
+
+        // this for drop down menu show
+       .dropdown-menu.show{
+            display: block;
+          } 
+        
+        
+        /* --- NEW SCSS for the 'Solutions' Layout --- */
+        .sidebar-links {
+          border-left: 1px solid #dee2e6;
+          padding-left: 1.5rem;
+        
+          @media (max-width: 991.98px) {
+            border-left: none;
+            padding-left: 0;
+            margin-top: 2rem;
+          }
+        }
+        
+       
+  .col-12{
+    &:hover{
+      color: $main-color;
+    }
+    &.active{
+      background-color: rgba(128, 128, 128 , .1);
+    }
+ 
+     .solution-item  {
+           cursor: pointer;
+           z-index: 9998;
+          .h6{
+            
+        
+            a {
+              text-decoration: none;
+             
+              
+              color: #212529;
+               &:hover{
+                color: $main-color;
+              }
+            
+            
+            }
+             
+          }
+        
+          p {
+           
+            color: #6c757d;
+          }
+          .item-arrow {
+  display: flex; // Use flexbox to center SVG
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem; // Space from title
+  
+  svg {
+    color: $main-color; // Muted arrow color by default
+    
+  }
+          }
+          
+         
+        }
+      }
+    }
+  }
+  }
+
+}
+@media (max-width: 991.98px) {
+  .navbar{
+    z-index: 9999;
+  }
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+    z-index: 1100;
+    padding: 0.15rem;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: none;
+      position: relative;
+      z-index: 9999;
+      width: 24px;
+      height: 2px;
+      background-color: $main-color;
+      display: block;
+      transition: all 0.2s ease-in-out;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $main-color;
+        transition: all 0.3s ease-in-out;
+      }
+      &::before {
+        top: -8px;
+      }
+      &::after {
+        top: 8px;
+      }
+    }
+  }
+
+  
+
+  .navbar-collapse {
+    position: fixed;
+    top: 3rem;
+    right: 0;
+    width: 80vw;
+    max-width: 350px;
+    height: calc(100vh - 3rem);
+    background-color: rgba($white-color, 0.98);
+    backdrop-filter: blur(12px);
+    z-index: 1050;
+    padding-top: 2rem;
+   padding-bottom: 2rem;
+   padding-left: .5rem;
+   padding-right: 0;
+
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+
+    &.show {
+      transform: translateX(0);
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    text-align: left;
+    margin-top: 1rem;
+
+    .nav-item {
+      margin-bottom: 0.3rem;
+      border-bottom: 1px solid rgba($main-color, 0.1);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .nav-link {
+        padding: 1rem 0;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #34495e;
+
+        &:hover,
+        &.nav-link-active {
+          background-color: transparent;
+          color: $main-color;
+          transform: translateX(5px);
+          transition: color 0.3s, transform 0.3s;
+        }
+      }
+    }
+
+  
+    .dropdown-menu {
+      position: static !important;
+      width: 100% !important;
+      float: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      background-color: transparent !important;
+      // padding-left: 1rem;
+      margin-top: 0;
+      border-radius: 0;
+     
+
+      .dropdown-item-text {
+        padding: 0;
+        &::before {
+          display: none;
+        }
+        .nav-link {
+          font-size: 0.9rem; /* Smaller font size for all dropdown links */
+          font-weight: 400;
+          color: #555;
+          padding: 0.5rem 0;
+          transform: none;
+
+
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+    }
+
+    .dropdown-mega {
+      .sidebar-links,
+      #solutions-drop-down .item-arrow,
+      #solutions-drop-down hr ,
+      #industries-drop-down .item-arrow ,
+      #industries-drop-down hr 
+        {
+          
+        display: none !important;
+
+      }
+
+      #solutions-drop-down  , #industries-drop-down {
+
+        border: none;
+                  max-width: fit-content;
+
+        .dropdown-solution-content a   , .dropdown-industry-content a{
+          
+          text-decoration: none;
+          
+
+          small {
+            font-size: 0.9rem; /* Consistent small font size for solution items */
+            font-weight: 400;
+            color: #34495e;
+            display: block;
+             padding-bottom: 0.5rem ;
+             padding-left: 0;
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+      .dropdown-solution-content .solution-item  , .dropdown-industry-content .industry-item{
+        display: block !important;
+      
+      }
+      }
+
+      .dropdown-item-text{
+         font-size: 0.9rem; /* Consistent small font size for solution items */
+            font-weight: 400;
+            color: #34495e;
+            display: block;
+            padding: 0.5rem 1rem;
+            &:hover {
+              color: $main-color;
+            }
+          
+      }
+    }
+  }
+
+}
+
+@media (max-width: 576px) {
+  .container-fluid {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}

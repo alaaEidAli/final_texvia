@@ -1,0 +1,91 @@
+<section class="industry  ">
+  <div class="container-fluid">
+    <div class="row  h-100 ">
+      <div
+        class="col-md-8 d-flex align-items-center justify-content-start p-md-5"
+      >
+        <div class="text-white">
+          <header>
+            <h2 class="mb-2">TEXVIA industries</h2>
+          </header>
+          <div class="line rounded-3"></div>
+           <button class="btn btn btn-outline-light  " routerLink="/solutions">our solutions</button>
+           <button
+            class="second-btn btn btn-outline-light mx-3 "
+            routerLink="/contact"
+          >
+            contact us
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<div class="details">
+  <div class="container">
+    <!-- navs and tabs ------- -->
+    <div class="navs pt-2">
+      <ul class="nav py-2 shadow-sm" id="myTab" role="tablist">
+        @for (industry of industryData; track industry.id) {
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="Food-Beverage-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#Food-Beverage"
+            type="button"
+            role="tab"
+            [routerLink]="['/industries']"
+            fragment="{{industry.id}}"
+            >{{industry.title}}</a
+          >
+        </li>
+      }
+      
+      
+      </ul>
+    </div>
+   @for (industry of industryData; track industry.id) {
+    <div class="row industry-cards " id="{{industry.id}}">
+      <div class="col-md-6 description-col ">
+        <div class="h-100">
+          <div>
+            <h4 class="fw-semibold lh-1 mb-3">{{industry.title}}</h4>
+            <p class="text-muted my-3 small">
+              <!-- <span class="fw-bold d-block"
+                >{{industry.category}}</span
+              > -->
+              {{industry.description}}
+            </p>
+             <p class="fw-bold text-muted">We Provide:</p>
+            <ul>
+            @for (indProvider of industry.industryProviders  ; track $index) {
+              <li class="text-muted m-2">
+               {{indProvider}}
+              </li>
+            } 
+            </ul>
+             <p class="text-muted my-3 small fw-medium">{{industry.notes}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 image-col ">
+        <div class="card image-card h-100">
+          <img
+            src="{{industry.imageUrl}}"
+            alt="{{industry.title}}"
+            
+          />
+          <div
+            class="layer d-flex justify-content-center align-items-center text-white"
+          >
+            <h3 class="fw-bold">{{industry.category}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  
+  </div>
+</div>

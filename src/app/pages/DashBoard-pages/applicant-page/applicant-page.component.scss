@@ -1,0 +1,307 @@
+ 
+@use '../../../shared/scss-Styles/colors' as *;
+@use '../../../shared/scss-Styles/sections-Header-styles' as * ;
+
+/*--------------------------------------------------
+    1. Variable Definitions & Bootstrap Overrides
+----------------------------------------------------*/
+$card-border-radius: .75rem; // .rounded-xl
+$card-box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); // .shadow-md
+
+// animation
+    .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+
+
+/*--------------------------------------------------
+    2. Header Styles
+----------------------------------------------------*/
+
+.header-gradient {
+    background-image: linear-gradient(to right, $main-color , $secend-main-color);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.header-subtitle {
+    color: $blue-100;
+}
+
+.search-input {
+    .form-control {
+        border-radius: 9999px !important;
+        padding-left: 2.5rem;
+    }
+    .search-icon {
+        position: absolute;
+        top: 50%;
+        left: 0.85rem;
+        transform: translateY(-50%);
+        color: $gray-300;
+    }
+}
+
+
+/*--------------------------------------------------
+    3. Dashboard Stat Cards
+----------------------------------------------------*/
+
+
+
+.stat-card {
+    border-radius: $card-border-radius;
+    box-shadow: $card-box-shadow;
+    border: 1px solid $gray-200;
+    border-left-width: 4px;
+
+    &.border-left-blue { border-left-color: $blue-500; }
+    &.border-left-green { border-left-color: $green-600; }
+    &.border-left-yellow { border-left-color: $amber-600; }
+    &.border-left-purple { border-left-color: $purple-500; }
+
+    .stat-icon-wrapper {
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+    }
+    .icon-bg-blue { background-color: $blue-100; color: $blue-600; }
+    .icon-bg-green { background-color: $green-100; color: $green-600; }
+    .icon-bg-yellow { background-color: $amber-100; color: $amber-600; }
+    .icon-bg-purple { background-color: $main-color-100; color: $main-color; }
+
+    .stat-change {
+        &.text-green { color: $green-600; }
+        &.text-yellow { color: $amber-600; }
+        &.text-purple { color: $main-color; }
+    }
+}
+
+/*--------------------------------------------------
+    4. Filters and Table Styles
+----------------------------------------------------*/
+.applicants-card {
+    border-radius: $card-border-radius;
+    box-shadow: $card-box-shadow;
+    border: none;
+    overflow: hidden;
+}
+
+.table {
+    th {
+        color: $gray-500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: .75rem;
+        
+    }
+    thead {
+        background-color: $gray-50;
+    }
+    tbody tr {
+        cursor: pointer;
+    }
+    .applicant-avatar {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 50%;
+        background-color: $blue-100;
+        color: $blue-500;
+       
+    }
+    .applicant-name {
+        color: $gray-900;
+    }
+    .applicant-email {
+        color: $gray-500;
+    }
+
+    
+}
+
+/*--------------------------------------------------
+    5. Applicant Modal Styles
+----------------------------------------------------*/
+
+.applicant-modal {
+
+    .modal-content {
+        border-radius: .75rem; 
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); 
+        border: none;
+        max-height: 90vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-header-sticky {
+        position: sticky;
+        top: 0;
+        background-color: $white-color;
+        z-index: 1050; // Ensure it's above the body
+    }
+    
+    .modal-body {
+        overflow-y: auto;
+    }
+
+    .modal-footer-sticky {
+        position: sticky;
+        bottom: 0;
+        background-color: $gray-50;
+        z-index: 1050;
+    }
+
+    .nav-tabs {
+        border-bottom: 1px solid $gray-200;
+        .nav-link {
+            border: none;
+            border-bottom: 2px solid transparent;
+            color: $gray-500;
+            font-weight: 500;
+            &:hover, &:focus {
+                color: $gray-700;
+                border-color: transparent;
+            }
+            &.active {
+                color: $blue-600;
+                border-color: $blue-600;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+// Left Column Styles
+.profile-card {
+    background-color: $gray-50;
+    border-radius: .75rem;
+
+    .applicant-avatar-large {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        background-color: $blue-100;
+        color: $blue-600;
+        font-weight: 700;
+        
+    }
+
+    .social-icon {
+        background-color: $blue-100;
+        color: $blue-600;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.5rem;
+        width: 2.5rem;
+        transition: background-color 0.2s ease-in-out;
+        &:hover {
+            background-color: #BFDBFE; // .hover:bg-blue-200
+        }
+    }
+}
+
+.info-card, .skills-card {
+    background-color: $gray-50;
+    border-radius: .75rem;
+}
+
+.skill-badge {
+    background-color: $gray-200;
+    color: $gray-700;
+    
+}
+
+// Right Column Styles
+.content-card {
+    background-color: $gray-50;
+    border-radius: .75rem;
+}
+
+.experience-item {
+    padding-left: 1rem;
+    border-left: 2px solid $gray-300;
+    &.highlight {
+        border-left-color: $blue-500;
+    }
+}
+
+// Timeline for Interview Process
+.timeline {
+    position: relative;
+    .timeline-line {
+        position: absolute;
+        left: 0.9rem; // (Icon width - line width) / 2
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: $gray-200;
+    }
+
+    .timeline-item {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+
+        .timeline-icon {
+            position: relative;
+            z-index: 1;
+            width: 1.5rem; // h-6 w-6
+            height: 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+            &.completed { background-color: $green-600; }
+            &.in-progress { background-color: $blue-500; }
+            &.pending { background-color: $gray-200; }
+
+            .inner-dot {
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 50%;
+                &.in-progress { background-color: $white-color; }
+                &.pending { background-color: $gray-300; }
+            }
+        }
+
+        .timeline-content {
+            margin-left: 1rem;
+        }
+
+        &.disabled {
+            .timeline-title, p {
+                color: $gray-300 !important;
+            }
+        }
+    }
+}
+
+// Notes Card Styles
+.note-card {
+    background-color: $white-color;
+    border: 1px solid $gray-200;
+    .note-author {
+        font-weight: 500;
+        color: $gray-700;
+    }
+    .note-meta {
+        font-size: 0.875rem;
+        color: $gray-500;
+    }
+    .note-actions button {
+        color: $gray-200;
+        &:hover {
+            color: $gray-600;
+        }
+    }
+}

@@ -1,0 +1,294 @@
+
+<section class="navbar navbar-expand-lg fixed-top  mb-2">
+  <div class="container-fluid">
+    <a
+      class="logo text-decoration-none"
+      routerLink="/home"
+      routerLinkActive="nav-link-active"
+      >TEXVIA</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-lg-0">
+        @if(isAdmin()){
+        <li class="nav-item dropdown" #dropdown1>
+          <a
+            class="nav-link dropdown-toggle"
+    
+            id="dropdownMenuButton1"
+            role="button"
+            (click)="toggleDropdown('dashboard', $event)"
+              (click)="preventClose($event)"
+                           [ngClass]="{'active': isDropdownOpen['dashboard']}" 
+            >Dashboard
+            <i class="down  fas fa-chevron-down ms-1 "></i>
+            <i class="up fas fa-chevron-up ms-1 "></i>
+            </a
+          >
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"   [ngClass]="{'show': isDropdownOpen['dashboard']}" (click)="preventClose($event)">
+             <li class="dropdown-item-text">
+              <a class="nav-link"   routerLink="/dashboard/dashboard-home"
+               (click)="closeAllDropdowns($event)"
+                >Dashboard Home</a
+              >
+            </li>
+            <li class="dropdown-item-text">
+              <a class="nav-link" routerLink="/dashboard/contact-submission"
+               (click)="closeAllDropdowns($event)"
+                >Dashboard Contact submissions</a
+              >
+            </li>
+            <li class="dropdown-item-text">
+              <a class="nav-link" routerLink="/dashboard/users"
+               (click)="closeAllDropdowns($event)"
+                >Dashboard Users</a
+              >
+            </li>
+            <li class="dropdown-item-text">
+              <a class="nav-link" routerLink="/dashboard/job-Management"
+               (click)="closeAllDropdowns($event)"
+                >Job Management</a
+              >
+            </li>
+            <li class="dropdown-item-text">
+              <a class="nav-link" routerLink="/dashboard/Applicant-Page"
+               (click)="closeAllDropdowns($event)"
+                >Applicant Page</a
+              >
+            </li>
+          </ul>
+        </li>
+      }
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/home"
+            routerLinkActive="nav-link-active"
+             (click)="closeAllDropdowns($event)"
+            >Home</a
+          >
+        </li>
+
+        <li class="nav-item dropdown dropdown-mega"  #dropdown>
+          <a
+            class="nav-link dropdown-toggle dropSolution"
+            id="solutionsMegaMenu"
+            role="button"
+             (click)="toggleDropdown('solutions', $event)"
+             [ngClass]="{'active': isDropdownOpen['solutions']}" 
+          >
+
+            Solutions
+            <i class="down  fas fa-chevron-down ms-1 "></i>
+            <i class="up fas fa-chevron-up ms-1 "></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="solutionsMegaMenu " [ngClass]="{'show': isDropdownOpen['solutions']}"    (click)="preventClose($event)"  >
+            <div class="container pt-4 pb-2">
+              <div class="row">
+                <div class="col-lg-4" id="solutions-drop-down">
+                  <div class="row mb-1 ">
+                  @for (sol of solution; track $index) {
+                    <div class="col-12 position-relative  " 
+                    (mouseenter)="selectSolution(sol , $event)" 
+                    (click)="preventClose($event)"
+                    
+                    [class.active]="sol === selectedSolution">
+                      <div class="d-flex align-items-start pt-0 pt-md-2 dropdown-solution-content " > 
+                        <div
+                          class=" d-flex align-items-center justify-content-center me-1 me-lg-3"
+                          [innerHTML]="getSvgSafe(sol.icon)"
+                        >
+                         
+                      
+                        </div>
+                        <div class="solution-item  d-flex flex-row  ">
+                          <h6 class="fw-semibold ">
+                            
+                            <a > <small>  {{sol.title}}</small></a>
+                          </h6>
+                          @if(sol === selectedSolution){
+                           <span class="item-arrow position-absolute " style="right: 15%;" >
+              <svg  width="23" height="23" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          }
+                        </div>
+                      </div>
+                    </div>
+                  }
+                     </div>
+
+                
+                  <hr>
+                   <a 
+                   class="nav-link text-decoration-underline" routerLink="/solutions" routerLinkActive="nav-link-active"
+                   (click)="closeAllDropdowns($event)"
+                    >
+                    <h6 class="fw-semibold">See All Solutions</h6>
+                    </a
+                  >
+                </div>
+                <div class="col-lg-8 sidebar-links">
+                  <h5>{{selectedSolution.title}}</h5>
+                    <p class="text-muted small">
+                     {{selectedSolution.description}}
+                    </p>
+                    
+                  
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+       
+     
+          <li class="nav-item dropdown dropdown-mega"  #dropdown4>
+          <a
+            class="nav-link dropdown-toggle dropindustires"
+            id="indurtiresMegaMenu"
+            role="button"
+             (click)="toggleDropdown('industries', $event)"
+             [ngClass]="{'active': isDropdownOpen['industries']}" 
+          >
+
+            industries
+            <i class="down  fas fa-chevron-down ms-1 "></i>
+            <i class="up fas fa-chevron-up ms-1 "></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="industriesMegaMenu " [ngClass]="{'show': isDropdownOpen['industries']}"    (click)="preventClose($event)"  >
+            <div class="container pt-4 pb-2">
+              <div class="row">
+                <div class="col-lg-4" id="industries-drop-down">
+                  <div class="row mb-1 ">
+                  @for (ind of industry; track $index) {
+                    <div class="col-12 position-relative    " 
+                    (mouseenter)="selectindustries(ind , $event)" 
+                    (click)="preventClose($event)"
+                    
+                    [class.active]="ind === selectedIndustrey">
+                      <div class="d-flex align-items-start pt-0 pt-md-2 dropdown-industry-content " > 
+                        <div
+                          class=" d-flex align-items-center justify-content-center me-1 me-lg-3"
+                          [innerHTML]="getSvgSafe(ind.icon)"
+                        >
+                         
+                      
+                        </div>
+                        <div class="industry-item  d-flex flex-row ">
+                          <h6 class="fw-semibold ">
+                            
+                            <a > <small>  {{ind.title}}</small></a>
+                          </h6>
+                          @if(ind === selectedIndustrey){
+                           <span class="item-arrow position-absolute " style="right: 15%;" >
+              <svg  width="23" height="23" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 5L19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          }
+                        </div>
+                      </div>
+                    </div>
+                  }
+                     </div>
+
+                
+                  <hr>
+                   <a 
+                   class="nav-link text-decoration-underline" routerLink="/industries" routerLinkActive="nav-link-active"
+                   (click)="closeAllDropdowns($event)"
+                    >
+                    <h6 class="fw-semibold">See All industries</h6>
+                    </a
+                  >
+                </div>
+                <div class="col-lg-8 sidebar-links">
+                  <h5>{{selectedIndustrey.title}}</h5>
+                    <p class="text-muted small">
+                     {{selectedIndustrey.description}}
+                    </p>
+                    
+                  
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/careers"
+            routerLinkActive="nav-link-active"
+             (click)="closeAllDropdowns($event)"
+            >Careers</a
+          >
+        </li>
+        <li class="nav-item">
+        
+            <a class="nav-link d-none d-xl-block" routerLink="/contact" routerLinkActive="nav-link-active"  (click)="closeAllDropdowns($event)">Contact Us</a>
+<a class="nav-link d-block d-xl-none" routerLink="/contact" routerLinkActive="nav-link-active"  (click)="closeAllDropdowns($event)">Contact</a>
+        
+        </li>
+        <li class="nav-item dropdown" #dropdown2>
+          <a
+            class="nav-link dropdown-toggle " style="cursor: pointer;"
+            id="navbarDropdown"
+             (click)="toggleDropdown('account', $event)"
+                          [ngClass]="{'active': isDropdownOpen['account']}" 
+
+            >Account
+             <i class="down  fas fa-chevron-down ms-1 "></i>
+            <i class="up fas fa-chevron-up ms-1 "></i>
+            </a
+          >
+          <ul
+            class="dropdown-menu dropdown-menu2"
+            aria-labelledby="navbarDropdown"
+             [ngClass]="{'show': isDropdownOpen['account']}"
+            (click)="preventClose($event)"
+          > 
+          @if(!isLogged()){
+            <li class="dropdown-item-text">
+              <a
+                class="nav-link"
+                routerLink="/login"
+                routerLinkActive="nav-link-active"
+                 (click)="closeAllDropdowns($event)"
+                >Login</a
+              >
+            </li>
+            
+          }
+          @else {
+             <li class="dropdown-item-text">
+              <a
+                class="nav-link"
+                (click)="logOut()"
+                style="cursor: pointer;"
+                 (click)="closeAllDropdowns($event)"
+                >Log out</a
+              >
+            </li>
+          }
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

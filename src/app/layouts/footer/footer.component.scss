@@ -1,0 +1,59 @@
+
+
+@use '../../shared/scss-Styles/sections-Header-styles';
+@use "../../shared/scss-Styles/colors" as *;
+
+@mixin transition($property: all, $duration: 0.3s, $easing: ease-in-out) {
+  transition: $property $duration $easing;
+}
+
+footer {
+  background-color: $footer-color;
+  color: white;
+
+  .text-color {
+    color: $main-color !important;
+  }
+
+  .text-muted {
+    color: #adb5bd !important;
+  }
+
+  .link-hover {
+    @include transition(color);
+
+    &:hover {
+      color: white !important;
+    }
+  }
+
+  .icon-link {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include transition(background-color);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+ ul{
+    line-height: 2rem;
+ }
+
+  .btn-color {
+    color: white;
+    background-color: $main-color;
+    border-color: $main-color;
+    &:hover {
+      background-color:$secend-main-color;
+      border-color:$secend-main-color;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($main-color, 0.5); // Simple focus shadow
+    }
+  }
+}

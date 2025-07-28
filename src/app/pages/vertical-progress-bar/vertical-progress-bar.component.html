@@ -1,0 +1,21 @@
+<div #container class="vertical-scroll-nav position-relative w-100">
+  <div class="vertical-scroll-nav__line position-absolute h-100 top-0 z-45 d-none d-lg-block"></div>
+
+  <div class="vertical-scroll-nav__slider position-absolute rounded-pill z-40 d-none d-lg-block"
+       [style.top.px]="sliderTop"
+       [style.height.px]="sliderHeight"
+       [style.background-color]="currentSectionColor"></div>
+
+  <ng-container>
+    @for (position of sectionPositions; track $index) {
+      <div class="vertical-scroll-nav__marker position-absolute z-50 d-none d-lg-flex align-items-center justify-content-center"
+           [ngClass]="filledSections[$index] ? ' is-active' : 'bg-secondary is-inactive'"
+           [style.top.%]="position"
+           tabindex="0"
+            [style.background-color]="getSectionColor($index)"
+           [attr.aria-label]="'Section ' + ($index + 1) + ' marker'">
+      </div>
+    }
+  </ng-container>
+  <ng-content></ng-content>
+</div>

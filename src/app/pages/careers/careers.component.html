@@ -1,0 +1,861 @@
+
+<div class="careers mt-5">
+  <!-- Square Grid Background -->
+  <div class="digital-grid"></div>
+
+  <!-- Hero Section -->
+  <div class="hero-section d-flex justify-content-center align-items-center">
+    <div class="container px-4 px-sm-5 px-lg-6">
+      <div class="text-center">
+        <h1 class="fw-bold mb-6">Join Our Team</h1>
+        <h4 class="fw-normal mx-auto mb-5">
+          We're looking for passionate individuals to help us build amazing
+          products and shape the future.
+        </h4>
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-center  "
+        >
+          <button class="first-btn btn btn-light fw-medium py-3 px-4 rounded" [routerLink]="['/careers']" fragment="open-positions-section">
+            View Open Positions
+          </button>
+          <!-- <button
+            class="second-btn btn btn-outline-light fw-medium py-3 px-4 rounded"
+          >
+            Learn About Our Culture
+          </button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- why to join us------>
+<div class="why-join-us bg-white py-3 py-md-5">
+  <div class="container px-4">
+    <div class="text-center mb-2 section-heading">
+      <h2 class=" section-title  mb-3">Why Join Us?</h2>
+      <p class="section-subtitle  fw-semibold">
+        We offer more than just a job. Join us and be part of a team that values
+        innovation, growth, and work-life balance.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="bg-light p-5 rounded-3 text-center custom-shadow h-100">
+          <div
+            class="icon-bg-main-color d-flex align-items-center justify-content-center mx-auto mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="2rem"
+              color="#6A05A6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+          </div>
+          <h5 class="fw-semibold mb-3 text-dark">Growth Opportunities</h5>
+          <p class="opacity-75">
+            We invest in our employees' professional development with training,
+            mentorship, and advancement opportunities.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="bg-light p-5 rounded-3 text-center custom-shadow h-100">
+          <div
+            class="icon-bg-main-color d-flex align-items-center justify-content-center mx-auto mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="2rem"
+              color="#6A05A6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+          <h5 class="fw-semibold mb-3 text-dark">Competitive Benefits</h5>
+          <p class="opacity-75">
+            Enjoy comprehensive health coverage, retirement plans, paid time
+            off, and other perks designed for your wellbeing.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="bg-light p-5 rounded-3 text-center custom-shadow h-100">
+          <div
+            class="icon-bg-main-color d-flex align-items-center justify-content-center mx-auto mb-4"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="2rem"
+              height="2rem"
+              color="#6A05A6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+          </div>
+          <h5 class="fw-semibold mb-3 text-dark">Inclusive Culture</h5>
+          <p class="opacity-75">
+            We foster a diverse and inclusive workplace where everyone's ideas
+            and contributions are valued.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------ open postions-----------  -->
+<section class="open-positions-section py-3 py-md-5 " id="open-positions-section" >
+  <div class="container">
+    <div class="text-center mb-2 section-heading">
+      <h2 class="section-title mb-3">Open Positions</h2>
+      <p class="section-subtitle fw-semibold">
+        Explore our current job openings and find the perfect role for your
+        skills and passion.
+      </p>
+    </div>
+
+    <!-- Job Categories Nav -->
+    <ul
+      class="nav nav-tabs job-category-nav justify-content-center gap-2 gap-md-3 mb-5 border-0"
+      id="jobTabs"
+      role="tablist"
+    >
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link rounded-pill active"
+          id="all-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#all-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="all-tab-pane"
+          aria-selected="true"
+        >
+          All Departments
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link rounded-pill"
+          id="engineering-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#engineering-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="engineering-tab-pane"
+          aria-selected="false"
+        >
+          Engineering
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link rounded-pill"
+          id="design-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#design-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="design-tab-pane"
+          aria-selected="false"
+        >
+          Design
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link rounded-pill"
+          id="marketing-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#marketing-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="marketing-tab-pane"
+          aria-selected="false"
+        >
+          Marketing
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link rounded-pill"
+          id="sales-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#sales-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="sales-tab-pane"
+          aria-selected="false"
+        >
+          Sales
+        </button>
+      </li>
+    </ul>
+
+    <!-- Job Listings Tab Content -->
+    <div class="tab-content" id="jobTabsContent">
+      <!-- All Departments Tab Pane -->
+      <div
+        class="tab-pane fade show active"
+        id="all-tab-pane"
+        role="tabpanel"
+        aria-labelledby="all-tab"
+      >
+        <div class="row g-4">
+          <!-- Job Cards: Engineering -->
+          <div class="col-md-6">
+            <div class="card job-card">
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-start mb-3"
+                >
+                  <div>
+                    <h4 class="mb-1">Automation Engineer</h4>
+                    <p class="job-department fw-semibold mb-0">
+                      Engineering • Full-time
+                    </p>
+                  </div>
+                  <span class="badge job-location-type rounded-pill px-3 py-2"
+                    >Remote</span
+                  >
+                </div>
+                <p class="job-description mb-4">
+                 We're looking for a skilled Automation Engineer to join our team and drive the development of smart, 
+                 efficient, and scalable automation solutions across industrial environments.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >PLC Programming</span
+                  >
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >SCADA Systems</span
+                  >
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >Industrial Networking</span
+                  >
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >Industry 4.0 / IIoT</span
+                  >
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <a
+                  
+                    class="view-details-btn d-flex align-items-center gap-1"
+                    role="button"
+                    (click)="goToPositionAutomationDtails()"
+                  >
+                    View Details
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-chevron-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                      />
+                    </svg>
+                  </a>
+                  <!-- <span class="posted-date">Posted 2 days ago</span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="col-md-6">
+            <div class="card job-card">
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-start mb-3"
+                >
+                  <div>
+                    <h4 class="mb-1">MES Engineer</h4>
+                    <p class="job-department fw-semibold mb-0">
+                     Engineering • Full-time
+                    </p>
+                  </div>
+                  <span class="badge job-location-type rounded-pill px-3 py-2"
+                    >Remote</span
+                  >
+                </div>
+                <p class="job-description mb-4">
+                We're looking for a talented MES Engineer to join our team and support the design, development, 
+                and deployment of Manufacturing Execution Systems that optimize production and enable digital transformation.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >AVEVA MES / Wonderware</span
+                  >
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >SQL / .NET / Scripting</span
+                  >
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >Manufacturing Process Knowledge</span
+                  >
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >Industrial Automation Integration</span
+                  >
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <a
+                  
+                    class="view-details-btn d-flex align-items-center gap-1"
+                    role="button"
+                    (click)="goToPositionMesEngineerDetail()"
+                  >
+                    View Details
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-chevron-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                      />
+                    </svg>
+                  </a>
+                  <!-- <span class="posted-date">Posted 2 days ago</span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+
+      <!-- Engineering Tab Pane -->
+      <div
+        class="tab-pane fade"
+        id="engineering-tab-pane"
+        role="tabpanel"
+        aria-labelledby="engineering-tab"
+      >
+        <div class="row g-4">
+          <!-- Job Card 1: Engineering -->
+          <div class="col-md-6">
+            <div class="card job-card">
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-start mb-3"
+                >
+                  <div>
+                    <h4 class="mb-1">Automation Engineer</h4>
+                    <p class="job-department fw-semibold mb-0">
+                      Engineering • Full-time
+                    </p>
+                  </div>
+                  <span class="badge job-location-type rounded-pill px-3 py-2"
+                    >Remote</span
+                  >
+                </div>
+                <p class="job-description mb-4">
+                 We're looking for a skilled Automation Engineer to join our team and drive the development of smart, 
+                 efficient, and scalable automation solutions across industrial environments.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >PLC Programming</span
+                  >
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >SCADA Systems</span
+                  >
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >Industrial Networking</span
+                  >
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >Industry 4.0 / IIoT</span
+                  >
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <a
+                  
+                    class="view-details-btn d-flex align-items-center gap-1"
+                    role="button"
+                    (click)="goToPositionAutomationDtails()"
+                  >
+                    View Details
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-chevron-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                      />
+                    </svg>
+                  </a>
+                  <!-- <span class="posted-date">Posted 2 days ago</span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="col-md-6">
+            <div class="card job-card">
+              <div class="card-body">
+                <div
+                  class="d-flex justify-content-between align-items-start mb-3"
+                >
+                  <div>
+                    <h4 class="mb-1">MES Engineer</h4>
+                    <p class="job-department fw-semibold mb-0">
+                     Engineering • Full-time
+                    </p>
+                  </div>
+                  <span class="badge job-location-type rounded-pill px-3 py-2"
+                    >Remote</span
+                  >
+                </div>
+                <p class="job-description mb-4">
+                We're looking for a talented MES Engineer to join our team and support the design, development, 
+                and deployment of Manufacturing Execution Systems that optimize production and enable digital transformation.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >AVEVA MES / Wonderware</span
+                  >
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >SQL / .NET / Scripting</span
+                  >
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >Manufacturing Process Knowledge</span
+                  >
+                  <span class="badge skill-tag rounded-pill px-2 py-1 fw-light"
+                    >Industrial Automation Integration</span
+                  >
+                </div>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-auto"
+                >
+                  <a
+                  
+                    class="view-details-btn d-flex align-items-center gap-1"
+                    role="button"
+                    (click)="goToPositionMesEngineerDetail()"
+                  >
+                    View Details
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-chevron-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                      />
+                    </svg>
+                  </a>
+                  <!-- <span class="posted-date">Posted 2 days ago</span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design Tab Pane -->
+      <div
+        class="tab-pane fade"
+        id="design-tab-pane"
+        role="tabpanel"
+        aria-labelledby="design-tab"
+      >
+        <div class="row g-4">
+        </div>
+      </div>
+
+      <!-- Marketing Tab Pane -->
+      <div
+        class="tab-pane fade"
+        id="marketing-tab-pane"
+        role="tabpanel"
+        aria-labelledby="marketing-tab"
+      >
+        <div class="row g-4">
+          <!-- Job Card 3: Marketing -->
+        
+        </div>
+      </div>
+
+      <!-- Sales Tab Pane -->
+      <div
+        class="tab-pane fade"
+        id="sales-tab-pane"
+        role="tabpanel"
+        aria-labelledby="sales-tab"
+      >
+        <div class="row g-4">
+          <!-- Job Card 4: Sales -->
+       
+        </div>
+      </div>
+    </div>
+    <!-- End Tab Content -->
+
+  </div>
+</section>
+
+<!-- Employee Testimonials Section -->
+ <!-- <section class="employee-testimonials-section  py-3 py-md-5">
+  <div class="container">
+    <div class="text-center mb-2 section-heading">
+      <h2 class="mb-3">Meet Our Team</h2>
+      <p class="section-subtitle fw-semibold ">
+        Hear from the people who make our company an amazing place to work.
+      </p>
+    </div>
+
+    <div class="row g-4 g-lg-5">
+    
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="d-flex align-items-center testimonial-author">
+            <div
+              class="author-avatar rounded-circle d-flex align-items-center justify-content-center"
+            >
+              JD
+            </div>
+            <div class="ms-3">
+              <h5 class="text-black mb-0">Jane Doe</h5>
+              <p class="author-role mb-0">Senior Developer</p>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "I've been with the company for 3 years and I'm constantly
+            challenged to grow. The supportive environment and focus on
+            work-life balance make this the best place I've ever worked."
+          </p>
+        </div>
+      </div>
+
+     
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="d-flex align-items-center testimonial-author">
+            <div
+              class="author-avatar rounded-circle d-flex align-items-center justify-content-center"
+            >
+              MS
+            </div>
+            <div class="ms-3">
+              <h5 class="text-black mb-0">Michael Smith</h5>
+              <p class="author-role mb-0">Product Manager</p>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "What I love most about working here is the collaborative culture.
+            Everyone's ideas are valued, and we work together to create products
+            that truly make a difference."
+          </p>
+        </div>
+      </div>
+
+     
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="d-flex align-items-center testimonial-author">
+            <div
+              class="author-avatar rounded-circle d-flex align-items-center justify-content-center"
+            >
+              AJ
+            </div>
+            <div class="ms-3">
+              <h5 class="text-black mb-0">Alex Johnson</h5>
+              <p class="author-role mb-0">UX Designer</p>
+            </div>
+          </div>
+          <p class="testimonial-text">
+            "The company invests in my professional development and gives me the
+            freedom to explore creative solutions. I've grown so much since
+            joining the team."
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>  -->
+
+<!-- process of hiring  -->
+<section class="process-of-hiring  bg-white  py-3 py-md-5">
+        <div class="container">
+            <div class="text-center mb-2 section-heading">
+                <h2 class=" section-title mb-3">Our Hiring Process</h2>
+                <p class="section-subtitle fw-semibold " >
+                    We've designed a straightforward and transparent process to help you find your perfect role with us.
+                </p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line d-none d-md-block"></div>
+
+                <div class="row g-0  align-items-stretch timeline-step timeline-step-right mb-2 mb-md-4">
+                    <div class="col-md-5 order-md-1 timeline-content-col">
+                        <div class="timeline-content text-md-end">
+                            <h4 class="timeline-step-title">1. Application Review</h4>
+                            <span class="timeline-step-description">
+                                Submit your application and our team will carefully review your qualifications and experience.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-1 order-md-2 timeline-icon-col ">
+                        <div class="timeline-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                                <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5.5 9a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5.5 11a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                                <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-5 order-md-3 timeline-extra-col">
+                        <div class="timeline-extra-content text-md-start">
+                             <p class="timeline-step-description  ">
+                                We aim to respond to all applications within 1 week. If your skills match our needs, we'll move to the next step.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-0  align-items-stretch timeline-step timeline-step-left mb-2 mb-md-4">
+                    <div class="col-md-5 order-md-1 order-3 timeline-extra-col ">
+                       <div class="timeline-extra-content text-md-start">
+                        <p class="timeline-step-description  ">
+                              This 30-45 minute video call helps us understand your background and gives you a chance to ask questions.
+                            </p>
+                       </div>
+                       
+                        </div>
+                    <div class="col-md-1 order-md-2 order-2 timeline-icon-col">
+                        <div class="timeline-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+                                <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                                <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-5 order-md-3 order-1 timeline-content-col">
+                        <div class="timeline-content text-md-start">
+                            <h4 class="timeline-step-title">2. Initial Interview</h4>
+                            <span class="timeline-step-description ">
+                                A 30-45 minute video call with our hiring team to discuss your background, experience, and answer your initial questions.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-0  align-items-stretch timeline-step timeline-step-right mb-2 mb-md-4">
+                    <div class="col-md-5 order-md-1 timeline-content-col">
+                        <div class="timeline-content text-md-end">
+                            <h4 class="timeline-step-title">3. Skills Assessment</h4>
+                            <span class="timeline-step-description">
+                                Demonstrate your skills through a practical assessment relevant to the role. We design these to be fair and respectful of your time.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-1 order-md-2 timeline-icon-col">
+                        <div class="timeline-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
+                                <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-5 order-md-3 timeline-extra-col ">
+                      <div class="timeline-extra-content text-md-start">
+                             <p class="timeline-step-description  ">
+                              We design our assessments to be fair and relevant, respecting your time while evaluating your abilities.
+                            </p>
+                        </div>
+                        </div>
+                </div>
+
+                <div class="row g-0  align-items-stretch timeline-step timeline-step-left mb-2 mb-md-4">
+                    <div class="col-md-5 order-md-1 order-3 timeline-extra-col ">
+                      <div class="timeline-extra-content text-md-start">
+                             <p class="timeline-step-description  ">
+                             This is your opportunity to get to know your potential colleagues and learn more about day-to-day responsibilities.
+                            </p>
+                        </div>
+                        </div>
+                    <div class="col-md-1 order-md-2  timeline-icon-col">
+                        <div class="timeline-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.3 2.3 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-5 order-md-3 order-1 timeline-content-col">
+                        <div class="timeline-content text-md-start">
+                            <h4 class="timeline-step-title">4. Final Interview</h4>
+                            <span class="timeline-step-description">
+                                Meet with potential team members and stakeholders to discuss the role in depth and ensure a great cultural and technical fit.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-0  align-items-stretch timeline-step timeline-step-right"> 
+                  <div class="col-md-5 order-md-1 timeline-content-col">
+                        <div class="timeline-content text-md-end">
+                            <h4 class="timeline-step-title">5. Offer & Onboarding</h4>
+                            <span class="timeline-step-description text-muted">
+                                If there's a mutual fit, we'll extend an offer! Our comprehensive onboarding will help you integrate smoothly and hit the ground running.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-1 order-md-2 timeline-icon-col">
+                        <div class="timeline-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-patch-check" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89-.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89-.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"/>
+                            </svg>
+                        </div>
+                    </div>
+                   <div class="col-md-5 order-md-3 timeline-extra-col ">
+                    <div class="timeline-extra-content text-md-start">
+                             <p class="timeline-step-description  ">
+                           Our comprehensive onboarding process will help you integrate smoothly and hit the ground running.
+                            </p>
+                        </div>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- fq question----->
+
+    <div class="faq-section bg-white  py-3 py-md-5">
+        <div class="container">
+            <div class="text-center mb-2  section-heading">
+                <h2 class="section-title text-dark mb-3">Frequently Asked Questions</h2>
+                <p class="section-subtitle fw-semibold">
+                    Find answers to common questions about our hiring process and working at our company.
+                </p>
+            </div>
+
+            <div class="accordion faq-accordion mx-auto" id="faqAccordion" style="max-width: 768px;">
+                <div class="accordion-item">
+                    <h2 class="accordion-header " id="faqHeadingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="false" aria-controls="faqCollapseOne">
+                            What benefits do you offer?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We offer comprehensive health insurance, retirement plans with company matching, generous paid time off, parental leave, professional development stipends, and flexible work arrangements. Our benefits are designed to support your wellbeing and growth.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeadingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                            Do you offer remote work options?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we offer remote, hybrid, and on-site positions depending on the role. Each job posting specifies the work arrangement. We believe in providing flexibility while maintaining strong team collaboration.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeadingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                            What is your company culture like?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our culture is built on collaboration, innovation, and respect. We value diverse perspectives and encourage open communication. We work hard but also prioritize work-life balance and celebrate our achievements together.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeadingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                            How long does the hiring process take?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our hiring process typically takes 2-4 weeks from application to offer, depending on the role and scheduling. We respect your time and aim to provide timely updates throughout the process.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeadingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                            What opportunities are there for growth?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We're committed to helping our employees grow professionally. We offer mentorship programs, learning stipends, internal mobility opportunities, and regular performance reviews with clear paths for advancement.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section  d-flex justify-content-center align-items-center ">
+      <div class="text-center px-0 px-sm-4 px-md-6 ">
+        <h2 class="fw-bold">Ready to Join Our Team?</h2>
+        <h5 class="fw-normal mx-auto ">
+         We're always looking for talented individuals who are passionate about making a difference. 
+        </h5>
+    </div>
+    </div>
+

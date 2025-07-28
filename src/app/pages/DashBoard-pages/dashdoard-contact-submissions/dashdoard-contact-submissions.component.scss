@@ -1,0 +1,100 @@
+
+@use '../../../shared/scss-Styles/colors' as *;
+@use '../../../shared/scss-Styles/sections-Header-styles' as * ;
+
+// animation
+    .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+
+
+        .card {
+            border: none;
+            border-radius: 0.75rem;
+            min-height: 75vh;
+        }
+
+        .card-header {
+            background-color: $main-color; /* Dark header */
+            color: white;
+            font-weight: 600;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+           
+            input::placeholder{
+              font-size: .9rem;
+            }
+        }
+        
+        .card-footer {
+            background-color: #ffffff;
+            border-bottom-left-radius: 0.75rem;
+            border-bottom-right-radius: 0.75rem;
+
+         .page-link{
+            color: blue !important;
+            background-color: white !important;
+
+            &.active{
+                 color: white !important;
+            background-color: blue !important;
+            }
+         }
+         
+        }
+
+        .table {
+            margin-bottom: 0; /* Remove bottom margin from table inside card */
+        
+        
+         th {
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: #495057;
+            cursor: pointer;
+        }
+        
+         td {
+            vertical-align: middle;
+        }
+    
+        .table-hover tbody tr:hover {
+            background-color: #f1f3f5;
+        }
+    }
+        // for nav routes 
+ a{
+    color:black ;
+    cursor: pointer;
+    &:hover{
+        color: $main-color;
+    }
+}
+ .active{
+    color: $main-color;
+    }
+ 
+
+        .table-actions .btn {
+            margin: 0 2px;
+        }
+        
+        .page-link {
+            border-radius: 0.375rem;
+            margin: 0 2px;
+        }
+
+        .page-item.active .page-link {
+            background-color: #343a40;
+            border-color: #343a40;
+        }
+
+        
+
+       

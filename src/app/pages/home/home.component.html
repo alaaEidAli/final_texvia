@@ -1,0 +1,2829 @@
+<!-- Home Section -->
+<section class="home-section" id="Home-Page-First-Screen-Section">
+  @if(isPlatformBrowser(this.platformId)){
+      <ngx-particles id="particles1" [options]="particlesOptions1"></ngx-particles>
+  }
+
+  <div class="container py-3 py-md-4 py-lg-5  ">
+    <div class="row">
+      <div class="col-12 home-caption" [ngClass]="{ visible: isVisible }">
+        <span
+          class="hero-caption bg-white bg-opacity-25 text-white rounded-pill fw-medium px-2 py-1 mb-3 d-inline-block"
+        >
+          {{ currentHomeCaption.top }}
+        </span>
+        <h1 class="hero-title text-white fw-bold mb-4">
+          {{ currentHomeCaption.header }}
+        </h1>
+        <h5 class="hero-description text-white fw-light mb-4 w-100">
+          {{ currentHomeCaption.description }}
+        </h5>
+      </div>
+      <div class="hero-actions d-flex flex-wrap gap-2 gap-md-3 mb-5">
+        <button
+          class="btn cta-button btn-start text-aveva-dark fw-medium py-2 py-md-3 px-3 px-md-4 rounded shadow-lg"
+          aria-label="Get Started"
+          (click)="talkToExpert()"
+        >
+          Get Started
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="all-services-card row g-3 row-cols-1 row-cols-md-2 align-items-stretch"
+    >
+      <div class="col-lg-3 col-md-6">
+        <div
+          class="service-card rounded p-4 shadow float-animation h-100 d-flex flex-column"
+        >
+          <h3 class="fs-6 fw-bold mb-1 text-white text-center flex-grow-1">
+            Industrial Internet of Things (IIoT)
+          </h3>
+          <p class="cards-paragraph flex-grow-1">
+            Connect machines, people, and systems across your operations to
+            unlock real-time visibility, improve traceability, enhance
+            operational efficiency, and lay the foundation for predictive
+            performance.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div
+          class="service-card rounded p-4 shadow float-animation h-100 d-flex flex-column"
+        >
+          <h3 class="fs-6 fw-bold mb-1 text-white text-center">
+            AI Agents and Intelligent Automation
+          </h3>
+          <p class="cards-paragraph flex-grow-1">
+            Empower your operations with autonomous, data-driven agents that
+            continuously optimize production, detect anomalies, reduce manual
+            intervention, and drive faster, more accurate decision-making.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div
+          class="service-card rounded p-4 shadow float-animation h-100 d-flex flex-column"
+        >
+          <h3 class="fs-6 fw-bold mb-1 text-white text-center flex-grow-1">
+            Unified Namespace (UNS)
+          </h3>
+          <p class="cards-paragraph flex-grow-1">
+            Unify all industrial data into a single, real-time source of truth
+            to ensure seamless system integration, enable cross-functional
+            collaboration, streamline enterprise data flow, and support
+            event-driven intelligence.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div
+          class="service-card rounded p-4 shadow float-animation h-100 d-flex flex-column"
+        >
+          <h3 class="fs-6 fw-bold mb-1 text-white text-center">
+            Composable and Modular Manufacturing Systems
+          </h3>
+          <p class="cards-paragraph flex-grow-1">
+            Build a flexible, scalable production environment with plug-and-play
+            components that adapt rapidly to market demands, support faster
+            deployment cycles, reduce engineering complexity, and evolve with
+            new technologies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<app-vertical-progress-bar>
+  <!-- Who We Are Section -->
+  <section
+    class="section-gradient py-5 homepage-section "
+    id="Who-We-Are-Section"
+  >
+    <div class="container mx-auto">
+      <!-- Headers -->
+      <header class="text-center mb-2">
+        <h2
+          class="fw-bold mb-2 text-black section-header"
+          data-section-index="0"
+        >
+          Who we are
+        </h2>
+        <div class="underline mx-auto"></div>
+      </header>
+      <header class="text-center mb-5">
+        <h4 class="fw-bold mb-3 text-black">
+          Driving the Future of <span class="highlight-text">Industry 4.0</span>
+        </h4>
+        <div class="underline-base mx-auto"></div>
+      </header>
+
+      <!--Descripcation -->
+      <div class="row g-5 align-items-center">
+        <div class="col-12 col-lg-6">
+          <p class="text-secondary mb-4">
+            <span class="fw-semibold text-main-color">Texvia</span> is a
+            technology-driven company transforming mission-critical industries
+            through advanced automation, digital integration, and operational
+            intelligence. Headquartered in Ireland, with strategic presence in
+            Egypt , we serve sectors including Food & Beverage, Life Sciences,
+            Energy, Smart Cities, Water & Wastewater, and Oil & Gas.
+          </p>
+          <p class="text-secondary mb-4">
+            Our mission is to deliver the next generation of
+            <span class="fw-semibold text-main-color"
+              >Industry 4.0 solutions</span
+            >—bridging data, systems, and human insight to improve performance,
+            resilience, and sustainability.
+          </p>
+          <div class="card p-4 shadow-sm">
+            <h5 class="fw-semibold mb-3 text-black">Global Presence</h5>
+            <div class="d-flex flex-wrap gap-3">
+              <div class="location-marker d-flex align-items-center">
+                <span
+                  class="location-dot bg-main-color rounded-circle me-2"
+                ></span>
+                <span class="fw-medium">Ireland (HQ)</span>
+              </div>
+              <div class="location-marker d-flex align-items-center">
+                <span
+                  class="location-dot bg-main-color rounded-circle me-2"
+                ></span>
+                <span class="fw-medium">Egypt</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6 position-relative">
+          <svg
+            viewBox="0 0 800 500"
+            xmlns="http://www.w3.org/2000/svg"
+            class="img-fluid"
+            role="img"
+            aria-label="Global presence map"
+          >
+            <path
+              d="M50,250 C100,200 200,150 300,200 C400,250 500,200 600,150 C700,100 750,200 750,250 C750,300 700,350 600,300 C500,250 400,300 300,350 C200,400 100,350 50,250 Z"
+              fill="#e2e8f0"
+              stroke="#cbd5e1"
+              stroke-width="2"
+            />
+            <path
+              d="M400,180 C420,170 440,160 460,170 C480,180 500,170 520,160 C540,150 560,160 570,180 C580,200 570,220 550,230 C530,240 510,230 490,220 C470,210 450,220 430,230 C410,240 390,230 380,210 C370,190 380,190 400,180 Z"
+              fill="#dbeafe"
+              stroke="#93c5fd"
+              stroke-width="1"
+            />
+            <path
+              d="M450,250 C470,240 490,230 510,240 C530,250 550,240 570,230 C590,220 610,230 620,250 C630,270 620,290 600,300 C580,310 560,300 540,290 C520,280 500,290 480,300 C460,310 440,300 430,280 C420,260 430,260 450,250 Z"
+              fill="#fef3c7"
+              stroke="#fcd34d"
+              stroke-width="1"
+            />
+            <circle cx="420" cy="190" r="10" fill="#6A05A6" class="map-dot" />
+            <text
+              x="420"
+              y="175"
+              text-anchor="middle"
+              fill="#6A05A6"
+              font-size="12"
+              font-weight="bold"
+            >
+              Ireland (HQ)
+            </text>
+
+            <circle cx="510" cy="250" r="8" fill="#6A05A6" class="map-dot" />
+            <text
+              x="510"
+              y="275"
+              text-anchor="middle"
+              fill="#6A05A6"
+              font-size="12"
+              font-weight="bold"
+            >
+              Egypt
+            </text>
+            <line
+              x1="420"
+              y1="190"
+              x2="435"
+              y2="200"
+              stroke="#6A05A6"
+              stroke-width="2"
+              stroke-dasharray="4"
+            />
+            <line
+              x1="435"
+              y1="200"
+              x2="510"
+              y2="250"
+              stroke="#6A05A6"
+              stroke-width="2"
+              stroke-dasharray="4"
+            />
+          </svg>
+          <div class="industry-graphic position-absolute top-0 end-0">
+            <svg
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Industry graphic"
+            >
+              <circle
+                cx="50"
+                cy="50"
+                r="45"
+                fill="none"
+                stroke="#6A05A6"
+                stroke-width="2"
+                stroke-dasharray="8 4"
+              />
+              <circle
+                cx="50"
+                cy="50"
+                r="30"
+                fill="none"
+                stroke="#3F1256"
+                stroke-width="2"
+              />
+              <circle cx="50" cy="50" r="15" fill="#6A05A6" opacity="0.2" />
+              <circle cx="50" cy="50" r="5" fill="#3F1256" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -----Industries------- -->
+    <div class="industries bg-white w-100 py-3 mt-5">
+      <div class="container mx-auto">
+        <div class="row bg-white text-center p-4 rounded-3">
+          <div class="col-12 mb-5">
+            <div>
+              <h4 class="text-black fw-bold">
+                Tailored Solutions for Your Sector
+              </h4>
+              <p class="fw-normal w-md-50 mx-auto">
+                Our expertise spans across multiple industries, with specialized
+                solutions for each sector's unique challenges.
+              </p>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 industries-cards">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <div
+                class="industries-icon rounded-circle d-flex justify-content-center align-items-center"
+              >
+                <svg
+                  class="icon-svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"
+                  />
+                </svg>
+              </div>
+              <div class="mt-3">
+                <h6 class="text-black">Food and Beverage</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 industries-cards">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <div
+                class="industries-icon rounded-circle d-flex justify-content-center align-items-center"
+              >
+                <svg
+                  class="icon-svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M7 2v2h1v14c0 2.21 1.79 4 4 4s4-1.79 4-4V4h1V2H7zm5 14c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm2-4c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm0-4c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-4 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"
+                  />
+                </svg>
+              </div>
+              <div class="mt-3">
+                <h6 class="text-black">Life Science</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 industries-cards">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <div
+                class="industries-icon rounded-circle d-flex justify-content-center align-items-center"
+              >
+                <svg
+                  class="icon-svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M7 2v11h3v9l7-12h-4l4-8z" />
+                </svg>
+              </div>
+              <div class="mt-3">
+                <h6 class="text-black">Energy Management</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 industries-cards">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <div
+                class="industries-icon rounded-circle d-flex justify-content-center align-items-center"
+              >
+                <svg
+                  class="icon-svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M15 11V5l-3-3-3 3v2H3v14h18V11h-6zm-8 8H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm6 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm6 12h-2v-2h2v2zm0-4h-2v-2h2v2z"
+                  />
+                </svg>
+              </div>
+              <div class="mt-3">
+                <h6 class="text-black">Smart City</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 industries-cards">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <div
+                class="industries-icon rounded-circle d-flex justify-content-center align-items-center"
+              >
+                <svg
+                  class="icon-svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-6.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14 0 3.63-2.65 6.2-6 6.2zm-4-8c0 2.21 1.79 4 4 4s4-1.79 4-4c0-.5-.18-1.21-.82-2.26L12 4.8l-3.18 4.94C8.18 10.79 8 11.5 8 12z"
+                  />
+                </svg>
+              </div>
+              <div class="mt-3">
+                <h6 class="text-black">Water/Wastewater</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 industries-cards">
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <div
+                class="industries-icon rounded-circle d-flex justify-content-center align-items-center"
+              >
+                <svg
+                  class="icon-svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 13V4.83C20 3.27 18.73 2 17.17 2c-.75 0-1.47.3-2 .83l-1.25 1.25c-.16-.05-.33-.08-.51-.08-.4 0-.77.12-1.08.32l2.76 2.76c.2-.31.32-.68.32-1.08 0-.18-.03-.34-.07-.51l1.25-1.25c.15-.15.36-.24.58-.24.46 0 .83.37.83.83V13h-6.85c-.3-.21-.57-.45-.82-.72l-1.4-1.55c-.19-.21-.43-.38-.69-.5-.31-.15-.65-.23-1-.23C6 10.01 5 11.01 5 12.25V13H2v6c0 1.1.9 2 2 2 0 .55.45 1 1 1h14c.55 0 1-.45 1-1 1.1 0 2-.9 2-2v-6h-2z"
+                  />
+                </svg>
+              </div>
+              <div class="mt-3">
+                <h6 class="text-black">Oil & Gas</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="mession bg-white shadow-sm">
+      <div class="row mt-5 pt-4 pb-2 mx-0 rounded-3 border-0 mission-container">
+        <div class="col-md-2 mb-2 mb-md-0">
+          <div
+            class="d-flex justify-content-center align-items-center bg-center"
+          >
+            <svg
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+              class="mission-icon mx-auto"
+              role="img"
+              aria-label="Industry 4.0 icon"
+            >
+              <circle
+                cx="50"
+                cy="50"
+                r="45"
+                fill="none"
+                stroke="#6A05A6"
+                stroke-width="2"
+              />
+              <text
+                x="50"
+                y="45"
+                text-anchor="middle"
+                fill="#6A05A6"
+                font-size="24"
+                font-weight="bold"
+              >
+                4.0
+              </text>
+              <text
+                x="50"
+                y="65"
+                text-anchor="middle"
+                fill="#6A05A6"
+                font-size="12"
+              >
+                INDUSTRY
+              </text>
+            </svg>
+          </div>
+        </div>
+        <div class="col-md-10 d-flex align-items-center">
+          <div>
+            <h4 class="fw-semibold mb-3 text-black mission-title">
+              Our Mission
+            </h4>
+            <p class="text-secondary text-center mission-text">
+              To deliver the next generation of
+              <span class="fw-semibold text-main-color"
+                >Industry 4.0 solutions</span
+              >
+              —bridging data, systems, and human insight to improve performance,
+              resilience, and sustainability.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pb-3 d-flex flex-wrap justify-content-center gap-2">
+        <span class="badge rounded-pill px-3 py-2 fw-medium">#Industry4.0</span>
+        <span class="badge rounded-pill px-3 py-2 fw-medium"
+          >#IndustrialAutomation</span
+        >
+        <span class="badge rounded-pill px-3 py-2 fw-medium"
+          >#DigitalIntegration</span
+        >
+        <span class="badge rounded-pill px-3 py-2 fw-medium"
+          >#OperationalIntelligence</span
+        >
+        <span class="badge rounded-pill px-3 py-2 fw-medium">#Ireland</span>
+        <span class="badge rounded-pill px-3 py-2 fw-medium">#UK</span>
+        <span class="badge rounded-pill px-3 py-2 fw-medium">#Egypt</span>
+      </div>
+    </section>
+  </section>
+
+  <!-- -----------what we do section----------------------->
+   <section
+    class="solutions py-5 position-relative homepage-section   "
+    id="Solutions-Section"
+  >
+    <header class="text-center mb-4">
+      <h2 class="fw-bold mb-2 text-black section-header" data-section-index="1">
+        what we do
+      </h2>
+      <div class="underline mx-auto"></div>
+    </header>
+     
+    <div
+      class="banner gradient-bg  position-relative gradient-bg p-4 p-md-5 mb-5 text-center d-flex justify-content-center align-items-center"
+    >
+    
+      <div class="position-relative ">
+        <h3 class="fw-bold text-white mb-4">
+          Smart Solutions for Critical Industries
+        </h3>
+        <p class="intro-text mx-auto" style="max-width: 768px">
+          Connecting data, people, and processes through intelligent
+          technologies that drive transformation across your operations.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="mb-5">
+        <div class="row g-4 solutions-container">
+          <div class="col-12 col-sm-6 col-lg-4 d-flex">
+            <div class="solution-card p-4 d-flex flex-column w-100">
+              <div class="glow-effect"></div>
+              <div class="d-flex align-items-start mb-3">
+                <div
+                  class="card-icon icon-container-fixed-size rounded-circle d-flex align-items-center justify-content-center me-3"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7 7V17"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M11 11V17"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M15 15V17"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M19 17V17"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="fs-5 fw-semibold mb-0">
+                  Digital Maturity Assessment
+                </h3>
+              </div>
+              <div class="assessment-animation my-3">
+                <div class="assessment-bar"></div>
+                <div class="assessment-bar"></div>
+                <div class="assessment-bar"></div>
+                <div class="assessment-bar"></div>
+                <div class="assessment-bar"></div>
+              </div>
+              <p class="small mb-4 flex-grow-1 solution-card-text">
+                Evaluate your organization's digital readiness and create a
+                roadmap for transformation
+              </p>
+              <button
+                class="btn learn-more-btn text-white w-100"
+                routerLink='/solutions'
+                fragment="1"
+                
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 d-flex">
+            <div class="solution-card p-4 d-flex flex-column w-100">
+              <div class="glow-effect"></div>
+              <div class="d-flex align-items-start mb-3">
+                <div
+                  class="card-icon icon-container-fixed-size rounded-circle d-flex align-items-center justify-content-center me-3"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M7 14L10 11L13 14L17 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 7H16"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="fs-5 fw-semibold mb-0">Digital Transformation</h3>
+              </div>
+              <div class="transform-animation my-3">
+                <div class="transform-line"></div>
+                <div class="transform-circle"></div>
+                <div class="transform-circle"></div>
+                <div class="transform-circle"></div>
+                <div class="transform-circle"></div>
+                <div class="transform-circle"></div>
+              </div>
+              <p class="small mb-4 flex-grow-1 solution-card-text">
+                Reimagine your business processes with digital technologies and
+                data-driven insights
+              </p>
+              <button
+                class="btn learn-more-btn text-white w-100"
+                [routerLink]="['/solutions']"
+                fragment="2"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 d-flex">
+            <div class="solution-card p-4 d-flex flex-column w-100">
+              <div class="glow-effect"></div>
+              <div class="d-flex align-items-start mb-3">
+                <div
+                  class="card-icon icon-container-fixed-size rounded-circle d-flex align-items-center justify-content-center me-3"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 4C12 5.10457 11.1046 6 10 6C8.89543 6 8 5.10457 8 4C8 2.89543 8.89543 2 10 2C11.1046 2 12 2.89543 12 4Z"
+                    />
+                    <path
+                      d="M16 15C16 16.1046 15.1046 17 14 17C12.8954 17 12 16.1046 12 15C12 13.8954 12.8954 13 14 13C15.1046 13 16 13.8954 16 15Z"
+                    />
+                    <path
+                      d="M7 13C7 14.1046 6.10457 15 5 15C3.89543 15 3 14.1046 3 13C3 11.8954 3.89543 11 5 11C6.10457 11 7 11.8954 7 13Z"
+                    />
+                    <path
+                      d="M20 8C20 9.10457 19.1046 10 18 10C16.8954 10 16 9.10457 16 8C16 6.89543 16.8954 6 18 6C19.1046 6 20 6.89543 20 8Z"
+                    />
+                    <path
+                      d="M10 6L14 13"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M14 13L18 10"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M5 11L10 6"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M14 13L5 15"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="fs-5 fw-semibold mb-0">AI-Ready IIoT Platform</h3>
+              </div>
+              <div class="iot-animation my-3">
+                <div class="device"></div>
+                <div class="device"></div>
+                <div class="device"></div>
+                <div class="device"></div>
+                <div class="signal"></div>
+                <div class="signal"></div>
+              </div>
+              <p class="small mb-4 flex-grow-1 solution-card-text">
+                Connect your industrial assets with an intelligent platform
+                built for AI and machine learning
+              </p>
+              <button
+                class="btn learn-more-btn text-white w-100"
+                [routerLink]="['/solutions']"
+                fragment="3"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 d-flex">
+            <div class="solution-card p-4 d-flex flex-column w-100">
+              <div class="glow-effect"></div>
+              <div class="d-flex align-items-start mb-3">
+                <div
+                  class="card-icon icon-container-fixed-size rounded-circle d-flex align-items-center justify-content-center me-3"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path d="M7 7H10V17H7V7Z" fill="currentColor" />
+                    <path d="M14 7H17V17H14V7Z" fill="currentColor" />
+                    <path
+                      d="M3 10H21"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M3 14H21"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="fs-5 fw-semibold mb-0">Smart Manufacturing</h3>
+              </div>
+              <div class="manufacturing-animation my-3">
+                <div class="conveyor"></div>
+                <div class="product"></div>
+                <div class="product"></div>
+              </div>
+              <p class="small mb-4 flex-grow-1 solution-card-text">
+                Optimize workflows, reduce waste, and increase uptime with
+                intelligent manufacturing solutions
+              </p>
+              <button
+                class="btn learn-more-btn text-white w-100"
+                [routerLink]="['/solutions']"
+                fragment="4"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 d-flex">
+            <div class="solution-card p-4 d-flex flex-column w-100">
+              <div class="glow-effect"></div>
+              <div class="d-flex align-items-start mb-3">
+                <div
+                  class="card-icon icon-container-fixed-size rounded-circle d-flex align-items-center justify-content-center me-3"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 3V9"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M12 9L17 14"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M12 9L7 14"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <rect
+                      x="10"
+                      y="14"
+                      width="4"
+                      height="7"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M5 21H19"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="fs-5 fw-semibold mb-0">Industrial Automation</h3>
+              </div>
+              <div class="automation-animation my-3">
+                <div class="robot-arm"><div class="robot-hand"></div></div>
+                <div class="sensor"></div>
+              </div>
+              <p class="small mb-4 flex-grow-1 solution-card-text">
+                Improve safety, speed, and precision with advanced robotics and
+                automation systems
+              </p>
+              <button
+                class="btn learn-more-btn text-white w-100"
+                [routerLink]="['/solutions']"
+                fragment="5"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 d-flex">
+            <div class="solution-card p-4 d-flex flex-column w-100">
+              <div class="glow-effect"></div>
+              <div class="d-flex align-items-start mb-3">
+                <div
+                  class="card-icon icon-container-fixed-size rounded-circle d-flex align-items-center justify-content-center me-3"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="9"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 8V16"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M8 12H16"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="fs-5 fw-semibold mb-0">PI System</h3>
+              </div>
+              <div class="pi-animation my-3">
+                <div class="pi-circle"></div>
+                <div class="pi-line"></div>
+              </div>
+              <p class="small mb-4 flex-grow-1 solution-card-text">
+                Collect, analyze, and visualize operational data with the
+                industry-leading PI System
+              </p>
+              <button
+                class="btn learn-more-btn text-white w-100"
+                [routerLink]="['/solutions']"
+                fragment="7"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-12 d-flex">
+            <div class="solution-card p-4 d-flex flex-column w-100">
+              <div class="glow-effect"></div>
+              <div class="d-flex align-items-start mb-3">
+                <div
+                  class="card-icon icon-container-fixed-size rounded-circle d-flex align-items-center justify-content-center me-3"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="3"
+                      y="3"
+                      width="18"
+                      height="18"
+                      rx="2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M7 14L10 11L13 14L17 10"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 7H16"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="fs-5 fw-semibold mb-0">
+                  Real-Time Data & Analytics
+                </h3>
+              </div>
+              <div class="analytics-animation my-3">
+                <div class="data-line"></div>
+                <div class="data-point"></div>
+                <div class="data-point"></div>
+                <div class="data-point"></div>
+                <div class="data-point"></div>
+                <div class="data-point"></div>
+              </div>
+              <p class="small mb-4 flex-grow-1 solution-card-text">
+                Transform raw data into actionable insights with real-time
+                analytics and visualization tools
+              </p>
+              <button
+                class="btn learn-more-btn text-white w-100"
+                [routerLink]="['/solutions']"
+                fragment="8"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div
+      class="banner  closing-cta-block rounded-custom-xl p-4 p-md-5 text-center shadow-lg"
+    >
+   
+      <div class=" position-relative z-3" > 
+         <h3 class="fw-bold text-white mb-3">
+        Want to see how these solutions come together in your environment?
+      </h3>
+      <p class="mb-4 cta-text mx-auto text-white" style="max-width: 768px">
+        Discover our industry use cases and see Texvia in action.
+      </p>
+      <button
+        class="btn btn-light banners-btn d-inline-flex align-items-center   "
+        (click)="goToSolution()"
+      >
+        <span class="cta-button-text me-2">Explore Our Solutions</span>
+        <svg
+          class="cta-button-arrow"
+          width="20"
+          height="20"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"
+          ></path>
+        </svg>
+      </button>
+      </div>
+     
+    </div>
+  </section> 
+
+  <!-- ------------How We Do------------------- -->
+  <div class="how-We-Do homepage-section " id="How-We-Do-Section">
+    <div class="container process-flow-container">
+      <div class="text-center mb-5">
+        <header class="mb-4">
+          <h2
+            class="fw-bold mb-1 text-black section-header"
+            data-section-index="2"
+          >
+            How we do it
+          </h2>
+          <div class="underline mx-auto"></div>
+        </header>
+        <h3 class="process-title">Our Process Flow</h3>
+        <p class="process-subtitle">
+          Follow our streamlined approach to transform your ideas into reality
+          through a series of strategic steps.
+        </p>
+      </div>
+      <div class="flow-track-wrapper position-relative">
+        <div class="flow-track d-flex" #flowTrack>
+          <div
+            class="flow-item card mx-3"
+            [ngClass]="{ active: currentInd === 0 }"
+          >
+            <div class="card-body d-flex flex-column h-100 shadow-sm">
+              <div class="flow-number">01</div>
+              <h5 class="flow-title card-title">Discover</h5>
+
+              <p class="flow-description card-text flex-grow-1">
+                Explore possibilities and uncover insights that will guide your
+                project’s direction.
+              </p>
+            </div>
+            <div class="pulse-ring"></div>
+          </div>
+          <div
+            class="flow-item card mx-3"
+            [ngClass]="{ active: currentInd === 1 }"
+          >
+            <div class="card-body d-flex flex-column h-100 shadow-sm">
+              <div class="flow-number">02</div>
+              <h5 class="flow-title card-title">Plan</h5>
+              <p class="flow-description card-text flex-grow-1">
+                Create a strategic roadmap with clear milestones and actionable
+                steps.
+              </p>
+            </div>
+            <div class="pulse-ring"></div>
+          </div>
+          <div
+            class="flow-item card mx-3"
+            [ngClass]="{ active: currentInd === 2 }"
+          >
+            <div class="card-body d-flex flex-column h-100 shadow-sm">
+              <div class="flow-number">03</div>
+
+              <h5 class="flow-title card-title">Create</h5>
+              <p class="flow-description card-text flex-grow-1">
+                Transform concepts into tangible solutions through expert
+                craftsmanship.
+              </p>
+            </div>
+            <div class="pulse-ring"></div>
+          </div>
+          <div
+            class="flow-item card mx-3"
+            [ngClass]="{ active: currentInd === 3 }"
+          >
+            <div class="card-body d-flex flex-column h-100 shadow-sm">
+              <div class="flow-number">04</div>
+              <h5 class="flow-title card-title">Validate</h5>
+              <p class="flow-description card-text flex-grow-1">
+                Test and refine your solution to ensure it meets all
+                requirements.
+              </p>
+            </div>
+            <div class="pulse-ring"></div>
+          </div>
+          <div
+            class="flow-item card mx-3"
+            [ngClass]="{ active: currentInd === 4 }"
+          >
+            <div class="card-body d-flex flex-column h-100 shadow-sm">
+              <div class="flow-number">05</div>
+              <h5 class="flow-title card-title">Launch</h5>
+              <p class="flow-description card-text flex-grow-1">
+                Deploy your solution with confidence and begin making an impact.
+              </p>
+            </div>
+            <div class="pulse-ring"></div>
+          </div>
+        </div>
+        <div class="flow-controls mt-4 d-flex justify-content-center gap-3">
+          <button
+            class="flow-control-btn btn btn-light"
+            (click)="moveLeft()"
+            [disabled]="currentInd === 0"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5 15L7.5 10L12.5 5"
+                stroke="#1e293b"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            class="flow-control-btn btn btn-light"
+            (click)="moveRight()"
+            [disabled]="currentInd >= 5 - visibleItems"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.5 5L12.5 10L7.5 15"
+                stroke="#1e293b"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flow-progress mt-3 d-flex justify-content-center gap-2">
+          <div
+            class="progress-dot"
+            [ngClass]="{ active: currentInd === 0 }"
+            (click)="goToItem(0)"
+          ></div>
+          <div
+            class="progress-dot"
+            [ngClass]="{ active: currentInd === 1 }"
+            (click)="goToItem(1)"
+          ></div>
+          <div
+            class="progress-dot"
+            [ngClass]="{ active: currentInd === 2 }"
+            (click)="goToItem(2)"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------ core values --------------- -->
+  <section
+    class="py-5 core-values-section homepage-section"
+    id="Core-Values-Section"
+  >
+    <div class="container">
+      <div class="text-center mb-5">
+        <div
+          class="d-inline-flex flex-nowrap align-items-center px-3 py-2 rounded-pill font-weight-medium mb-3 core-badge"
+        >
+          <span class="me-2 section-header" data-section-index="3">🔷</span>
+          Core Values
+        </div>
+        <h3>Guided by Values. Driven by Purpose.</h3>
+        <div class="values-underline mx-auto rounded"></div>
+      </div>
+
+      <div class="row mt-5 align-items-stretch">
+        <div class="col-xl-6 mb-4 mb-md-0">
+          <div class="mission-vision-card card h-100">
+            <div class="card-body p-5 position-relative">
+              <div class="circle-top-left rounded-circle"></div>
+              <div class="circle-bottom-right rounded-circle"></div>
+
+              <div class="position-relative mb-2 mb-lg-5">
+                <div class="d-flex align-items-center mb-3">
+                  <div
+                    class="icon-circle rounded-circle d-flex align-items-center justify-content-center me-2 me-lg-2 pulse-animation"
+                  >
+                    <svg
+                      class="w-50"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="card-title">Mission</h4>
+                </div>
+                <p class="ps-5 border-start py-2 text-secondary">
+                  To deliver innovative, secure, and sustainable digital
+                  solutions that enhance industrial performance across the
+                  globe.
+                </p>
+              </div>
+
+              <div class="position-relative">
+                <div class="d-flex align-items-center mb-1 mb-lg-3">
+                  <div
+                    class="icon-circle rounded-circle d-flex align-items-center justify-content-center me-3 pulse-animation"
+                  >
+                    <svg
+                      class="w-50"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="card-title">Vision</h4>
+                </div>
+                <p class="text-secondary ps-5 border-start py-2">
+                  A smarter, more connected world where technology drives
+                  efficiency, safety, and environmental stewardship.
+                </p>
+              </div>
+
+              <div class="mt-5">
+                <svg
+                  class="w-100"
+                  viewBox="0 0 400 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="200"
+                    cy="100"
+                    r="80"
+                    fill="#6a05a603"
+                    stroke="#6A05A6"
+                    stroke-width="2"
+                    stroke-dasharray="5,3"
+                  />
+                  <circle cx="200" cy="100" r="8" fill="#6A05A6" />
+                  <circle cx="150" cy="70" r="6" fill="#6A05A6" />
+                  <circle cx="250" cy="70" r="6" fill="#6A05A6" />
+                  <circle cx="170" cy="150" r="6" fill="#6A05A6" />
+                  <circle cx="230" cy="150" r="6" fill="#6A05A6" />
+                  <circle cx="130" cy="120" r="6" fill="#6A05A6" />
+                  <circle cx="270" cy="120" r="6" fill="#6A05A6" />
+                  <line
+                    x1="200"
+                    y1="100"
+                    x2="150"
+                    y2="70"
+                    stroke="#6A05A6"
+                    stroke-width="1.5"
+                  />
+                  <line
+                    x1="200"
+                    y1="100"
+                    x2="250"
+                    y2="70"
+                    stroke="#6A05A6"
+                    stroke-width="1.5"
+                  />
+                  <line
+                    x1="200"
+                    y1="100"
+                    x2="170"
+                    y2="150"
+                    stroke="#6A05A6"
+                    stroke-width="1.5"
+                  />
+                  <line
+                    x1="200"
+                    y1="100"
+                    x2="230"
+                    y2="150"
+                    stroke="#6A05A6"
+                    stroke-width="1.5"
+                  />
+                  <line
+                    x1="200"
+                    y1="100"
+                    x2="130"
+                    y2="120"
+                    stroke="#6A05A6"
+                    stroke-width="1.5"
+                  />
+                  <line
+                    x1="200"
+                    y1="100"
+                    x2="270"
+                    y2="120"
+                    stroke="#6A05A6"
+                    stroke-width="1.5"
+                  />
+                  <text
+                    x="150"
+                    y="70"
+                    font-size="13"
+                    text-anchor="middle"
+                    fill="#0c4a6e"
+                    font-weight="bold"
+                  >
+                    🏭
+                  </text>
+                  <text
+                    x="250"
+                    y="70"
+                    font-size="13"
+                    text-anchor="middle"
+                    fill="#0c4a6e"
+                    font-weight="bold"
+                  >
+                    🔧
+                  </text>
+                  <text
+                    x="170"
+                    y="150"
+                    font-size="13"
+                    text-anchor="middle"
+                    fill="#0c4a6e"
+                    font-weight="bold"
+                  >
+                    🌱
+                  </text>
+                  <text
+                    x="230"
+                    y="150"
+                    font-size="13"
+                    text-anchor="middle"
+                    fill="#0c4a6e"
+                    font-weight="bold"
+                  >
+                    📊
+                  </text>
+                  <text
+                    x="130"
+                    y="120"
+                    font-size="13"
+                    text-anchor="middle"
+                    fill="#0c4a6e"
+                    font-weight="bold"
+                  >
+                    💻
+                  </text>
+                  <text
+                    x="270"
+                    y="120"
+                    font-size="13"
+                    text-anchor="middle"
+                    fill="#0c4a6e"
+                    font-weight="bold"
+                  >
+                    🔒
+                  </text>
+                  <text
+                    x="200"
+                    y="105"
+                    font-size="16"
+                    text-anchor="middle"
+                    fill="#6A05A6"
+                    font-weight="bold"
+                  >
+                    🌐
+                  </text>
+                </svg>
+              </div>
+
+              <div
+                class="mt-4 d-flex flex-wrap justify-content-center gap-1 keywords-container"
+              >
+                <p
+                  class="px-2 px-lg-3 py-1 rounded-pill keyword-badge keyword-blue"
+                >
+                  sustainable solutions
+                </p>
+                <p
+                  class="px-2 px-lg-3 py-1 rounded-pill keyword-badge keyword-emerald"
+                >
+                  industrial innovation
+                </p>
+                <p
+                  class="px-2 px-lg-3 py-1 rounded-pill keyword-badge keyword-cyan"
+                >
+                  digital stewardship
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6 mt-3 mt-xl-0">
+          <div class="card core-values-card h-100">
+            <div class="card-body p-5">
+              <h3 class="card-title text-center mb-4">Core Values</h3>
+              <div class="row g-4 d-flex align-items-stretch">
+                <div class="col-md-6">
+                  <div class="value-card card border-left-blue h-100">
+                    <div class="card-body p-4 d-flex flex-column">
+                      <div class="d-flex align-items-center mb-2">
+                        <div class="value-icon fs-3 me-1 me-xl-2 floating">
+                          💡
+                        </div>
+                        <h6 class="mb-0 pe-1">Innovation</h6>
+                      </div>
+                      <small
+                        class="h6 fw-normal text-center flex-grow-1 text-secondary"
+                      >
+                        We lead with creativity and curiosity to build what's
+                        next.
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="value-card card border-left-indigo h-100">
+                    <div class="card-body p-4 d-flex flex-column">
+                      <div class="d-flex align-items-center mb-2">
+                        <div
+                          class="value-icon fs-3 me-1 me-xl-2 floating"
+                          style="animation-delay: 0.5s"
+                        >
+                          🤝
+                        </div>
+                        <h6 class="mb-0 pe-1">Integrity</h6>
+                      </div>
+                      <small
+                        class="h6 fw-normal text-center flex-grow-1 text-secondary"
+                      >
+                        We build trust through transparency, honesty, and
+                        reliability.
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="value-card card border-left-emerald h-100">
+                    <div class="card-body p-4 d-flex flex-column">
+                      <div class="d-flex align-items-center mb-2">
+                        <div
+                          class="value-icon fs-3 me-0 me-xl-2 floating"
+                          style="animation-delay: 1s"
+                        >
+                          🌱
+                        </div>
+                        <h6 class="mb-0 pe-1">Sustainability</h6>
+                      </div>
+                      <small
+                        class="h6 fw-normal text-center flex-grow-1 text-secondary"
+                      >
+                        We believe in technology that respects the planet and
+                        future generations.
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="value-card card border-left-cyan h-100">
+                    <div class="card-body p-4 d-flex flex-column">
+                      <div class="d-flex align-items-center mb-2">
+                        <div
+                          class="value-icon fs-3 me-1 me-xl-2 floating"
+                          style="animation-delay: 1.5s"
+                        >
+                          🎯
+                        </div>
+                        <h6 class="mb-0 pe-1">Customer-Centricity</h6>
+                      </div>
+                      <small
+                        class="h6 fw-normal text-center flex-grow-1 text-secondary"
+                      >
+                        We listen, adapt, and deliver solutions tailored to your
+                        unique needs.
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mt-4 rounded p-2 p-xl-4 rounded-3 values-in-action-container"
+              >
+                <h4 class="card-title mb-3">Our Values in Action</h4>
+                <div class="d-flex flex-column gap-3">
+                  <div class="d-flex align-items-start">
+                    <div
+                      class="flex-shrink-0 icon-circle-small rounded-circle d-flex align-items-center justify-content-center me-3"
+                    >
+                      <svg
+                        class="w-50"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </div>
+                    <p class="text-sm mb-0">
+                      <span class="font-weight-medium">Innovation:</span>
+                      20% of our resources dedicated to R&D and emerging
+                      technologies
+                    </p>
+                  </div>
+                  <div class="d-flex align-items-start">
+                    <div
+                      class="flex-shrink-0 icon-circle-small rounded-circle d-flex align-items-center justify-content-center me-3"
+                    >
+                      <svg
+                        class="w-50"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </div>
+                    <p class="text-sm mb-0">
+                      <span class="font-weight-medium">Integrity:</span>
+                      Transparent reporting and ethical data practices in all
+                      operations
+                    </p>
+                  </div>
+                  <div class="d-flex align-items-start">
+                    <div
+                      class="flex-shrink-0 icon-circle-small rounded-circle d-flex align-items-center justify-content-center me-3"
+                    >
+                      <svg
+                        class="w-50"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </div>
+                    <p class="text-sm mb-0">
+                      <span class="font-weight-medium">Sustainability:</span>
+                      Carbon-neutral operations and solutions that reduce
+                      environmental impact
+                    </p>
+                  </div>
+                  <div class="d-flex align-items-start">
+                    <div
+                      class="flex-shrink-0 icon-circle-small rounded-circle d-flex align-items-center justify-content-center me-3"
+                    >
+                      <svg
+                        class="w-50"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </div>
+                    <p class="text-sm mb-0">
+                      <span class="font-weight-medium"
+                        >Customer-Centricity:</span
+                      >
+                      98% client retention rate through personalized support and
+                      solutions
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer-Centricity -->
+  <section class="py-5 customer-centricity-section position-relative z-1">
+    <div class="container">
+      <div class="customer-centricity">
+        <div class="row align-items-center">
+          <div class="col-10 col-md mx-auto">
+            <h3 class="fw-bold mb-3 customer-centricity-title">
+              🎯 Customer-Centricity
+            </h3>
+            <p class="text-secondary mb-4">
+              At the heart of everything we do is our commitment to our
+              customers. We believe in building lasting relationships based on
+              trust, understanding, and mutual success.
+            </p>
+            <div class="row g-4 mt-4 text-center">
+              <div class="col-md-4">
+                <div
+                  class="card h-100 p-4 rounded-xl shadow-sm customer-feature-card border"
+                >
+                  <h5 class="mb-2 customer-feature-title">
+                    Responsive Support
+                  </h5>
+                  <p class="text-sm text-muted mb-0">
+                    We're always there when you need us, providing timely and
+                    effective solutions.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="card h-100 p-4 rounded-xl shadow-sm customer-feature-card border"
+                >
+                  <h5 class="mb-2 customer-feature-title">
+                    Tailored Solutions
+                  </h5>
+                  <p class="text-sm text-muted mb-0">
+                    We understand your unique challenges and create solutions
+                    that fit your specific needs.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div
+                  class="card h-100 p-4 rounded-xl shadow-sm customer-feature-card border"
+                >
+                  <h5 class="mb-2 customer-feature-title">
+                    Long-term Partnership
+                  </h5>
+                  <p class="text-sm text-muted mb-0">
+                    We're committed to your success beyond the initial
+                    implementation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-------- why texvia-------->
+  <section class="aboutTexvia homepage-section" id="Why-Texvia-Section">
+    
+    <div
+      class="py-5 px-3 px-sm-4 px-lg-5 mx-auto my-5 what-sets-us-apart-section"
+    >
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-12 col-lg-6">
+            <div class="d-flex flex-column h-100">
+              <div class="mb-4">
+                <h2
+                  class="fs-2 fw-bold mb-3 section-title section-header"
+                  data-section-index="4"
+                >
+                  What Sets Us Apart
+                </h2>
+                <p class="text-secondary mt-4">
+                  Texvia combines
+                  <span class="fw-semibold"
+                    >world-class technical expertise</span
+                  >
+                  with
+                  <span class="fw-semibold"
+                    >cost-effective service delivery</span
+                  >, thanks to our cross-regional presence in Europe, the Middle
+                  East, and North Africa.
+                </p>
+              </div>
+
+              <div class="mt-4">
+                <h3 class="fs-5 fw-semibold mb-3">
+                  We're trusted by global leaders for our:
+                </h3>
+                <ul class="list-unstyled space-y-3">
+                  <li
+                    class="feature-list-item d-flex align-items-center p-3 rounded"
+                  >
+                    <span class="check-icon me-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="blue"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="blue"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      >High-quality industrial automation services at lower
+                      operational costs</span
+                    >
+                  </li>
+                  <li
+                    class="feature-list-item d-flex align-items-center p-3 rounded"
+                  >
+                    <span class="check-icon me-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="blue"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      >Deep domain knowledge across manufacturing
+                      industries</span
+                    >
+                  </li>
+                  <li
+                    class="feature-list-item d-flex align-items-center p-3 rounded"
+                  >
+                    <span class="check-icon me-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="blue"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      >Scalable digital architectures tailored for industrial
+                      growth</span
+                    >
+                  </li>
+                  <li
+                    class="feature-list-item d-flex align-items-center p-3 rounded"
+                  >
+                    <span class="check-icon me-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="blue"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      >Responsive, personalized customer support for IoT
+                      solutions</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-4">
+                <button
+                  class="btn btn-primary cta-button rounded-pill fw-semibold"
+                  (click)="talkToExpert()"
+                >
+                  <span>Talk to a Digital Consultant</span>
+                  <span class="cta-button-icon ms-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 position-relative">
+            <div
+              class="card bg-white rounded-3 shadow-sm p-4 p-md-5 position-relative overflow-hidden h-100"
+            >
+              <h3 class="fs-5 fw-semibold mb-3">
+                Global Expertise, Local Delivery
+              </h3>
+              <p class="text-muted mb-4">
+                Our cross-regional presence enables us to deliver premium
+                industrial automation and IoT solutions at competitive rates.
+              </p>
+              <div class="global-presence-map">
+                <svg viewBox="0 0 1000 500" class="w-100 h-100">
+                  <path
+                    d="M171,157.5c0.6,2.2,1.1,4.4,1.7,6.6c-0.2,0.2-0.5,0.5-0.7,0.7c-1.3-0.4-2.6-0.8-3.9-1.2c-0.2,0.1-0.4,0.2-0.6,0.3c0.5,1.9,1,3.8,1.6,5.7c-1.3,0.5-1.3,0.5-2.8-0.1c-0.2,0.1-0.4,0.2-0.6,0.3c0.4,1.9,0.8,3.8,1.2,5.7c-0.2,0.1-0.4,0.2-0.6,0.3c-1.5-1-3-2-4.5-2.9c-0.2,0.1-0.5,0.2-0.7,0.3c0.3,1.9,0.5,3.8,0.8,5.7c-0.2,0-0.4,0.1-0.6,0.1c-1.1-1.5-2.2-2.9-3.3-4.4c-0.2,0-0.4,0.1-0.6,0.1c-0.1,1.9-0.2,3.8-0.3,5.7c-0.2,0-0.4,0-0.7,0c-0.7-1.7-1.4-3.4-2.1-5.1c-0.2,0-0.4,0-0.7,0c-0.6,1.8-1.2,3.6-1.8,5.4c-0.2,0-0.4-0.1-0.7-0.1c-0.3-1.8-0.6-3.6-0.9-5.4c-0.2,0-0.4-0.1-0.7-0.1c-1,1.6-2,3.2-3,4.8c-0.2-0.1-0.4-0.1-0.6-0.2c0.1-1.9,0.2-3.8,0.3-5.7c-0.2-0.1-0.4-0.1-0.6-0.2c-1.4,1.3-2.8,2.6-4.2,3.9c-0.2-0.1-0.4-0.2-0.6-0.3c0.5-1.8,1-3.6,1.5-5.4c-0.2-0.1-0.4-0.2-0.5-0.3c-1.7,0.9-3.4,1.8-5.1,2.7c-0.2-0.1-0.3-0.2-0.5-0.4c0.9-1.6,1.8-3.3,2.7-4.9c-0.1-0.1-0.3-0.2-0.4-0.4c-1.8,0.5-3.7,1-5.5,1.5c-0.1-0.1-0.3-0.3-0.4-0.4c1.2-1.4,2.4-2.8,3.7-4.3c-0.1-0.1-0.2-0.3-0.3-0.4c-1.9,0.1-3.8,0.2-5.7,0.3c-0.1-0.2-0.2-0.3-0.3-0.5c1.5-1.2,3-2.3,4.5-3.5c-0.1-0.2-0.1-0.3-0.2-0.5c-1.9-0.3-3.8-0.6-5.7-0.9c0-0.2-0.1-0.3-0.1-0.5c1.7-0.9,3.4-1.8,5.1-2.6c0-0.2,0-0.3-0.1-0.5c-1.8-0.7-3.7-1.3-5.5-2c0-0.2,0-0.3,0-0.5c1.8-0.5,3.6-1.1,5.4-1.6c0-0.2,0.1-0.3,0.1-0.5c-1.7-1-3.4-2.1-5.1-3.1c0.1-0.2,0.1-0.3,0.2-0.5c1.9-0.2,3.8-0.3,5.7-0.5c0.1-0.1,0.1-0.3,0.2-0.4c-1.5-1.4-3-2.7-4.5-4.1c0.1-0.1,0.2-0.3,0.3-0.4c1.9,0.2,3.8,0.4,5.7,0.6c0.1-0.1,0.2-0.3,0.3-0.4c-1.2-1.6-2.5-3.3-3.7-4.9c0.1-0.1,0.3-0.2,0.4-0.3c1.8,0.6,3.6,1.1,5.4,1.7c0.2-0.1,0.3-0.2,0.5-0.3c-0.9-1.8-1.8-3.6-2.7-5.4c0.2-0.1,0.3-0.2,0.5-0.2c1.6,0.9,3.2,1.8,4.8,2.7c0.2-0.1,0.4-0.1,0.5-0.2c-0.5-1.9-1-3.8-1.6-5.7c0.2-0.1,0.4-0.1,0.6-0.2c1.4,1.2,2.7,2.4,4.1,3.6c0.2,0,0.4-0.1,0.6-0.1c-0.2-1.9-0.3-3.8-0.5-5.7c0.2,0,0.4-0.1,0.6-0.1c1.1,1.5,2.2,3,3.3,4.5c0.2,0,0.4,0,0.7,0c0.2-1.9,0.4-3.8,0.5-5.7c0.2,0,0.4,0,0.7,0c0.8,1.7,1.5,3.4,2.3,5.1c0.2,0,0.4,0,0.7,0.1c0.5-1.8,1-3.7,1.6-5.5c0.2,0,0.4,0.1,0.7,0.1c0.4,1.8,0.8,3.6,1.3,5.4c0.2,0.1,0.4,0.1,0.7,0.2c0.9-1.7,1.7-3.3,2.6-5c0.2,0.1,0.4,0.1,0.6,0.2c0,1.9,0,3.8,0,5.7c0.2,0.1,0.4,0.1,0.6,0.2c1.2-1.4,2.4-2.9,3.6-4.3c0.2,0.1,0.4,0.2,0.6,0.3c-0.4,1.8-0.8,3.7-1.2,5.5c0.2,0.1,0.4,0.2,0.5,0.3c1.5-1.1,3-2.2,4.5-3.3c0.2,0.1,0.3,0.2,0.5,0.3c-0.8,1.7-1.5,3.4-2.3,5.1c0.1,0.1,0.3,0.2,0.4,0.4c1.7-0.7,3.5-1.4,5.2-2.1c0.1,0.1,0.3,0.3,0.4,0.4c-1.1,1.5-2.2,3-3.3,4.5c0.1,0.1,0.2,0.3,0.3,0.4c1.9-0.3,3.7-0.6,5.6-0.9c0.1,0.2,0.2,0.3,0.2,0.5c-1.4,1.2-2.8,2.5-4.2,3.7c0.1,0.2,0.1,0.3,0.2,0.5c1.9,0.1,3.8,0.2,5.7,0.3c0,0.2,0.1,0.3,0.1,0.5c-1.6,0.9-3.3,1.9-4.9,2.8c0,0.2,0,0.3,0.1,0.5c1.8,0.5,3.7,1,5.5,1.6c0,0.2,0,0.3,0,0.5c-1.8,0.6-3.5,1.3-5.3,1.9c0,0.2-0.1,0.3-0.1,0.5c1.7,0.9,3.4,1.8,5.1,2.8c-0.1,0.2-0.1,0.3-0.2,0.5c-1.9,0.3-3.7,0.6-5.6,0.9c-0.1,0.1-0.1,0.3-0.2,0.4c1.5,1.3,2.9,2.6,4.4,3.9c-0.1,0.1-0.2,0.3-0.3,0.4c-1.8-0.1-3.7-0.1-5.5-0.2c-0.1,0.1-0.2,0.3-0.3,0.4c1.3,1.6,2.5,3.1,3.8,4.7c-0.1,0.1-0.3,0.2-0.4,0.3c-1.7-0.5-3.5-0.9-5.2-1.4c-0.2,0.1-0.3,0.2-0.5,0.3c0.9,1.8,1.9,3.5,2.8,5.3c-0.2,0.1-0.3,0.2-0.5,0.3c-1.5-0.8-3.1-1.7-4.6-2.5c-0.2,0.1-0.4,0.2-0.6,0.2c0.6,1.8,1.1,3.7,1.7,5.5c-0.2,0.1-0.4,0.1-0.6,0.2c-1.3-1.2-2.5-2.3-3.8-3.5c-0.2,0.1-0.4,0.1-0.6,0.2c0.2,1.9,0.4,3.8,0.6,5.7c-0.2,0-0.4,0.1-0.6,0.1c-1-1.5-2-3.1-3-4.6c-0.2,0-0.4,0.1-0.7,0.1c-0.1,1.9-0.3,3.8-0.4,5.7c-0.2,0-0.4,0-0.7,0c-0.7-1.7-1.5-3.5-2.2-5.2c-0.2,0-0.5,0-0.7,0c-0.5,1.8-1,3.7-1.5,5.5C829,281,828.8,281.1,828.6,281.2z"
+                    fill="#e2e8f0"
+                  />
+                  <path
+                    d="M568.6,192.1c-0.3,1.9-0.5,3.8-0.8,5.7c-0.2,0-0.4,0-0.6,0c-0.7-1.7-1.4-3.5-2.1-5.2c-0.2,0-0.5,0-0.7,0c-0.6,1.8-1.2,3.6-1.8,5.4c-0.2,0-0.5-0.1-0.7-0.1c-0.3-1.8-0.6-3.6-0.9-5.4c-0.2,0-0.5-0.1-0.7-0.1c-1,1.6-2,3.2-3,4.8c-0.2-0.1-0.4-0.1-0.6-0.2c0.1-1.9,0.2-3.8,0.3-5.7c-0.2-0.1-0.4-0.1-0.6-0.2c-1.4,1.3-2.8,2.6-4.2,3.9c-0.2-0.1-0.4-0.2-0.6-0.3c0.5-1.8,1-3.6,1.5-5.4c-0.2-0.1-0.4-0.2-0.5-0.3c-1.7,0.9-3.4,1.8-5.1,2.7c-0.2-0.1-0.3-0.2-0.5-0.4c0.9-1.6,1.8-3.3,2.7-4.9c-0.1-0.1-0.3-0.2-0.4-0.4c-1.8,0.5-3.7,1-5.5,1.5c-0.1-0.1-0.3-0.3-0.4-0.4c1.2-1.4,2.4-2.8,3.7-4.3c-0.1-0.1-0.2-0.3-0.3-0.4c-1.9,0.1-3.8,0.2-5.7,0.3c-0.1-0.2-0.2-0.3-0.3-0.5c1.5-1.2,3-2.3,4.5-3.5c-0.1-0.2-0.1-0.3-0.2-0.5c-1.9-0.3-3.8-0.6-5.7-0.9c0-0.2-0.1-0.3-0.1-0.5c1.7-0.9,3.4-1.8,5.1-2.6c0-0.2,0-0.3-0.1-0.5c-1.8-0.7-3.7-1.3-5.5-2c0-0.2,0-0.3,0-0.5c1.8-0.5,3.6-1.1,5.4-1.6c0-0.2,0.1-0.3,0.1-0.5c-1.7-1-3.4-2.1-5.1-3.1c0.1-0.2,0.1-0.3,0.2-0.5c1.9-0.2,3.8-0.3,5.7-0.5c0.1-0.1,0.1-0.3,0.2-0.4c-1.5-1.4-3-2.7-4.5-4.1c0.1-0.1,0.2-0.3,0.3-0.4c1.9,0.2,3.8,0.4,5.7,0.6c0.1-0.1,0.2-0.3,0.3-0.4c-1.2-1.6-2.5-3.3-3.7-4.9c0.1-0.1,0.3-0.2,0.4-0.3c1.8,0.6,3.6,1.1,5.4,1.7c0.2-0.1,0.3-0.2,0.5-0.3c-0.9-1.8-1.8-3.6-2.7-5.4c0.2-0.1,0.3-0.2,0.5-0.2c1.6,0.9,3.2,1.8,4.8,2.7c0.2-0.1,0.4-0.1,0.5-0.2c-0.5-1.9-1-3.8-1.6-5.7c0.2-0.1,0.4-0.1,0.6-0.2c1.4,1.2,2.7,2.4,4.1,3.6c0.2,0,0.4-0.1,0.6-0.1c-0.2-1.9-0.3-3.8-0.5-5.7c0.2,0,0.4-0.1,0.6-0.1c1.1,1.5,2.2,3,3.3,4.5c0.2,0,0.4,0,0.7,0c0.2-1.9,0.4-3.8,0.5-5.7c0.2,0,0.4,0,0.7,0c0.8,1.7,1.5,3.4,2.3,5.1c0.2,0,0.4,0,0.7,0.1c0.5-1.8,1-3.7,1.6-5.5c0.2,0,0.4,0.1,0.7,0.1c0.4,1.8,0.8,3.6,1.3,5.4c0.2,0.1,0.4,0.1,0.7,0.2c0.9-1.7,1.7-3.3,2.6-5c0.2,0.1,0.4,0.1,0.6,0.2c0,1.9,0,3.8,0,5.7c0.2,0.1,0.4,0.1,0.6,0.2c1.2-1.4,2.4-2.9,3.6-4.3c0.2,0.1,0.4,0.2,0.6,0.3c-0.4,1.8-0.8,3.7-1.2,5.5c0.2,0.1,0.4,0.2,0.5,0.3c1.5-1.1,3-2.2,4.5-3.3c0.2,0.1,0.3,0.2,0.5,0.3c-0.8,1.7-1.5,3.4-2.3,5.1c0.1,0.1,0.3,0.2,0.4,0.4c1.7-0.7,3.5-1.4,5.2-2.1c0.1,0.1,0.3,0.3,0.4,0.4c-1.1,1.5-2.2,3-3.3,4.5c0.1,0.1,0.2,0.3,0.3,0.4c1.9-0.3,3.7-0.6,5.6-0.9c0.1,0.2,0.2,0.3,0.2,0.5c-1.4,1.2-2.8,2.5-4.2,3.7c0.1,0.2,0.1,0.3,0.2,0.5c1.9,0.1,3.8,0.2,5.7,0.3c0,0.2,0.1,0.3,0.1,0.5c-1.6,0.9-3.3,1.9-4.9,2.8c0,0.2,0,0.3,0.1,0.5c1.8,0.5,3.7,1,5.5,1.6c0,0.2,0,0.3,0,0.5c-1.8,0.6-3.5,1.3-5.3,1.9c0,0.2-0.1,0.3-0.1,0.5c1.7,0.9,3.4,1.8,5.1,2.8c-0.1,0.2-0.1,0.3-0.2,0.5c-1.9,0.3-3.7,0.6-5.6,0.9c-0.1,0.1-0.1,0.3-0.2,0.4c1.5,1.3,2.9,2.6,4.4,3.9c-0.1,0.1-0.2,0.3-0.3,0.4c-1.8-0.1-3.7-0.1-5.5-0.2c-0.1,0.1-0.2,0.3-0.3,0.4c1.3,1.6,2.5,3.1,3.8,4.7c-0.1,0.1-0.3,0.2-0.4,0.3c-1.7-0.5-3.5-0.9-5.2-1.4c-0.2,0.1-0.3,0.2-0.5,0.3c0.9,1.8,1.9,3.5,2.8,5.3c-0.2,0.1-0.3,0.2-0.5,0.3c-1.5-0.8-3.1-1.7-4.6-2.5c-0.2,0.1-0.4,0.2-0.6,0.2c0.6,1.8,1.1,3.7,1.7,5.5c-0.2,0.1-0.4,0.1-0.6,0.2c-1.3-1.2-2.5-2.3-3.8-3.5c-0.2,0.1-0.4,0.1-0.6,0.2c0.2,1.9,0.4,3.8,0.6,5.7c-0.2,0-0.4,0.1-0.6,0.1c-1-1.5-2-3.1-3-4.6c-0.2,0-0.4,0.1-0.7,0.1c-0.1,1.9-0.3,3.8-0.4,5.7c-0.2,0-0.4,0-0.7,0c-0.7-1.7-1.5-3.5-2.2-5.2c-0.2,0-0.5,0-0.7,0c-0.5,1.8-1,3.7-1.5,5.5C829,281,828.8,281.1,828.6,281.2z"
+                    fill="#e2e8f0"
+                  />
+                  <path
+                    d="M371.6,249.1c-0.3,1.9-0.5,3.8-0.8,5.7c-0.2,0-0.4,0-0.6,0c-0.7-1.7-1.4-3.5-2.1-5.2c-0.2,0-0.5,0-0.7,0c-0.6,1.8-1.2,3.6-1.8,5.4c-0.2,0-0.5-0.1-0.7-0.1c-0.3-1.8-0.6-3.6-0.9-5.4c-0.2,0-0.5-0.1-0.7-0.1c-1,1.6-2,3.2-3,4.8c-0.2-0.1-0.4-0.1-0.6-0.2c0.1-1.9,0.2-3.8,0.3-5.7c-0.2-0.1-0.4-0.1-0.6-0.2c-1.4,1.3-2.8,2.6-4.2,3.9c-0.2-0.1-0.4-0.2-0.6-0.3c0.5-1.8,1-3.6,1.5-5.4c-0.2-0.1-0.4-0.2-0.5-0.3c-1.7,0.9-3.4,1.8-5.1,2.7c-0.2-0.1-0.3-0.2-0.5-0.4c0.9-1.6,1.8-3.3,2.7-4.9c-0.1-0.1-0.3-0.2-0.4-0.4c-1.8,0.5-3.7,1-5.5,1.5c-0.1-0.1-0.3-0.3-0.4-0.4c1.2-1.4,2.4-2.8,3.7-4.3c-0.1-0.1-0.2-0.3-0.3-0.4c-1.9,0.1-3.8,0.2-5.7,0.3c-0.1-0.2-0.2-0.3-0.3-0.5c1.5-1.2,3-2.3,4.5-3.5c-0.1-0.2-0.1-0.3-0.2-0.5c-1.9-0.3-3.8-0.6-5.7-0.9c0-0.2-0.1-0.3-0.1-0.5c1.7-0.9,3.4-1.8,5.1-2.6c0-0.2,0-0.3-0.1-0.5c-1.8-0.7-3.7-1.3-5.5-2c0-0.2,0-0.3,0-0.5c1.8-0.5,3.6-1.1,5.4-1.6c0-0.2,0.1-0.3,0.1-0.5c-1.7-1-3.4-2.1-5.1-3.1c0.1-0.2,0.1-0.3,0.2-0.5c1.9-0.2,3.8-0.3,5.7-0.5c0.1-0.1,0.1-0.3,0.2-0.4c-1.5-1.4-3-2.7-4.5-4.1c0.1-0.1,0.2-0.3,0.3-0.4c1.9,0.2,3.8,0.4,5.7,0.6c0.1-0.1,0.2-0.3,0.3-0.4c-1.2-1.6-2.5-3.3-3.7-4.9c0.1-0.1,0.3-0.2,0.4-0.3c1.8,0.6,3.6,1.1,5.4,1.7c0.2-0.1,0.3-0.2,0.5-0.3c-0.9-1.8-1.8-3.6-2.7-5.4c0.2-0.1,0.3-0.2,0.5-0.2c1.6,0.9,3.2,1.8,4.8,2.7c0.2-0.1,0.4-0.1,0.5-0.2c-0.5-1.9-1-3.8-1.6-5.7c0.2-0.1,0.4-0.1,0.6-0.2c1.4,1.2,2.7,2.4,4.1,3.6c0.2,0,0.4-0.1,0.6-0.1c-0.2-1.9-0.3-3.8-0.5-5.7c0.2,0,0.4-0.1,0.6-0.1c1.1,1.5,2.2,3,3.3,4.5c0.2,0,0.4,0,0.7,0c0.2-1.9,0.4-3.8,0.5-5.7c0.2,0,0.4,0,0.7,0c0.8,1.7,1.5,3.4,2.3,5.1c0.2,0,0.4,0,0.7,0.1c0.5-1.8,1-3.7,1.6-5.5c0.2,0,0.4,0.1,0.7,0.1c0.4,1.8,0.8,3.6,1.3,5.4c0.2,0.1,0.4,0.1,0.7,0.2c0.9-1.7,1.7-3.3,2.6-5c0.2,0.1,0.4,0.1,0.6,0.2c0,1.9,0,3.8,0,5.7c0.2,0.1,0.4,0.1,0.6,0.2c1.2-1.4,2.4-2.9,3.6-4.3c0.2,0.1,0.4,0.2,0.6,0.3c-0.4,1.8-0.8,3.7-1.2,5.5c0.2,0.1,0.4,0.2,0.5,0.3c1.5-1.1,3-2.2,4.5-3.3c0.2,0.1,0.3,0.2,0.5,0.3c-0.8,1.7-1.5,3.4-2.3,5.1c0.1,0.1,0.3,0.2,0.4,0.4c1.7-0.7,3.5-1.4,5.2-2.1c0.1,0.1,0.3,0.3,0.4,0.4c-1.1,1.5-2.2,3-3.3,4.5c0.1,0.1,0.2,0.3,0.3,0.4c1.9-0.3,3.7-0.6,5.6-0.9c0.1,0.2,0.2,0.3,0.2,0.5c-1.4,1.2-2.8,2.5-4.2,3.7c0.1,0.2,0.1,0.3,0.2,0.5c1.9,0.1,3.8,0.2,5.7,0.3c0,0.2,0.1,0.3,0.1,0.5c-1.6,0.9-3.3,1.9-4.9,2.8c0,0.2,0,0.3,0.1,0.5c1.8,0.5,3.7,1,5.5,1.6c0,0.2,0,0.3,0,0.5c-1.8,0.6-3.5,1.3-5.3,1.9c0,0.2-0.1,0.3-0.1,0.5c1.7,0.9,3.4,1.8,5.1,2.8c-0.1,0.2-0.1,0.3-0.2,0.5c-1.9,0.3-3.7,0.6-5.6,0.9c-0.1,0.1-0.1,0.3-0.2,0.4c1.5,1.3,2.9,2.6,4.4,3.9c-0.1,0.1-0.2,0.3-0.3,0.4c-1.8-0.1-3.7-0.1-5.5-0.2c-0.1,0.1-0.2,0.3-0.3,0.4c1.3,1.6,2.5,3.1,3.8,4.7c-0.1,0.1-0.3,0.2-0.4,0.3c-1.7-0.5-3.5-0.9-5.2-1.4c-0.2,0.1-0.3,0.2-0.5,0.3c0.9,1.8,1.9,3.5,2.8,5.3c-0.2,0.1-0.3,0.2-0.5,0.3c-1.5-0.8-3.1-1.7-4.6-2.5c-0.2,0.1-0.4,0.2-0.6,0.2c0.6,1.8,1.1,3.7,1.7,5.5c-0.2,0.1-0.4,0.1-0.6,0.2c-1.3-1.2-2.5-2.3-3.8-3.5c-0.2,0.1-0.4,0.1-0.6,0.2c0.2,1.9,0.4,3.8,0.6,5.7c-0.2,0-0.4,0.1-0.6,0.1c-1-1.5-2-3.1-3-4.6c-0.2,0-0.4,0.1-0.7,0.1c-0.1,1.9-0.3,3.8-0.4,5.7c-0.2,0-0.4,0-0.7,0c-0.7-1.7-1.5-3.5-2.2-5.2c-0.2,0-0.5,0-0.7,0c-0.5,1.8-1,3.7-1.5,5.5C829,281,828.8,281.1,828.6,281.2z"
+                    fill="#e2e8f0"
+                  />
+                  <path
+                    d="M371.6,249.1c-0.3,1.9-0.5,3.8-0.8,5.7c-0.2,0-0.4,0-0.6,0c-0.7-1.7-1.4-3.5-2.1-5.2c-0.2,0-0.5,0-0.7,0c-0.6,1.8-1.2,3.6-1.8,5.4c-0.2,0-0.5-0.1-0.7-0.1c-0.3-1.8-0.6-3.6-0.9-5.4c-0.2,0-0.5-0.1-0.7-0.1c-1,1.6-2,3.2-3,4.8c-0.2-0.1-0.4-0.1-0.6-0.2c0.1-1.9,0.2-3.8,0.3-5.7c-0.2-0.1-0.4-0.1-0.6-0.2c-1.4,1.3-2.8,2.6-4.2,3.9c-0.2-0.1-0.4-0.2-0.6-0.3c0.5-1.8,1-3.6,1.5-5.4c-0.2-0.1-0.4-0.2-0.5-0.3c-1.7,0.9-3.4,1.8-5.1,2.7c-0.2-0.1-0.3-0.2-0.5-0.4c0.9-1.6,1.8-3.3,2.7-4.9c-0.1-0.1-0.3-0.2-0.4-0.4c-1.8,0.5-3.7,1-5.5,1.5c-0.1-0.1-0.3-0.3-0.4-0.4c1.2-1.4,2.4-2.8,3.7-4.3c-0.1-0.1-0.2-0.3-0.3-0.4c-1.9,0.1-3.8,0.2-5.7,0.3c-0.1-0.2-0.2-0.3-0.3-0.5c1.5-1.2,3-2.3,4.5-3.5c-0.1-0.2-0.1-0.3-0.2-0.5c-1.9-0.3-3.8-0.6-5.7-0.9c0-0.2-0.1-0.3-0.1-0.5c1.7-0.9,3.4-1.8,5.1-2.6c0-0.2,0-0.3-0.1-0.5c-1.8-0.7-3.7-1.3-5.5-2c0-0.2,0-0.3,0-0.5c1.8-0.5,3.6-1.1,5.4-1.6c0-0.2,0.1-0.3,0.1-0.5c-1.7-1-3.4-2.1-5.1-3.1c0.1-0.2,0.1-0.3,0.2-0.5c1.9-0.2,3.8-0.3,5.7-0.5c0.1-0.1,0.1-0.3,0.2-0.4c-1.5-1.4-3-2.7-4.5-4.1c0.1-0.1,0.2-0.3,0.3-0.4c1.9,0.2,3.8,0.4,5.7,0.6c0.1-0.1,0.2-0.3,0.3-0.4c-1.2-1.6-2.5-3.3-3.7-4.9c0.1-0.1,0.3-0.2,0.4-0.3c1.8,0.6,3.6,1.1,5.4,1.7c0.2-0.1,0.3-0.2,0.5-0.3c-0.9-1.8-1.8-3.6-2.7-5.4c0.2-0.1,0.3-0.2,0.5-0.2c1.6,0.9,3.2,1.8,4.8,2.7c0.2-0.1,0.4-0.1,0.5-0.2c-0.5-1.9-1-3.8-1.6-5.7c0.2-0.1,0.4-0.1,0.6-0.2c1.4,1.2,2.7,2.4,4.1,3.6c0.2,0,0.4-0.1,0.6-0.1c-0.2-1.9-0.3-3.8-0.5-5.7c0.2,0,0.4-0.1,0.6-0.1c1.1,1.5,2.2,3,3.3,4.5c0.2,0,0.4,0,0.7,0c0.2-1.9,0.4-3.8,0.5-5.7c0.2,0,0.4,0,0.7,0c0.8,1.7,1.5,3.4,2.3,5.1c0.2,0,0.4,0,0.7,0.1c0.5-1.8,1-3.7,1.6-5.5c0.2,0,0.4,0.1,0.7,0.1c0.4,1.8,0.8,3.6,1.3,5.4c0.2,0.1,0.4,0.1,0.7,0.2c0.9-1.7,1.7-3.3,2.6-5c0.2,0.1,0.4,0.1,0.6,0.2c0,1.9,0,3.8,0,5.7c0.2,0.1,0.4,0.1,0.6,0.2c1.2-1.4,2.4-2.9,3.6-4.3c0.2,0.1,0.4,0.2,0.6,0.3c-0.4,1.8-0.8,3.7-1.2,5.5c0.2,0.1,0.4,0.2,0.5,0.3c1.5-1.1,3-2.2,4.5-3.3c0.2,0.1,0.3,0.2,0.5,0.3c-0.8,1.7-1.5,3.4-2.3,5.1c0.1,0.1,0.3,0.2,0.4,0.4c1.7-0.7,3.5-1.4,5.2-2.1c0.1,0.1,0.3,0.3,0.4,0.4c-1.1,1.5-2.2,3-3.3,4.5c0.1,0.1,0.2,0.3,0.3,0.4c1.9-0.3,3.7-0.6,5.6-0.9c0.1,0.2,0.2,0.3,0.2,0.5c-1.4,1.2-2.8,2.5-4.2,3.7c0.1,0.2,0.1,0.3,0.2,0.5c1.9,0.1,3.8,0.2,5.7,0.3c0,0.2,0.1,0.3,0.1,0.5c-1.6,0.9-3.3,1.9-4.9,2.8c0,0.2,0,0.3,0.1,0.5c1.8,0.5,3.7,1,5.5,1.6c0,0.2,0,0.3,0,0.5c-1.8,0.6-3.5,1.3-5.3,1.9c0,0.2-0.1,0.3-0.1,0.5c1.7,0.9,3.4,1.8,5.1,2.8c-0.1,0.2-0.1,0.3-0.2,0.5c-1.9,0.3-3.7,0.6-5.6,0.9c-0.1,0.1-0.1,0.3-0.2,0.4c1.5,1.3,2.9,2.6,4.4,3.9c-0.1,0.1-0.2,0.3-0.3,0.4c-1.8-0.1-3.7-0.1-5.5-0.2c-0.1,0.1-0.2,0.3-0.3,0.4c1.3,1.6,2.5,3.1,3.8,4.7c-0.1,0.1-0.3,0.2-0.4,0.3c-1.7-0.5-3.5-0.9-5.2-1.4c-0.2,0.1-0.3,0.2-0.5,0.3c0.9,1.8,1.9,3.5,2.8,5.3c-0.2,0.1-0.3,0.2-0.5,0.3c-1.5-0.8-3.1-1.7-4.6-2.5c-0.2,0.1-0.4,0.2-0.6,0.2c0.6,1.8,1.1,3.7,1.7,5.5c-0.2,0.1-0.4,0.1-0.6,0.2c-1.3-1.2-2.5-2.3-3.8-3.5c-0.2,0.1-0.4,0.1-0.6,0.2c0.2,1.9,0.4,3.8,0.6,5.7c-0.2,0-0.4,0.1-0.6,0.1c-1-1.5-2-3.1-3-4.6c-0.2,0-0.4,0.1-0.7,0.1c-0.1,1.9-0.3,3.8-0.4,5.7c-0.2,0-0.4,0-0.7,0c-0.7-1.7-1.5-3.5-2.2-5.2c-0.2,0-0.5,0-0.7,0c-0.5,1.8-1,3.7-1.5,5.5C829,281,828.8,281.1,828.6,281.2z"
+                    fill="#e2e8f0"
+                  />
+                  <path
+                    d="M371.6,249.1c-0.3,1.9-0.5,3.8-0.8,5.7c-0.2,0-0.4,0-0.6,0c-0.7-1.7-1.4-3.5-2.1-5.2c-0.2,0-0.5,0-0.7,0c-0.6,1.8-1.2,3.6-1.8,5.4c-0.2,0-0.5-0.1-0.7-0.1c-0.3-1.8-0.6-3.6-0.9-5.4c-0.2,0-0.5-0.1-0.7-0.1c-1,1.6-2,3.2-3,4.8c-0.2-0.1-0.4-0.1-0.6-0.2c0.1-1.9,0.2-3.8,0.3-5.7c-0.2-0.1-0.4-0.1-0.6-0.2c-1.4,1.3-2.8,2.6-4.2,3.9c-0.2-0.1-0.4-0.2-0.6-0.3c0.5-1.8,1-3.6,1.5-5.4c-0.2-0.1-0.4-0.2-0.5-0.3c-1.7,0.9-3.4,1.8-5.1,2.7c-0.2-0.1-0.3-0.2-0.5-0.4c0.9-1.6,1.8-3.3,2.7-4.9c-0.1-0.1-0.3-0.2-0.4-0.4c-1.8,0.5-3.7,1-5.5,1.5c-0.1-0.1-0.3-0.3-0.4-0.4c1.2-1.4,2.4-2.8,3.7-4.3c-0.1-0.1-0.2-0.3-0.3-0.4c-1.9,0.1-3.8,0.2-5.7,0.3c-0.1-0.2-0.2-0.3-0.3-0.5c1.5-1.2,3-2.3,4.5-3.5c-0.1-0.2-0.1-0.3-0.2-0.5c-1.9-0.3-3.8-0.6-5.7-0.9c0-0.2-0.1-0.3-0.1-0.5c1.7-0.9,3.4-1.8,5.1-2.6c0-0.2,0-0.3-0.1-0.5c-1.8-0.7-3.7-1.3-5.5-2c0-0.2,0-0.3,0-0.5c1.8-0.5,3.6-1.1,5.4-1.6c0-0.2,0.1-0.3,0.1-0.5c-1.7-1-3.4-2.1-5.1-3.1c0.1-0.2,0.1-0.3,0.2-0.5c1.9-0.2,3.8-0.3,5.7-0.5c0.1-0.1,0.1-0.3,0.2-0.4c-1.5-1.4-3-2.7-4.5-4.1c0.1-0.1,0.2-0.3,0.3-0.4c1.9,0.2,3.8,0.4,5.7,0.6c0.1-0.1,0.2-0.3,0.3-0.4c-1.2-1.6-2.5-3.3-3.7-4.9c0.1-0.1,0.3-0.2,0.4-0.3c1.8,0.6,3.6,1.1,5.4,1.7c0.2-0.1,0.3-0.2,0.5-0.3c-0.9-1.8-1.8-3.6-2.7-5.4c0.2-0.1,0.3-0.2,0.5-0.2c1.6,0.9,3.2,1.8,4.8,2.7c0.2-0.1,0.4-0.1,0.5-0.2c-0.5-1.9-1-3.8-1.6-5.7c0.2-0.1,0.4-0.1,0.6-0.2c1.4,1.2,2.7,2.4,4.1,3.6c0.2,0,0.4-0.1,0.6-0.1c-0.2-1.9-0.3-3.8-0.5-5.7c0.2,0,0.4-0.1,0.6-0.1c1.1,1.5,2.2,3,3.3,4.5c0.2,0,0.4,0,0.7,0c0.2-1.9,0.4-3.8,0.5-5.7c0.2,0,0.4,0,0.7,0c0.8,1.7,1.5,3.4,2.3,5.1c0.2,0,0.4,0,0.7,0.1c0.5-1.8,1-3.7,1.6-5.5c0.2,0,0.4,0.1,0.7,0.1c0.4,1.8,0.8,3.6,1.3,5.4c0.2,0.1,0.4,0.1,0.7,0.2c0.9-1.7,1.7-3.3,2.6-5c0.2,0.1,0.4,0.1,0.6,0.2c0,1.9,0,3.8,0,5.7c0.2,0.1,0.4,0.1,0.6,0.2c1.2-1.4,2.4-2.9,3.6-4.3c0.2,0.1,0.4,0.2,0.6,0.3c-0.4,1.8-0.8,3.7-1.2,5.5c0.2,0.1,0.4,0.2,0.5,0.3c1.5-1.1,3-2.2,4.5-3.3c0.2,0.1,0.3,0.2,0.5,0.3c-0.8,1.7-1.5,3.4-2.3,5.1c0.1,0.1,0.3,0.2,0.4,0.4c1.7-0.7,3.5-1.4,5.2-2.1c0.1,0.1,0.3,0.3,0.4,0.4c-1.1,1.5-2.2,3-3.3,4.5c0.1,0.1,0.2,0.3,0.3,0.4c1.9-0.3,3.7-0.6,5.6-0.9c0.1,0.2,0.2,0.3,0.2,0.5c-1.4,1.2-2.8,2.5-4.2,3.7c0.1,0.2,0.1,0.3,0.2,0.5c1.9,0.1,3.8,0.2,5.7,0.3c0,0.2,0.1,0.3,0.1,0.5c-1.6,0.9-3.3,1.9-4.9,2.8c0,0.2,0,0.3,0.1,0.5c1.8,0.5,3.7,1,5.5,1.6c0,0.2,0,0.3,0,0.5c-1.8,0.6-3.5,1.3-5.3,1.9c0,0.2-0.1,0.3-0.1,0.5c1.7,0.9,3.4,1.8,5.1,2.8c-0.1,0.2-0.1,0.3-0.2,0.5c-1.9,0.3-3.7-0.6-5.6-0.9c-0.1,0.1-0.1,0.3-0.2,0.4c1.5,1.3,2.9,2.6,4.4,3.9c-0.1,0.1-0.2,0.3-0.3,0.4c-1.8-0.1-3.7-0.1-5.5-0.2c-0.1,0.1-0.2,0.3-0.3,0.4c1.3,1.6,2.5,3.1,3.8,4.7c-0.1,0.1-0.3,0.2-0.4,0.3c-1.7-0.5-3.5-0.9-5.2-1.4c-0.2,0.1-0.3,0.2-0.5,0.3c0.9,1.8,1.9,3.5,2.8,5.3c-0.2,0.1-0.3,0.2-0.5,0.3c-1.5-0.8-3.1-1.7-4.6-2.5c-0.2,0.1-0.4,0.2-0.6,0.2c0.6,1.8,1.1,3.7,1.7,5.5c-0.2,0.1-0.4,0.1-0.6,0.2c-1.3-1.2-2.5-2.3-3.8-3.5c-0.2,0.1-0.4,0.1-0.6,0.2c0.2,1.9,0.4,3.8,0.6,5.7c-0.2,0-0.4,0.1-0.6,0.1c-1-1.5-2-3.1-3-4.6c-0.2,0-0.4,0.1-0.7,0.1c-0.1,1.9-0.3,3.8-0.4,5.7c-0.2,0-0.4,0-0.7,0c-0.7-1.7-1.5-3.5-2.2-5.2c-0.2,0-0.5,0-0.7,0c-0.5,1.8-1,3.7-1.5,5.5C372,249,371.8,249.1,371.6,249.1z"
+                    fill="#e2e8f0"
+                  />
+                  <path
+                    d="M800,0H0v500h800V0z M799,499H1V1h798V499z"
+                    fill="none"
+                  />
+                </svg>
+
+                <div class="map-dot europe"></div>
+                <div class="map-label europe">Europe</div>
+
+                <div class="map-dot middle-east"></div>
+                <div class="map-label middle-east">Middle East</div>
+
+                <div class="map-dot north-africa"></div>
+                <div class="map-label north-africa">North Africa</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------insights--------------- -->
+
+  
+   <section class="insights py-5" id="Insights-Section">
+    <div class="insights-header bg-danger">
+      <svg
+        class="insights-icon d-none d-md-block"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 3H14C19.5 3 21 4.5 21 10V14C21 19.5 19.5 21 14 21H10C4.5 21 3 19.5 3 14V10C3 4.5 4.5 3 10 3Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M16.5 16.5L12.3 14.1C11.8 13.8 11.4 13.1 11.4 12.5V7.5"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M5 3L21 21"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <div
+        class="insights-header-content p-4 p-md-5 d-flex flex-column justify-content-center align-items-center"
+      >
+        <div
+          class="d-inline-block px-4 py-1 bg-white bg-opacity-25 text-white rounded-pill fs-sm fw-semibold mb-3"
+        >
+          🔷 8. Insights
+        </div>
+
+        <h3 class="text-white">Insights & Innovation</h3>
+        <p class="text-center">
+          Explore our latest thinking on digital transformation, automation, and
+          sustainability.
+        </p>
+      </div>
+    </div>
+
+    <!-- --blogs cards--- -->
+    <div class="container">
+      <div class="row g-5 my-4">
+        <div class="col-12 col-md-6 col-xl-4">
+          <div
+            class="card blog-card blue h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#HowUOC"
+          >
+            <div
+              class="blog-image"
+              style="
+                background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'200\' viewBox=\'0 0 400 200\'%3E%3Crect width=\'400\' height=\'200\' fill=\'%23dbeafe\'/%3E%3Cpath d=\'M100,100 L300,100 M200,50 L200,150\' stroke=\'%232563eb\' stroke-width=\'8\' stroke-linecap=\'round\'/%3E%3Ccircle cx=\'200\' cy=\'100\' r=\'60\' fill=\'none\' stroke=\'%232563eb\' stroke-width=\'8\'/%3E%3Ccircle cx=\'200\' cy=\'100\' r=\'40\' fill=\'none\' stroke=\'%2360a5fa\' stroke-width=\'6\'/%3E%3Ccircle cx=\'200\' cy=\'100\' r=\'20\' fill=\'%2393c5fd\' stroke=\'%2360a5fa\' stroke-width=\'4\'/%3E%3C/svg%3E');
+              "
+            >
+              <span class="blog-tag blue">Operations</span>
+            </div>
+            <div class="card-body p-4">
+              <div
+                class="d-flex align-items-center justify-content-between mb-3"
+              >
+                <span class="text-muted small">June 15, 2023</span>
+                <span class="badge bg-primary-subtle text-primary fw-medium"
+                  >5 min read</span
+                >
+              </div>
+              <h4 class="card-title fs-5 fw-bold mb-3">
+                📘 How UOCs Are Changing Operational Efficiency
+              </h4>
+              <p class="card-text text-secondary mb-4">
+                Unified Operations Centers are revolutionizing how companies
+                monitor and optimize their operations. Learn how these
+                integrated command centers are driving unprecedented efficiency
+                gains.
+              </p>
+              <a
+                href="#"
+                class="read-more"
+                data-bs-toggle="modal"
+                data-bs-target="#HowUOC"
+              >
+                Read Article
+                <svg
+                  class="icon-arrow-right ms-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 5L19 12L12 19"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-4">
+          <div
+            class="card blog-card green h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#WaystoCutDowntime"
+          >
+            <div
+              class="blog-image"
+              style="
+                background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'200\' viewBox=\'0 0 400 200\'%3E%3Crect width=\'400\' height=\'200\' fill=\'%23d1fae5\'/%3E%3Cpath d=\'M50,150 L100,100 L150,125 L200,75 L250,100 L300,50 L350,125\' stroke=\'%2310b981\' stroke-width=\'8\' stroke-linecap=\'round\' stroke-linejoin=\'round\' fill=\'none\'/%3E%3Ccircle cx=\'100\' cy=\'100\' r=\'10\' fill=\'%2334d399\'/%3E%3Ccircle cx=\'150\' cy=\'125\' r=\'10\' fill=\'%2334d399\'/%3E%3Ccircle cx=\'200\' cy=\'75\' r=\'10\' fill=\'%2334d399\'/%3E%3Ccircle cx=\'250\' cy=\'100\' r=\'10\' fill=\'%2334d399\'/%3E%3Ccircle cx=\'300\' cy=\'50\' r=\'10\' fill=\'%2334d399\'/%3E%3Ccircle cx=\'350\' cy=\'125\' r=\'10\' fill=\'%2334d399\'/%3E%3C/svg%3E');
+              "
+            >
+              <span class="blog-tag green">Maintenance</span>
+            </div>
+            <div class="card-body p-4">
+              <div
+                class="d-flex align-items-center justify-content-between mb-3"
+              >
+                <span class="text-muted small">May 22, 2023</span>
+                <span class="badge bg-success-subtle text-success fw-medium"
+                  >7 min read</span
+                >
+              </div>
+              <h3 class="card-title fs-5 fw-bold mb-3">
+                📗 5 Ways to Cut Downtime with Predictive Maintenance
+              </h3>
+              <p class="card-text text-secondary mb-4">
+                Discover how AI-powered predictive maintenance is transforming
+                industrial operations by identifying potential failures before
+                they occur, reducing costly downtime by up to 50%.
+              </p>
+              <a
+                href="#"
+                class="read-more"
+                data-bs-toggle="modal"
+                data-bs-target="#WaystoCutDowntime"
+              >
+                Read Article
+                <svg
+                  class="icon-arrow-right ms-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 5L19 12L12 19"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-12 col-xl-4">
+          <div
+            class="card blog-card orange h-100"
+            data-bs-toggle="modal"
+            data-bs-target="#SmartManufacturing"
+          >
+            <div
+              class="blog-image"
+              style="
+                background-image: url('data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'200\' viewBox=\'0 0 400 200\'%3E%3Crect width=\'400\' height=\'200\' fill=\'%23fef3c7\'/%3E%3Crect x=\'100\' y=\'50\' width=\'60\' height=\'100\' fill=\'%23f59e0b\' rx=\'5\'/%3E%3Crect x=\'170\' y=\'75\' width=\'60\' height=\'75\' fill=\'%23fbbf24\' rx=\'5\'/%3E%3Crect x=\'240\' y=\'25\' width=\'60\' height=\'125\' fill=\'%23f59e0b\' rx=\'5\'/%3E%3Cpath d=\'M100,150 L300,150\' stroke=\'%23d97706\' stroke-width=\'4\' stroke-linecap=\'round\'/%3E%3Ccircle cx=\'130\' cy=\'80\' r=\'10\' fill=\'%23fcd34d\'/%3E%3Ccircle cx=\'200\' cy=\'100\' r=\'10\' fill=\'%23fcd34d\'/%3E%3Ccircle cx=\'270\' cy=\'60\' r=\'10\' fill=\'%23fcd34d\'/%3E%3C/svg%3E');
+              "
+            >
+              <span class="blog-tag orange">Manufacturing</span>
+            </div>
+            <div class="card-body p-4">
+              <div
+                class="d-flex align-items-center justify-content-between mb-3"
+              >
+                <span class="text-muted small">April 8, 2023</span>
+                <span class="badge bg-warning-subtle text-warning fw-medium"
+                  >10 min read</span
+                >
+              </div>
+              <h3 class="card-title fs-5 fw-bold mb-3">
+                📙 Smart Manufacturing Trends for 2025
+              </h3>
+              <p class="card-text text-secondary mb-4">
+                From digital twins to autonomous factories, explore the emerging
+                technologies that will define the next wave of manufacturing
+                innovation and how to prepare your operations today.
+              </p>
+              <a
+                href="#"
+                class="read-more"
+                data-bs-toggle="modal"
+                data-bs-target="#SmartManufacturing"
+              >
+                Read Article
+                <svg
+                  class="icon-arrow-right ms-2"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 5L19 12L12 19"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <!--------- blogs models --------------->
+    <div
+      class="modal fade "
+      id="HowUOC"
+      tabindex="-1"
+      aria-labelledby="HowUOC"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-lg  modal-dialog-scrollable"
+      >
+        <div class="modal-content modal-custom-content">
+          <div class="modal-header border-0 mt-3 position-relative ">
+            <button
+              type="button"
+              class="btn-close position-absolute  end-0 mt-1 me-3 "
+           
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body px-3 px-md-5 py-2 py-md-3 pt-0">
+            <div class="modelTag-conatiner rounded-3 mb-2">
+              <span
+                id="modalTag"
+                class="d-inline-block px-2 py-1 rounded-pill fw-medium"
+                >operations</span
+              >
+            </div>
+
+            <h5 id="modalTitle" class="fw-bold text-dark mb-2">
+              📘 How Unified Operations Centers Are Changing Operational
+              Efficiency
+            </h5>
+            <div class="d-flex align-items-center mb-3">
+              <div class="flex-shrink-0 me-3">
+                <div
+                  class="d-flex align-items-center justify-content-center bg-info-subtle rounded-circle icon-size-md"
+                >
+                  <svg
+                    class="text-info icon-size-sm"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <p class="fw-medium mb-0" id="modalAuthor">Sarah Johnson</p>
+                <p class="text-muted small mb-0" id="modalAuthorTitle">
+                  Digital Transformation Specialist
+                </p>
+              </div>
+            </div>
+
+            <div class="prose-content">
+              <small class="fw-semibold mb-2"
+                >In an era where agility, visibility, and control are essential
+                to remain competitive, Unified Operations Centers (UOCs) are
+                rapidly transforming how industrial organizations operate. These
+                centralized hubs offer a complete, real-time view of processes,
+                assets, and performance across the enterprise, enabling faster
+                decision-making and greater operational resilience. 
+                </small
+              >
+              <br>
+              <small class="fw-semibold mb-2">
+                Unified Operations Centers combine Information Technology (IT)
+                and Operational Technology (OT) systems into one integrated
+                platform. This convergence allows teams across departments to
+                access consistent, accurate data and work collaboratively to
+                resolve issues, optimize processes, and drive continuous
+                improvement.
+              </small>
+              <br>
+              <small class="fw-semibold mb-2">
+                The impact of this integration is significant. With real-time
+                visibility, businesses can react quickly to disruptions,
+                identify inefficiencies, and monitor performance across sites.
+                In fact, data-driven decision-making enabled by UOCs can improve
+                response times by up to 65%, dramatically enhancing productivity
+                and minimizing downtime.
+              </small>
+              <br>
+              <small class=" fw-semibold mb-2">
+                Yet, technology alone is not enough. For a Unified Operations
+                Center to deliver its full value, companies must prioritize
+                change management. Adoption requires more than new systems; it
+                demands a cultural shift. Teams need to trust the data, embrace
+                new workflows, and align with strategic goals. When done
+                correctly, the return on investment can be substantial
+              </small>
+               <br>
+              <h4 class="fs-5 fw-bold mt-4 mb-3">Key Takeaways</h4>
+              <ul class="ps-4 mb-4">
+                <li class="mb-1">
+                  <span class="fw-semibold"> Unified Operations Centers</span>
+                  provide real-time visibility across all operations
+                </li>
+                <li class="mb-1">
+                  <span class="fw-semibold">IT and OT integration</span> is
+                  essential to achieving digital transformation
+                </li>
+                <li class="mb-1">
+                  <span class="fw-semibold">Data-driven decisions</span> improve
+                  response times by up to 65 percent
+                </li>
+                <li class="mb-1">
+                  <span class="fw-semibold">Change management</span> is critical
+                  to adoption and long-term success
+                </li>
+              </ul>
+
+              <blockquote
+                class="blockquote-custom border-start border-info ps-3 fst-italic my-3"
+              >
+                "The future of industrial operations lies in connected,
+                intelligent systems that can predict and prevent issues before
+                they impact production."
+              </blockquote>
+              <small class="fw-bold ">
+                As industries become increasingly complex, those who adopt
+                intelligent, connected solutions like Unified Operations Centers
+                will gain a decisive edge. They will not only operate more
+                efficiently but also future-proof their organizations against
+                disruption and change.
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <div
+      class="modal fade"
+      id="WaystoCutDowntime"
+      tabindex="-1"
+      aria-labelledby="WaystoCutDowntime"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable"
+      >
+        <div class="modal-content modal-custom-content">
+          <div class="modal-header border-0 mt-3 position-relative">
+            <button
+              type="button"
+              class="btn-close position-absolute  end-0 mt-1 me-3 z-1"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body px-3 px-md-5 py-2 py-md-3 pt-0">
+            <div class="modelTag-conatiner rounded-3 mb-2">
+              <span
+                id="modalTag"
+                class="d-inline-block px-2 py-1 rounded-pill fw-medium"
+                >Maintenance</span
+              >
+            </div>
+
+            <h5 id="modalTitle" class="fw-bold text-dark mb-2">
+              	📗 5 Ways to Cut Downtime with Predictive Maintenance
+            </h5>
+            <div class="d-flex align-items-center mb-3">
+              <div class="flex-shrink-0 me-3">
+                <div
+                  class="d-flex align-items-center justify-content-center bg-info-subtle rounded-circle icon-size-md"
+                >
+                  <svg
+                    class="text-info icon-size-sm"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <p class="fw-medium mb-0" id="modalAuthor">Sarah Johnson</p>
+                <p class="text-muted small mb-0" id="modalAuthorTitle">
+                  Digital Transformation Specialist
+                </p>
+              </div>
+            </div>
+
+            <div class="prose-content">
+              <small class="fw-semibold mb-2"
+                >Unplanned downtime is one of the most expensive challenges facing industrial operations. Whether caused by equipment failure, process inefficiency, or lack of visibility, downtime can significantly impact productivity, profitability, and customer satisfaction. Fortunately, predictive maintenance offers a powerful way to reduce these interruptions and keep operations running efficiently.
+                </small
+              >
+              <br>
+              <small class="fw-semibold mb-2">
+               By using real-time data, sensors, and analytics, predictive maintenance helps organizations identify signs of wear, stress, or failure before equipment breaks down. This shift from reactive to proactive maintenance not only improves equipment reliability but also lowers maintenance costs and extends asset lifecycles.
+              </small>
+              <br>
+              <small class="fw-semibold mb-2">
+                The impact of this integration is significant. With real-time
+                visibility, businesses can react quickly to disruptions,
+                identify inefficiencies, and monitor performance across sites.
+                In fact, data-driven decision-making enabled by UOCs can improve
+                response times by up to 65%, dramatically enhancing productivity
+                and minimizing downtime.
+              </small>
+              <br>
+              <small class=" fw-semibold mb-2">
+                Yet, technology alone is not enough. For a Unified Operations
+                Center to deliver its full value, companies must prioritize
+                change management. Adoption requires more than new systems; it
+                demands a cultural shift. Teams need to trust the data, embrace
+                new workflows, and align with strategic goals. When done
+                correctly, the return on investment can be substantial
+              </small>
+                <br>
+                <br>
+               <small>
+                <h6>  Here are five ways predictive maintenance can cut downtime and improve performance:</h6>
+                <ul>
+                  <li>
+                 <span class="fw-semibold" >Real-Time Monitoring of Critical Assets :</span> <small class="fw-semibold"> Sensors placed on key machinery continuously track temperature, vibration, pressure, and other indicators. These insights allow teams to detect anomalies early and respond before breakdowns occur.</small>
+                  </li>
+                    <li>
+                 <span class="fw-semibold" >Data-Driven Maintenance Scheduling :</span> <small class="fw-semibold"> Instead of relying on fixed calendar-based schedules, predictive maintenance uses actual asset condition data to recommend interventions. This approach avoids unnecessary maintenance and reduces the risk of unexpected failures.</small>
+                  </li>
+                    <li>
+                 <span class="fw-semibold" >Integration with IT and OT Systems :</span> <small class="fw-semibold"> When predictive maintenance is integrated with IT and OT platforms like Unified Operations Centers, it creates a streamlined workflow. Teams gain access to consistent data and can collaborate more effectively across departments.</small>
+                  </li>
+                    <li>
+                 <span class="fw-semibold" >Advanced Analytics and Machine Learning :</span> <small class="fw-semibold">By analyzing both historical and real-time data, machine learning models can identify patterns, predict failures, and suggest optimal responses. This increases accuracy and improves long-term planning.</small>
+                  </li>
+                    <li>
+                 <span class="fw-semibold" >Empowered Workforce and Strong Change Management :</span> <small class="fw-semibold"> Giving technicians access to real-time insights helps them make informed decisions. At the same time, change management ensures teams are trained, aligned, and ready to adopt new tools and processes.</small>
+                  </li>
+                </ul>
+               </small>
+               <br>
+              <h4 class="fs-5 fw-bold mt-4 mb-3">Key Takeaways</h4>
+              <ul class="ps-4 mb-4">
+                <li class="mb-1">
+                  <span class="fw-semibold">Predictive maintenance </span>
+                  helps detect equipment issues early using real-time monitoring
+                </li>
+                <li class="mb-1">
+                  <span class="fw-semibold">Condition-based scheduling </span>reduces unnecessary maintenance and maximizes uptime
+                </li>
+                <li class="mb-1">
+                  <span class="fw-semibold">Integration of IT and OT systems </span>enhances coordination and response
+                </li>
+                <li class="mb-1">
+                  <span class="fw-semibold">Analytics and machine learning </span> deliver accurate predictions and root cause analysis
+                </li>
+                <li class="mb-1">
+                  <span class="fw-semibold">Change management  </span> ensures successful adoption and long-term value
+                </li>
+              </ul>
+
+              <blockquote
+                class="blockquote-custom border-start border-info ps-3 fst-italic my-3"
+              >
+                "The future of industrial operations lies in connected,
+                intelligent systems that can predict and prevent issues before
+                they impact production."
+              </blockquote>
+              <small class="fw-bold ">
+                As industrial organizations modernize their operations, predictive maintenance has emerged as one of the most effective strategies to reduce downtime. Companies that invest in these capabilities are better positioned to achieve consistent performance, lower costs, and greater operational resilience
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div
+      class="modal fade"
+      id="SmartManufacturing"
+      tabindex="-1"
+      aria-labelledby="SmartManufacturing"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable"
+      >
+        <div class="modal-content modal-custom-content">
+          <div class="modal-header border-0 mt-3 position-relative">
+            <button
+              type="button"
+              class="btn-close position-absolute  end-0 mt-1 me-3 z-1"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body px-3 px-md-5 py-2 py-md-3 pt-0">
+            <div class="modelTag-conatiner rounded-3 mb-2">
+              <span
+                id="modalTag"
+                class="d-inline-block px-2 py-1 rounded-pill fw-medium"
+                >Manufacturing</span
+              >
+            </div>
+
+            <h5 id="modalTitle" class="fw-bold text-dark mb-2">
+              		📙 Smart Manufacturing Trends for 2025
+            </h5>
+            <div class="d-flex align-items-center mb-3">
+              <div class="flex-shrink-0 me-3">
+                <div
+                  class="d-flex align-items-center justify-content-center bg-info-subtle rounded-circle icon-size-md"
+                >
+                  <svg
+                    class="text-info icon-size-sm"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <p class="fw-medium mb-0" id="modalAuthor">Sarah Johnson</p>
+                <p class="text-muted small mb-0" id="modalAuthorTitle">
+                  Digital Transformation Specialist
+                </p>
+              </div>
+            </div>
+
+            <div class="prose-content">
+              <small class="fw-semibold mb-2"
+                >As we approach 2025, manufacturing continues to undergo a rapid transformation driven by digital innovation, automation, and real-time data. Smart manufacturing is no longer a futuristic concept. It is becoming a core strategy for companies looking to increase agility, resilience, and productivity.
+                </small
+              >
+              <br>
+              <small class="fw-semibold mb-2">
+              From predictive analytics to cloud-connected factories, emerging technologies are enabling new levels of efficiency and control. Smart manufacturing is about more than just adopting the latest tools. It’s about creating an intelligent, interconnected production environment that responds quickly to change and continuously improves performance
+              </small>
+              <br>
+             
+                <br>
+                <br>
+               <small>
+                <h6>  Here are some of the key trends shaping smart manufacturing in 2025:</h6>
+                <ul>
+                  <li>
+                 <span class="fw-semibold" >Unified Operations Centers (UOCs) :</span> <small class="fw-semibold"> Manufacturers are increasingly centralizing operations through Unified Operations Centers. These platforms provide end-to-end visibility across all assets, departments, and facilities. With real-time insights, teams can respond faster to disruptions and make better decisions that improve output and reduce waste.</small>
+                  </li>
+                    <li>
+                 <span class="fw-semibold" >IT and OT Integration :</span> <small class="fw-semibold"> The convergence of Information Technology and Operational Technology is essential for achieving a truly smart factory. Seamless data flow between systems allows organizations to optimize processes, align teams, and automate more complex tasks.</small>
+                  </li>
+                    <li>
+                 <span class="fw-semibold" >Predictive and Data-Driven Decision Making :</span> <small class="fw-semibold">Advanced analytics and machine learning are enabling manufacturers to anticipate equipment failures, forecast demand, and refine production schedules. Data-driven strategies can improve response times by up to 65 percent and reduce unplanned downtime.</small>
+                  </li>
+                    <li>
+                 <span class="fw-semibold" >Scalable and Connected Ecosystems :</span> <small class="fw-semibold">Smart manufacturing requires platforms that can scale easily and integrate with suppliers, customers, and remote assets. Cloud-based systems and open standards are becoming essential for flexibility and future growth.</small>
+                  </li>
+                    <li>
+                 <span class="fw-semibold" >Change Management and Workforce Enablement :</span> <small class="fw-semibold">Technology is only part of the equation. Manufacturers must also focus on guiding teams through change, upskilling employees, and creating a culture of continuous improvement. Effective change management ensures that new systems are adopted and used to their full potential.</small>
+                  </li>
+                </ul>
+               </small>
+               <br>
+              <h4 class="fs-5 fw-bold mt-4 mb-3">Key Takeaways</h4>
+              <ul class="ps-4 mb-4">
+                <li class="mb-1">
+                  <span class="fw-semibold">Unified Operations Centers </span>
+                 enhance visibility and coordination across operations
+                </li>
+                <li class="mb-1">
+                  <span class="fw-semibold">IT/OT integration </span>
+                 is critical for achieving smart manufacturing goals
+                </li>
+                <li class="mb-1">
+                  <span class="fw-semibold">Predictive insights </span>
+                 and real-time data drive faster, better decisions
+                </li>
+                <li class="mb-1">
+                  <span class="fw-semibold">Scalable ecosystems </span>
+                 are key to long-term flexibility and connectivity
+                </li>
+                <li class="mb-1">
+                  <span class="fw-semibold">Change management </span>
+                 and workforce readiness support lasting transformation
+                </li>
+                  
+               
+              </ul>
+
+              <blockquote
+                class="blockquote-custom border-start border-info ps-3 fst-italic my-3"
+              >
+                "The future of industrial operations lies in connected,
+                intelligent systems that can predict and prevent issues before
+                they impact production."
+              </blockquote>
+              <small class="fw-bold ">
+               Smart manufacturing is reshaping the future of industry. By embracing connected technologies, integrated platforms, and people-focused transformation strategies, manufacturers can position themselves to lead in 2025 and beyond.
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  </section>
+  <!-------------------Newsletter Section---------------------- -->
+
+  <section class="mt-5">
+    <div
+      class="newsletter-gradient text-white position-relative overflow-hidden"
+    >
+      <div class="newsletter-shape newsletter-shape-top-right"></div>
+      <div class="newsletter-shape newsletter-shape-bottom-left"></div>
+
+      <div
+        class="banner p-4 p-md-5 d-flex justify-content-center align-items-center text-center"
+      >
+        <div>
+          <h3 class="fw-bold mb-3">Stay Ahead with Texvia Insights</h3>
+          <p class="">
+            Subscribe to our newsletter for the latest trends, case studies, and
+            industry insights.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="m-5 homepage-section">
+    <div class="text-center mb-lg-5">
+      <h2 class="fs-2 fw-bold mb-3 section-header" data-section-index="5">
+        Featured Resources
+      </h2>
+      <p class="text-secondary-emphasis mx-auto" style="max-width: 60rem">
+        Download our latest whitepapers, guides, and case studies to help drive
+        your digital transformation journey.
+      </p>
+    </div>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card h-100 rounded-3 overflow-hidden shadow-sm hover-shadow-lg transition-base"
+          >
+            <div
+              class="resource-card-header bg-gradient-primary d-flex align-items-center justify-content-center p-4"
+            >
+              <svg
+                class="resource-icon text-white opacity-75"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M22 10H18C15 10 14 9 14 6V2L22 10Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7 13H13"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7 17H11"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="card-body p-4">
+              <h5 class="mb-2">Digital Transformation Roadmap</h5>
+              <h6 class="fw-light small mb-3">
+                A comprehensive guide to planning and executing your digital
+                transformation strategy.
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card h-100 rounded-3 overflow-hidden shadow-sm hover-shadow-lg transition-base"
+          >
+            <div
+              class="resource-card-header bg-gradient-green d-flex align-items-center justify-content-center p-4"
+            >
+              <svg
+                class="resource-icon text-white opacity-75"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.6699 14.3L21.2699 11.8C20.7699 8.61002 18.6099 7.05002 15.5499 7.05002H8.4399C5.3799 7.05002 3.2199 8.63002 2.7199 11.8L2.3199 14.3C2.0499 16.03 2.5299 17.65 3.6499 18.83C4.7699 20.01 6.3599 20.63 8.1099 20.63H15.8899C17.6399 20.63 19.2299 20 20.3499 18.83C21.4599 17.66 21.9399 16.03 21.6699 14.3Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8 7V5.2C8 3.43 9.43 2 11.2 2H12.8C14.57 2 16 3.43 16 5.2V7"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M21.6501 14.3H18.0001C16.9001 14.3 16.0001 15.2 16.0001 16.3C16.0001 17.4 16.9001 18.3 18.0001 18.3C19.1001 18.3 20.0001 17.4 20.0001 16.3"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="card-body p-4">
+              <h5 class="mb-2">Industry 4.0 Case Study</h5>
+              <h6 class="fw-light small mb-3">
+                How a leading manufacturer achieved 35% efficiency gains through
+                smart factory implementation.
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card h-100 rounded-3 overflow-hidden shadow-sm hover-shadow-lg transition-base"
+          >
+            <div
+              class="resource-card-header bg-gradient-purple d-flex align-items-center justify-content-center p-4"
+            >
+              <svg
+                class="resource-icon text-white opacity-75"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9 10C10.1046 10 11 9.10457 11 8C11 6.89543 10.1046 6 9 6C7.89543 6 7 6.89543 7 8C7 9.10457 7.89543 10 9 10Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2.67004 18.9501L7.60004 15.6401C8.39004 15.1101 9.53004 15.1701 10.24 15.7801L10.57 16.0701C11.35 16.7401 12.61 16.7401 13.39 16.0701L17.55 12.5001C18.33 11.8301 19.59 11.8301 20.37 12.5001L22 13.9001"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="card-body p-4">
+              <h5 class="mb-2 fs-5">Data Visualization Guide</h5>
+              <h6 class="fw-light small mb-3">
+                Best practices for creating actionable dashboards that drive
+                better business decisions.
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card h-100 rounded-3 overflow-hidden shadow-sm hover-shadow-lg transition-base"
+          >
+            <div
+              class="resource-card-header bg-gradient-amber d-flex align-items-center justify-content-center p-4"
+            >
+              <svg
+                class="resource-icon text-white opacity-75"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.5 9.5L7.5 4.5"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M21 16V8.00002C20.9996 7.6493 20.9071 7.30483 20.7315 7.00119C20.556 6.69754 20.3037 6.44539 20 6.27002L13 2.27002C12.696 2.09449 12.3511 2.00208 12 2.00208C11.6489 2.00208 11.304 2.09449 11 2.27002L4 6.27002C3.69626 6.44539 3.44398 6.69754 3.26846 7.00119C3.09294 7.30483 3.00036 7.6493 3 8.00002V16C3.00036 16.3508 3.09294 16.6952 3.26846 16.9989C3.44398 17.3025 3.69626 17.5547 4 17.73L11 21.73C11.304 21.9056 11.6489 21.998 12 21.998C12.3511 21.998 12.696 21.9056 13 21.73L20 17.73C20.3037 17.5547 20.556 17.3025 20.7315 16.9989C20.9071 16.6952 20.9996 16.3508 21 16Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3.27002 6.96002L12 12L20.73 6.96002"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 22.08V12"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="card-body p-4">
+              <h5 class="mb-2">Sustainability Report</h5>
+              <h6 class="fw-light small mb-3">
+                How digital technologies are enabling more sustainable
+                industrial operations and reducing carbon footprints.
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</app-vertical-progress-bar>

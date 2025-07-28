@@ -1,0 +1,80 @@
+ 
+@use '../../../shared/scss-Styles/colors' as *;
+@use '../../../shared/scss-Styles/sections-Header-styles' as * ;
+
+// animation
+    .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+ 
+//  
+.bg-main-color{
+    background-color: $main-color;
+}
+.btn-main-color {
+            background-color: $main-color;
+            border-color: $main-color;
+             color: $white-color;
+        
+        
+        &:hover {
+           
+            background-color:  $main-color-darkness;
+            border-color: rgba($main-color, 10%);
+        }
+    }
+ // for nav routes 
+ a{
+    color:black ;
+    &:hover{
+        color: $main-color;
+    }
+ }
+ .active{
+    color: $main-color;
+    }
+
+
+    .card-header {
+     background: linear-gradient(160deg , $main-color , $secend-main-color);
+    }
+
+      .card-footer {
+            background-color: #ffffff;
+            border-bottom-left-radius: 0.75rem;
+            border-bottom-right-radius: 0.75rem;
+
+         .page-link{
+            color: blue !important;
+            background-color: white !important;
+
+            &.active{
+                 color: white !important;
+            background-color: blue !important;
+            }
+         }}
+
+    .status-badge {
+        font-size: 0.8em;
+        padding: 0.4em 0.7em;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+        .main-content {
+            padding: 1rem;
+        }
+    }
+
+    .save-admin-btn{
+        color: white;
+        background-color: $main-color;
+    }
+
+   

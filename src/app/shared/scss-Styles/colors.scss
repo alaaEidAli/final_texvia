@@ -1,0 +1,52 @@
+ @use 'sass:color';
+
+$main-color :#6A05A6;// -----------------main colors ---------------------------------------
+
+$secend-main-color:#3F1256;
+$black-color:#000000;
+$white-color:white;
+$footer-color:#343a40;
+$btn-color: #007bff;
+$btn-hover:#3051DB;
+$text-muted: #666;
+$card-bg: rgba(255, 255, 255, 0.1);
+$value-blue-light: #3b82f6;
+$value-indigo-light: #6366f1;
+$value-emerald-light: #10b981;
+$value-cyan-light: #06b6d4;
+
+$abstract-blue-dark: #0284c7;
+$abstract-blue-light: #0ea5e9;
+$abstract-text-dark: #0c4a6e;
+$abstract-bg-light: #f0f9ff;
+$main-color-100: #F3E8FF;
+$blue-500: #3B82F6;
+$blue-600: #2563eb;
+$green-600: #10b981;
+$amber-600: #f59e0b;
+$amber-100: #FEF3C7;
+$gray-500: #6b7280; // Not used as much directly, but good for context
+$gray-600: #4b5563; // Not used as much directly, but good for context
+$blue-100: #dbeafe; // Tailwind blue-100 for background in SVG
+$green-100: #d1fae5; // Tailwind green-100 for background in SVG
+$orange-100: #fef3c7; 
+$purple-500: #a855f7;
+$purple-700: #7e22ce;
+
+
+
+
+
+
+
+// careers home colors 
+$gray-50: #f8f9fa;    // For section background
+$gray-200: #e9ecef;   // For job card border, skill tag background
+$gray-300: #dee2e6;   // For default border color (e.g., nav links)
+$gray-600: #6c757d;   // For descriptions, subtitle, posted date
+$gray-700: #495057;   // For skill tag text, inactive nav link text
+$gray-900: #212529; 
+
+// //  main-color ligntness  and darkness
+ $main-color-lightness :color.adjust($main-color, $lightness: 10%);
+ $main-color-darkness:color.adjust($main-color , $lightness: -10%) 

@@ -1,0 +1,286 @@
+<div class="container px-4 pt-5 pb-3 mt-4">
+    <nav style="--bs-breadcrumb-divider:url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a routerLink="/home " > <span class=" small fw-medium">Home</span></a>
+            </li>
+            <li class="breadcrumb-item">
+                <a routerLink="/careers" ><span class="small fw-medium "> Careers</span> </a>
+            </li>
+            <li class="breadcrumb-item">
+                <a routerLink="/careers"  fragment="open-positions-section" ><span class="small fw-medium "> Engineering</span> </a>
+            </li>
+            <li class="breadcrumb-item active text-secondary" aria-current="page"><span class="small "> Automation Engineer</span></li>
+        </ol>
+    </nav>
+<!-- Back Link -->
+<a  class="back-to-jobs-btn d-inline-flex align-items-center   mb-2" routerLink="/careers"  fragment="open-positions-section" >
+    <div>
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        fill="currentColor"
+        class="bi bi-arrow-left me-2 transition-transform"
+        viewBox="0 0 16 16"
+    >
+        <path fill-rule="evenodd" d="M4.3 8.3a.5.5 0 0 1 0-.4l4-4a.5.5 0 1 1 .7.7L5.5 8h9a.5.5 0 0 1 0 1h-9l3.5 3.4a.5.5 0 1 1-.7.7l-4-4z"/>
+    </svg>
+    </div>
+    <div>
+         <p class="d-inline ms-1 fw-normal">  Back to all jobs </p> 
+    </div>
+   
+   
+  
+</a>
+</div>
+
+<!-- Job Header -->
+ <div class="job-header container">
+    <div class="bg-white rounded  px-4 mb-4  card-3d">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <div class="d-flex flex-column flex-md-row align-items-center">
+            <div class="icon-wrapper-div rounded d-flex align-items-center justify-content-center shadow mb-4 mb-md-0 me-md-3">
+                <svg  width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="#4B0082"/>
+                    <path d="M2 17L12 22L22 17" stroke="#4B0082" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="#4B0082" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div>
+                <h2 class=" mb-1 fw-bold">Automation Engineer</h2>
+                <p class="job-header-description fw-semibold">Engineering Department</p>
+                <div class="d-flex flex-wrap gap-1 mt-3">
+                    <div class=" badge job-details px-3 py-2 "> 
+                        <i class="bi bi-geo-alt me-2 "></i> <span class="fw-normal ">Remote (Egypt)</span> 
+                    </div>
+                    <div class="badge job-details px-3 py-2"> 
+                        <i class="bi bi-briefcase me-2"></i> <span class="fw-normal ">Full-time</span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 mt-md-0 d-flex flex-column  flex-sm-row  gap-2 ">
+            
+            <button class="btn  " id="applyNowBtn" (click)="goToApplyTab()">
+                <i class="bi bi-send me-2"></i> Apply Now
+            </button>
+        </div>
+    </div>
+</div>
+ </div>
+
+
+ <!--- job Description and apply and sidebar----->
+
+ <div class="container my-5">
+  <div class="row justify-content-center">
+
+    <!--  in this part i use ng-bootstrap liberery for navigation between taps  -->
+    <div class="col-lg-10 col-xl-8">
+      <div class="mb-4">
+         <ul ngbNav #nav="ngbNav" [(activeId)]="activeTab" class=" nav-tabs fw-medium" id="jobTabs" role="tablist"  >
+          <li class="nav-item " role="presentation" [ngbNavItem]="1">
+            <button ngbNavLink >
+              <i class="bi bi-file-text me-2" ></i>Job Description
+            </button>
+            <ng-template ngbNavContent>
+               <div class="tab-pane fade show active" id="description-pane" role="tabpanel" aria-labelledby="description-tab-btn">
+            <p class=" mb-4">We're looking for a skilled Automation Engineer to join our team and drive the development of smart, efficient, and scalable automation solutions across industrial environments.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+              <span class="badge rounded-pill px-2 py-1 fw-normal ">PLC Programming</span>
+              <span class="badge rounded-pill px-2 py-1 fw-normal ">SCADA Systems</span>
+              <span class="badge rounded-pill px-2 py-1 fw-normal ">Industrial Networking</span>
+              <span class="badge rounded-pill px-2 py-1 fw-normal ">Industry 4.0</span>
+              <span class="badge rounded-pill px-2 py-1 fw-normal ">IIoT</span>
+            </div>
+
+            <h4 class=" fw-medium  mb-3">About the Role</h4>
+            <p class="mb-4">
+We are seeking a skilled Automation Engineer with 0 to 5 years of experience in industrial automation, specifically with Siemens technologies (TIA Portal, Siemens PLCs). The successful candidate will provide remote support to international clients, especially during Canadian CST time zone (+6 hours). Fluent English is essential for effective communication.
+            </p>
+
+            <h4 class=" fw-medium mb-3">Responsibilities</h4>
+            <ul class="list-unstyled ps-1 mb-4 styled-list">
+              <li><i class="bi bi-check-circle-fill me-2"></i>Design, develop, and troubleshoot PLC programs using Siemens TIA Portal and other leading platforms.</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>Configure and maintain SCADA systems for real-time monitoring and control of industrial processes.</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>Provide remote technical support to clients across global regions, ensuring minimal downtime.</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>Develop and optimize automation logic and HMI interfaces using industry standards.</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>Collaborate with engineering and project teams to ensure seamless system integration and high performance.</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>Document technical issues, implemented solutions, and continuous improvement initiatives.</li>
+              <li><i class="bi bi-check-circle-fill me-2"></i>Communicate clearly and professionally with international clients and cross-functional teams.</li>
+             
+            </ul>
+
+            <h4 class=" fw-medium  mb-3">Requirements</h4>
+            <ul class="list-unstyled ps-3 mb-4 styled-list">
+              <li><i class="bi bi-dot me-2"></i>From 0 to 5 years of experience in industrial automation and control systems.</li>
+              <li><i class="bi bi-dot me-2"></i>Strong hands-on experience with Siemens PLCs and TIA Portal.</li>
+              <li><i class="bi bi-dot me-2"></i>Proficiency in SCADA systems (e.g., WinCC, AVEVA, Ignition is a plus).</li>
+              <li><i class="bi bi-dot me-2"></i>Solid programming skills in SQL and Java.</li>
+              <li><i class="bi bi-dot me-2"></i>Fluent in English (spoken and written) – mandatory.</li>
+              <li><i class="bi bi-dot me-2"></i>Availability to support clients in CST (Canada) time zone (+6 hours).</li>
+              
+            </ul>
+
+            <h4 class=" fw-medium  mb-3">Nice to Have</h4>
+            <ul class="list-unstyled ps-3 mb-4 styled-list">
+              <li><i class="bi bi-plus-circle me-2"></i>Familiarity with Concrete Batching Systems.</li>
+              <li><i class="bi bi-plus-circle me-2"></i>Background in Food & Beverage, Life Sciences, or Smart Infrastructure sectors.</li>
+              
+            </ul>
+
+            <h4 class=" fw-medium  mb-3">Benefits</h4>
+            <ul class="list-unstyled ps-3 mb-4 styled-list">
+              <li><i class="bi bi-patch-check me-2"></i>Competitive salary and performance-based bonuses paid in USD.</li>
+              <li><i class="bi bi-patch-check me-2"></i>Comprehensive health, dental, and vision insurance.</li>
+              <li><i class="bi bi-patch-check me-2"></i>Flexible remote/hybrid work options.</li>
+              <li><i class="bi bi-patch-check me-2"></i>Paid time off and wellness days.</li>
+              <li><i class="bi bi-patch-check me-2"></i>Training and certification sponsorship.</li>
+              <li><i class="bi bi-patch-check me-2"></i>International project exposure and cross-cultural collaboration.</li>
+              <li><i class="bi bi-patch-check me-2"></i>Professional development opportunities.</li>
+              
+            </ul>
+
+            <h4 class=" fw-medium  mb-3">Our Commitment to Diversity</h4>
+            <p class="small mb-4">
+             <span class="fw-semibold"> TEXVIA </span>is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. We do not discriminate based on race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <button class="  btn   btn-3d " id="applyNowBtn2"  (click)="goToApplyTab()">
+                <i class="bi bi-send me-2"></i>Apply for this Position
+              </button>
+             
+              </div>
+          </div>
+
+            </ng-template>
+          </li>
+          <li class="nav-item " role="presentation" [ngbNavItem]="2">
+            <button ngbNavLink>
+              <i class="bi bi-send me-2"></i>Apply Now
+            </button>
+            <ng-template ngbNavContent>
+            <div class="tab-pane fade show active" id="apply-pane" role="tabpanel" aria-labelledby="apply-tab-btn">
+            
+              <div class="bg-white ">
+      <div class="apply-tab p-1 p-md-5  ">
+        <div class="text-center mb-5">
+          <h3 class=" fw-bold text-dark mb-4">Apply for Open Positions</h3>
+          <p class="text-muted  mx-auto">
+            We're looking for talented individuals to join our growing team. Instead of filling out a lengthy application form, simply send your resume directly to our hiring team.
+          </p>
+        </div>
+
+        <div class=" border  rounded-3 p-1 p-md-5 mb-5  mx-auto apply-section">
+          <div class="d-flex align-items-start">
+            <div class="flex-shrink-0 d-none d-md-block ">
+              <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#6A05A6" height="30" width="30">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="ms-0  ps-0 ms-md-3">
+              <h4 class=" fw-medium ">How to Apply</h4>
+              <p class=" mt-2 " style="color: #6A05A6;">Please email your resume directly to:</p>
+              <div class="mt-3 d-flex justify-content-center">
+                <div class="bg-white border  rounded-3 px-1 px-md-4 bg-success py-3 d-flex align-items-center">
+                  <span class="fw-medium text-dark w-100 " id="email">{{email}}</span>
+                  <button class="copy-btn ms-3 border-0 " (click)="copyEmail()" title="Copy email address">
+                     <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#6A05A6" height="30" width="30">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                  </button>
+                </div>
+              </div>
+              <p class="mt-3 " style="color: #6A05A6;">Include the position you're applying for in the subject line and attach your resume in PDF format.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+            
+          </div>
+            </ng-template>
+          </li>
+        </ul> 
+       
+      <div class="tab-content bg-white border border-top-0 rounded-bottom p-4 p-md-5 depth-shadow" [ngbNavOutlet]="nav"></div>
+
+      </div>
+    </div>
+    <div class="col-lg-2 col-xl-4">
+      <div class="job-sidebar card card-3d depth-shadow tilt-effect ">
+                    <div class="card-body p-4">
+                        <h3 class="fw-semibold mb-4 job-title-custom">Job Details</h3>
+                        <div class="custom-space-y-4">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-bg-custom rounded-circle d-flex align-items-center justify-content-center text-main-color me-3 float-3d-effect">
+                                    <i class="bi bi-calendar"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm-custom text-muted mb-0">Date Posted</p>
+                                    <p class="fw-medium mb-0">July 1, 2025</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-bg-custom rounded-circle d-flex align-items-center justify-content-center text-main-color me-3 float-3d-effect">
+                                    <i class="bi bi-geo-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm-custom text-muted mb-0">Location</p>
+                                    <p class="fw-medium mb-0">Remote (Egypt)</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-bg-custom rounded-circle d-flex align-items-center justify-content-center text-main-color me-3 float-3d-effect">
+                                    <i class="bi bi-briefcase"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm-custom text-muted mb-0">Employment Type</p>
+                                    <p class="fw-medium mb-0">Full-time</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-bg-custom rounded-circle d-flex align-items-center justify-content-center text-main-color me-3 float-3d-effect">
+                                    <i class="bi bi-cash-stack"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm-custom text-muted mb-0">Salary Range</p>
+                                    <p class="fw-medium mb-0">Competitive (In USD)</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-bg-custom rounded-circle d-flex align-items-center justify-content-center text-main-color me-3 float-3d-effect">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm-custom text-muted mb-0">Department</p>
+                                    <p class="fw-medium mb-0">Engineering</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-bg-custom rounded-circle d-flex align-items-center justify-content-center text-main-color me-3 float-3d-effect">
+                                    <i class="bi bi-person-badge"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm-custom text-muted mb-0">Experience Level</p>
+                                    <p class="fw-medium mb-0">From 0 - 5 years</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-2 custom-space-y-3">
+                            <button class="btn btn-main-custom w-100 py-2 px-4 d-flex align-items-center justify-content-center btn-3d-effect pulse-effect" id="applyNowBtn3" (click)="goToApplyTab()">
+                                <i class="bi bi-send me-2"></i>Apply Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+    
+

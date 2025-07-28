@@ -1,0 +1,143 @@
+<footer class="bg-dark text-white py-4 position-relative z-1">
+    <div class="container">
+      <div class="row  g-4 mb-3">
+        <div class=" col-md-6 col-lg-3">
+          <a href="#" class="h5 text-decoration-none text-white mb-4 d-block">
+            TEX<span class="text-color">VIA</span>
+          </a>
+          <p class="text-muted ">
+            Leading provider of industrial technology solutions, empowering
+            businesses to thrive in the digital age.
+          </p>
+          <div class="d-flex gap-3">
+            <a  class="text-muted icon-link text-decoration-none" href="https://www.linkedin.com/company/texvia/" target="_blank">
+              <i class="fab fa-linkedin-in" >  </i>
+            </a>
+            
+          </div>
+          <div class="mt-2">
+     
+  
+            <div class="d-flex flex-row align-items-start   ">
+              <div class="">
+                 <i class="fas fa-envelope mb-0 "></i>
+              </div>
+               
+              <div class="d-flex flex-row ms-1 ">
+                <p class=" small mx-2">Email :  </p>
+                <p class="text-muted">{{email}}</p>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+  
+        <div class="col-md-6 col-lg-3">
+          <h5 class="h5 mb-4">Solutions</h5>
+          <ul class="list-unstyled">
+            @for(sol of SolutionsData; track sol.id) {
+            <li>
+              <a
+               routerLink="/solutions"
+               fragment="{{sol.id}}"
+                class="text-muted text-decoration-none link-hover"
+                >{{sol.title}}</a
+              >
+            </li>
+          }
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h5 class="h5 mb-4">Industries</h5>
+          <ul class="list-unstyled">
+            @for(ind of industryData; track ind.id) {
+            <li>
+              <a
+               routerLink="/industries"
+               fragment="{{ind.id}}"
+                class="text-muted text-decoration-none link-hover"
+                >{{ind.title}}</a
+              >
+            </li>
+          }
+          </ul>
+        </div>
+  
+        <div class="col-md-6 col-lg-3">
+          <h5 class="h5 mb-4">Company</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a 
+              routerLink="/home"
+              fragment="Who-We-Are-Section"
+               class="text-muted text-decoration-none link-hover"
+                >About Us</a
+              >
+            </li>
+        
+            <li>
+              <a 
+              routerLink="/careers"
+               class="text-muted text-decoration-none link-hover"
+                >Careers</a
+              >
+            </li>
+            <li>
+              <a  
+              [routerLink]="['/home']"
+              fragment="Insights-Section"
+              class="text-muted text-decoration-none link-hover"
+                >News & Insights</a
+              >
+            </li>
+            <li>
+              <a 
+              routerLink="/contact"
+               class="text-muted text-decoration-none link-hover"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+  
+        <!-- <div class="col">
+          <h5 class="h5 mb-4">Newsletter</h5>
+          <p class="text-muted mb-3">
+            Subscribe to our newsletter for the latest updates and insights.
+          </p>
+          <form class="d-flex">
+            <input
+              type="email"
+              class="form-control rounded-start rounded-1 rounded-end-0"
+              placeholder="Your email"
+            />
+            <button type="submit" class="btn btn-color rounded-end rounded-1 rounded-start-0">
+              <i class="fas fa-paper-plane bg-color"></i>
+            </button>
+          </form>
+        </div> -->
+      </div>
+  
+      <hr class="text-secondary" />
+  
+      <div
+        class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+      >
+        <p class="text-muted small mb-2 mb-md-0">
+          &copy; 2023 TEXVIA. All rights reserved.
+        </p>
+        <div class="d-flex gap-3">
+          <a  class="text-muted small text-decoration-none link-hover"
+            >Privacy Policy</a
+          >
+          <a  class="text-muted small text-decoration-none link-hover"
+            >Terms of Service</a
+          >
+          <a  class="text-muted small text-decoration-none link-hover"
+            >Cookie Policy</a
+          >
+        </div>
+      </div>
+    </div>
+  </footer>

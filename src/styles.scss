@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+html{
+     scroll-padding-top: 7rem;
+     scroll-behavior: smooth;
+}
+
+// toater message in jpb details compoments
+#toast-container > .toast-success {
+  
+  background-color: #F0FFF4; 
+  border-left: 5px solid #6A05A6; 
+  border-radius: 6px;
+
+  padding: 12px 18px;
+  min-width: 270px;
+  max-width: 330px;
+
+  
+  color: #333333; 
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+
+ 
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); 
+   display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+
+
+#toast-container > .toast-success .toast-message {
+  font-size: 0.9em;
+  color: #555555;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+ 
+}
+
+#toast-container > .toast-success .toast-close-button {
+  color: #666; /* Darker close button */
+  font-size: 1.4em;
+  opacity: 1;
+  top: 0%;
+  right: 0px;
+  
+}
+
+#toast-container > .toast-success .toast-close-button:hover {
+  color: #333;
+}
+
+
+
+
+// toater message in jpb details compoments
+#toast-container > .toast-error {
+  
+  background-color: #F0FFF4; 
+  border-left: 5px solid rgb(191, 57, 57); 
+  border-radius: 6px;
+
+  padding: 12px 18px;
+  min-width: 270px;
+  max-width: 330px;
+
+  
+  color: #333333; 
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+
+ 
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); 
+   display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+
+
+#toast-container > .toast-error .toast-message {
+  font-size: 0.9em;
+  color: #555555;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+ 
+}
+
+#toast-container > .toast-error .toast-close-button {
+  color: #666; /* Darker close button */
+  font-size: 1.4em;
+  opacity: 1;
+  top: 0%;
+  right: 0px;
+  
+}
+
+#toast-container > .toast-error .toast-close-button:hover {
+  color: #333;
+}

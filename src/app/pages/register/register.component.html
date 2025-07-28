@@ -1,0 +1,129 @@
+ <section id="register" class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-lg my-5">
+                    <div class="card-body p-5 text-center">
+
+                        <div class="mb-5">
+                           <h2 class="h1 fw-bold text-dark mt-3 mb-2">Create an Account</h2>
+                           <p class="text-muted">Let's get you all set up!</p>
+                        </div>
+
+                        <!-- This form integrates your Angular logic with the new Bootstrap design -->
+                        <form [formGroup]="registerForm" (ngSubmit)="submitRegisterForm()"  class="text-start">
+                            
+                            <!-- Name Input -->
+                            <div class="custom-form-floating">
+                                @let nameControl = registerForm.get('name');
+                                <input
+                                    formControlName="name"
+                                    type="text"
+                                    class="form-control"
+                                    id="name"
+                                    placeholder="Enter your name"
+                                    [ngClass]="{'is-invalid': nameControl?.errors && nameControl?.touched, 'is-valid': !nameControl?.errors && nameControl?.touched}"
+                                />
+                                <label for="name" class="form-label">Name</label>
+                                @if(nameControl?.errors && nameControl?.touched){
+                                    <div class="invalid-feedback d-block">
+                                        @if(nameControl?.getError('required')){
+                                            Name is required.
+                                        } @else if (nameControl?.getError('minlength')) {
+                                            The name is short .
+                                        } @else if(nameControl?.getError('maxlength') ) {
+                                            The name cannot exceed 20 characters.
+                                        }
+                                    </div>
+                                }
+                            </div>
+
+                            <!-- Email Input -->
+                            <div class="custom-form-floating">
+                                @let emailControl = registerForm.get('email');
+                                <input
+                                    formControlName="email"
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    placeholder="Enter your email"
+                                    [ngClass]="{'is-invalid': emailControl?.errors && emailControl?.touched, 'is-valid': !emailControl?.errors && emailControl?.touched}"
+                                />
+                                <label for="email" class="form-label">Email address</label>
+                                @if(emailControl?.errors && emailControl?.touched){
+                                    <div class="invalid-feedback d-block">
+                                        @if(emailControl?.getError('required')){
+                                            Email is required.
+                                        } @else if (emailControl?.getError('email')) {
+                                            Please enter a valid email address.
+                                        }
+                                    </div>
+                                }
+                            </div>
+
+                            <!-- Password Input -->
+                            <div class="custom-form-floating">
+                                @let passControl = registerForm.get('password');
+                                <input
+                                    formControlName="password"
+                                    type="password"
+                                    class="form-control"
+                                    id="password"
+                                    placeholder="Enter your password"
+                                    [ngClass]="{'is-invalid': passControl?.errors && passControl?.touched, 'is-valid': !passControl?.errors && passControl?.touched}"
+                                />
+                                <label for="password" class="form-label">Password</label>
+                                @if(passControl?.errors && passControl?.touched){
+                                    <div class="invalid-feedback d-block">
+                                        <ul>
+                                             @if(passControl?.getError('required') ){
+                                         <li>
+                                              Password is required.
+                                         </li>
+                                          
+                                        }
+                                        @else if(passControl?.getError('pattern')){
+                                        @if(!passwordHasLength) {
+                                            <li>
+                                                 Passwords must be at least 6 characters.
+                                            </li>
+                                         
+                                        }
+                                        @if(!passwordHasDigit) {
+                                            <li>
+                                                 Passwords must have at least one digit ('0'-'9')
+                                            </li>
+                                         
+                                        }
+                                        @if (!passwordHasUpper) {
+                                            <li>
+                                                 Passwords must have at least one uppercase ('A'-'Z').
+                                            </li>
+                                           
+                                        }
+                                    }
+                                        </ul>
+                                       
+                                    </div>
+                                }
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="d-grid mt-5">
+                                <button [disabled]="isLoading" [disabled]="" type="submit" class="btn btn-primary btn-lg fw-semibold">
+                                    Register
+                                    @if(isLoading){
+                                     <i class="fas fa-spin fa-spinner"></i>
+                                    }
+                                </button>
+                            </div>
+                            <div>
+                                <p class="small text-muted text-center mt-2">
+                                    you already have an account?  <a class="text-decoration-none" style="color: #6A05A6 ; cursor: pointer;" [routerLink]="['/login']"> Log in</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

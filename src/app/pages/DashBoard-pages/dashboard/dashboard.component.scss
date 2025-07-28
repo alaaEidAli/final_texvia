@@ -1,0 +1,31 @@
+.sidebar {
+        background-color: #343a40;
+        color: #fff;
+        padding-top: 1rem;
+        position: fixed;
+    }
+
+   .bg-white-50{
+    background-color: rgba(white, .5);
+    color: white;
+   }
+    .sidebar .nav-link .fa-fw {
+        margin-right: 0.5rem;
+    }
+
+    .sidebar-header {
+
+
+
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        color: #fff;
+        border-bottom: 1px solid #495057;
+    }
+    @media (max-width: 768px) {
+        // .sidebar {
+        //     min-height: auto; /* Adjust sidebar height for smaller screens */
+        //     position: static; /* In a real app with Angular router, sidebar toggling might be handled differently */
+        // }
+    }

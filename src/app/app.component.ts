@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./layouts/navbar/navbar.component";
 import { FooterComponent } from "./layouts/footer/footer.component";
 import { NgxSpinnerComponent } from 'ngx-spinner';
-import { AuthService } from './core/services/Auth/auth.service';
+import { filter, map, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -14,21 +14,30 @@ import { AuthService } from './core/services/Auth/auth.service';
 export class AppComponent {
   title = 'TEXVIA';
 
-  private readonly authService = inject(AuthService)
 private readonly router = inject (Router)
+showFooter = true; 
+
+
 
 ngOnInit(): void {
-this.isLoggedIn()
+
+    // Listen to route changes
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: any) => {
+      const hiddenRoutes = ['/contact', '/careers', '/events'];
+      // Hide if the current URL matches any in the list
+      this.showFooter = !hiddenRoutes.some(route => event.urlAfterRedirects.includes(route));
+    });
 
 }
-   isLoggedIn(){
-  const user = this.authService.getUser();
-  if (user) {
-    if (this.authService.isAdmin()) {
-      this.router.navigate(['/home']);
-    } else {
-      this.router.navigate(['/home']);
-    }
-  }
+  
+
+
+ 
+
 }
-}
+
+
+
+

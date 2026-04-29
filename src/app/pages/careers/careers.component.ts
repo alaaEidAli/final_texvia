@@ -1,5 +1,6 @@
-import { Component, inject } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Component, effect, inject, input, OnInit, signal } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { ActivatedRoute,  RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-careers',
@@ -7,14 +8,28 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './careers.component.html',
   styleUrl: './careers.component.scss'
 })
-export class CareersComponent {
-  private readonly router = inject(Router)
+export class CareersComponent  implements OnInit {
+  private route = inject(ActivatedRoute);
+  private sanitizer = inject(DomSanitizer);
 
-  goToPositionAutomationDtails():void{
-   this.router.navigate(['/Automation-job-Details'])
-  }
+  private readonly BASE_URL = 'https://texvia-holding.odoo.com/jobs';
+  
+  iframeUrl = signal<SafeResourceUrl | null>(null);
 
-  goToPositionMesEngineerDetail():void{
-    this.router.navigate(['/MES-Engineer-job-Details']);
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      const jobId = params['job_id'];
+      
+      
+
+      let finalPath = this.BASE_URL;
+
+      if (jobId) {
+        finalPath = `${this.BASE_URL}/${jobId}`;
+      }
+
+
+      this.iframeUrl.set(this.sanitizer.bypassSecurityTrustResourceUrl(finalPath));
+    });
   }
 }

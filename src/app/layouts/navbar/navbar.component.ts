@@ -2,7 +2,6 @@ import { isPlatformBrowser, NgClass } from '@angular/common';
 import { Component, ElementRef, HostListener, inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import {  Router, RouterLink, RouterLinkActive } from '@angular/router';
-import { AuthService } from '../../core/services/Auth/auth.service';
 
 interface solutions{
   title: string,
@@ -27,7 +26,6 @@ export class NavbarComponent {
 
    private elementRef = inject(ElementRef);
    private sanitizer = inject(DomSanitizer)
-  private readonly authService = inject(AuthService)
   private readonly router = inject(Router)
    pLATFORM_ID = inject(PLATFORM_ID)
 
@@ -345,37 +343,5 @@ ngOnInit(): void {
     inustries:false
   };
 }
-  // for dashboard to just apprear for admin 
-
-  isAdmin() {
-if(isPlatformBrowser(this.pLATFORM_ID)){
-    return this.authService.isAdmin()
-
-}
-else return false
-}
-isLogged() :any{
-  if(isPlatformBrowser(this.pLATFORM_ID)){
-    const user = this.authService.getUser()
-    return user != null  ? true : false
-  }
-}
-
- logOut(){
-   const refreshToken = this.authService.getRefreshToken();
-   this.authService.logout(refreshToken!).subscribe({
-        next: (res) => {
-          this.authService.clearTokens();
-          this.router.navigate(['/home']);
-
-          console.log(res)
-        },
-        error: () => {
-          this.authService.clearTokens();
-          this.router.navigate(['/home']);
-        }
- 
-  })
-
-}
+  
 }

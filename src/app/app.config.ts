@@ -8,7 +8,7 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import {  provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { loadingInterceptor } from './core/interceptors/loading/loading.interceptor';
-import { headerInterceptor } from './core/interceptors/Header/header.interceptor';
+// import { headerInterceptor } from './core/interceptors/Header/header.interceptor';
 export const appConfig: ApplicationConfig = {
    providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
@@ -28,7 +28,7 @@ export const appConfig: ApplicationConfig = {
       closeButton: true, 
       
     }),
-    provideHttpClient(withFetch() , withInterceptors([loadingInterceptor , headerInterceptor])) ,
+    provideHttpClient(withFetch() , withInterceptors([loadingInterceptor ])) ,
      importProvidersFrom(NgxSpinnerModule )
      
   ]

@@ -20,57 +20,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-lg-0">
-        @if(isAdmin()){
-        <li class="nav-item dropdown" #dropdown1>
-          <a
-            class="nav-link dropdown-toggle"
-    
-            id="dropdownMenuButton1"
-            role="button"
-            (click)="toggleDropdown('dashboard', $event)"
-              (click)="preventClose($event)"
-                           [ngClass]="{'active': isDropdownOpen['dashboard']}" 
-            >Dashboard
-            <i class="down  fas fa-chevron-down ms-1 "></i>
-            <i class="up fas fa-chevron-up ms-1 "></i>
-            </a
-          >
-
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"   [ngClass]="{'show': isDropdownOpen['dashboard']}" (click)="preventClose($event)">
-             <li class="dropdown-item-text">
-              <a class="nav-link"   routerLink="/dashboard/dashboard-home"
-               (click)="closeAllDropdowns($event)"
-                >Dashboard Home</a
-              >
-            </li>
-            <li class="dropdown-item-text">
-              <a class="nav-link" routerLink="/dashboard/contact-submission"
-               (click)="closeAllDropdowns($event)"
-                >Dashboard Contact submissions</a
-              >
-            </li>
-            <li class="dropdown-item-text">
-              <a class="nav-link" routerLink="/dashboard/users"
-               (click)="closeAllDropdowns($event)"
-                >Dashboard Users</a
-              >
-            </li>
-            <li class="dropdown-item-text">
-              <a class="nav-link" routerLink="/dashboard/job-Management"
-               (click)="closeAllDropdowns($event)"
-                >Job Management</a
-              >
-            </li>
-            <li class="dropdown-item-text">
-              <a class="nav-link" routerLink="/dashboard/Applicant-Page"
-               (click)="closeAllDropdowns($event)"
-                >Applicant Page</a
-              >
-            </li>
-          </ul>
-        </li>
-      }
-        <li class="nav-item">
+         <li class="nav-item">
           <a
             class="nav-link"
             routerLink="/home"
@@ -239,55 +189,23 @@
             >Careers</a
           >
         </li>
+         <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/events"
+            routerLinkActive="nav-link-active"
+             (click)="closeAllDropdowns($event)"
+            >Events</a
+          >
+        </li>
+
         <li class="nav-item">
         
             <a class="nav-link d-none d-xl-block" routerLink="/contact" routerLinkActive="nav-link-active"  (click)="closeAllDropdowns($event)">Contact Us</a>
 <a class="nav-link d-block d-xl-none" routerLink="/contact" routerLinkActive="nav-link-active"  (click)="closeAllDropdowns($event)">Contact</a>
         
         </li>
-        <li class="nav-item dropdown" #dropdown2>
-          <a
-            class="nav-link dropdown-toggle " style="cursor: pointer;"
-            id="navbarDropdown"
-             (click)="toggleDropdown('account', $event)"
-                          [ngClass]="{'active': isDropdownOpen['account']}" 
-
-            >Account
-             <i class="down  fas fa-chevron-down ms-1 "></i>
-            <i class="up fas fa-chevron-up ms-1 "></i>
-            </a
-          >
-          <ul
-            class="dropdown-menu dropdown-menu2"
-            aria-labelledby="navbarDropdown"
-             [ngClass]="{'show': isDropdownOpen['account']}"
-            (click)="preventClose($event)"
-          > 
-          @if(!isLogged()){
-            <li class="dropdown-item-text">
-              <a
-                class="nav-link"
-                routerLink="/login"
-                routerLinkActive="nav-link-active"
-                 (click)="closeAllDropdowns($event)"
-                >Login</a
-              >
-            </li>
-            
-          }
-          @else {
-             <li class="dropdown-item-text">
-              <a
-                class="nav-link"
-                (click)="logOut()"
-                style="cursor: pointer;"
-                 (click)="closeAllDropdowns($event)"
-                >Log out</a
-              >
-            </li>
-          }
-          </ul>
-        </li>
+   
       </ul>
     </div>
   </div>

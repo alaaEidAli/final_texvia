@@ -14,18 +14,19 @@ Angular 19 project that adapts and implements client pages originally designed i
 
 ```bash
 npm install --legacy-peer-deps
-Run the project
-Bashng serve
+Run the project  
+commend : ng serve
+
 Open your browser at: http://localhost:4200
 Build for production
-Bashng build --configuration production
+commend : ng build --configuration production
 Project Structure
 textsrc/app/
 ├── core/           # Environment, Interceptors, Services, Guards
 ├── layouts/        # Navbar & Footer
 └── pages/          # Application pages
-Notes
 
+Notes
 This project does not use Angular Material.
 Some unused dependencies were cleaned before uploading.
 Main environment file: src/app/core/environment/environment.ts

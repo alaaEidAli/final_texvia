@@ -1,10 +1,10 @@
-import { Component, effect, inject, input, OnInit, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { ActivatedRoute,  RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-careers',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './careers.component.html',
   styleUrl: './careers.component.scss'
 })

@@ -183,13 +183,22 @@
         <li class="nav-item">
           <a
             class="nav-link"
+            routerLink="/support"
+            routerLinkActive="nav-link-active"
+             (click)="closeAllDropdowns($event)"
+            >Support</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
             routerLink="/careers"
             routerLinkActive="nav-link-active"
              (click)="closeAllDropdowns($event)"
             >Careers</a
           >
         </li>
-         <li class="nav-item">
+         <!-- <li class="nav-item">
           <a
             class="nav-link"
             routerLink="/events"
@@ -197,7 +206,7 @@
              (click)="closeAllDropdowns($event)"
             >Events</a
           >
-        </li>
+        </li> -->
 
         <li class="nav-item">
         

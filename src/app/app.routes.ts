@@ -37,7 +37,12 @@ export const routes: Routes = [
 //     { path: '', pathMatch: 'full'  },          
 //     { path: ':jobSlug'  }    
 //   ]
-// },   
+// }, 
+  {
+    path:'support',
+    loadComponent:() =>import('./pages/support/support.component').then(m=> m.SupportComponent),
+    title:'Support -TEXVIA'
+  },  
 
   {
     path: 'events',

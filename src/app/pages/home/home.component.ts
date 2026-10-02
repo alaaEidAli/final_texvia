@@ -7,7 +7,6 @@ import {   Engine, FullScreen, } from '@tsparticles/engine';
 import { Router, RouterLink } from '@angular/router';
 import { concatMap,  Subject, takeUntil, timer } from 'rxjs';
 import { VerticalProgressBarComponent } from "../vertical-progress-bar/vertical-progress-bar.component";
-import { TagManagerService } from '../../core/services/Tag-Manager/tag-manager.service';
 
 interface home{
   top:string,
@@ -30,7 +29,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   private readonly ngParticlesService = inject(NgParticlesService);
   private readonly router = inject(Router);
   private cdr = inject(ChangeDetectorRef);
-  private tagManagerService = inject(TagManagerService);
    
   
 
@@ -137,7 +135,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       this.updateVisibleItems();
       this.startAutoSlide();
       window.addEventListener('resize', () => this.updateVisibleItems());
-      this.trackingSectionTime();
     }
   }
 
@@ -145,7 +142,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
       this.stopAutoSlide();
       window.removeEventListener('resize', () => this.updateVisibleItems());
-      this.endOfSectionTime();
     }
     this.destroy$.next();
     this.destroy$.complete();
@@ -253,44 +249,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  trackingSectionTime(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      ['Home-Page-First-Screen-Section', 'Who-We-Are-Section', 'Solutions-Section', 'How-We-Do-Section', 'Core-Values-Section', 'Why-Texvia-Section', 'Insights-Section'].forEach(sectionId => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                  this.sectionStartTimes[sectionId] = Date.now();
-                } else if (this.sectionStartTimes[sectionId]) {
-                  const timeSpent = (Date.now() - this.sectionStartTimes[sectionId]) / 1000;
-                  this.sectionTimes[sectionId] += timeSpent;
-                  this.tagManagerService.trackSectionView(sectionId, timeSpent, this.router.url);
-                  delete this.sectionStartTimes[sectionId];
-                }
-              });
-            },
-            { threshold: 0.5 }
-          );
-          observer.observe(element);
-          this.observers.push(observer);
-        }
-      });
-    }
-  }
-
-  endOfSectionTime(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      this.observers.forEach(observer => observer.disconnect());
-      ['Home-Page-First-Screen-Section', 'Who-We-Are-Section', 'Solutions-Section', 'How-We-Do-Section', 'Core-Values-Section', 'Why-Texvia-Section', 'Insights-Section'].forEach(sectionId => {
-        if (this.sectionTimes[sectionId] > 0) {
-          this.tagManagerService.trackSectionView(sectionId, this.sectionTimes[sectionId], this.router.url);
-        }
-      });
-    }
-  }
-
+  
   talkToExpert(): void {
     this.router.navigate(['/contact']);
   }

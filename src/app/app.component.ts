@@ -3,7 +3,7 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./layouts/navbar/navbar.component";
 import { FooterComponent } from "./layouts/footer/footer.component";
 import { NgxSpinnerComponent } from 'ngx-spinner';
-import { filter, map, Observable } from 'rxjs';
+import { filter,  } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +25,7 @@ ngOnInit(): void {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
-      const hiddenRoutes = ['/contact', '/careers', '/events'];
+      const hiddenRoutes = ['/contact', '/careers', '/events' , '/support'];
       // Hide if the current URL matches any in the list
       this.showFooter = !hiddenRoutes.some(route => event.urlAfterRedirects.includes(route));
     });

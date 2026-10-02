@@ -26,6 +26,12 @@ textsrc/app/
 ├── layouts/        # Navbar & Footer
 └── pages/          # Application pages
 
+
+## Important Note about Environment
+
+Some API connections in the environment configuration only work when the project is deployed on the server.  
+They may not work properly when running the project locally (`ng serve`).
+
 Notes
 This project does not use Angular Material.
 Some unused dependencies were cleaned before uploading.
